@@ -171,6 +171,22 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\apps\css\inbox.css" />
+    <Content Include="assets\apps\css\inbox.min.css" />
+    <Content Include="assets\apps\css\ticket.css" />
+    <Content Include="assets\apps\css\ticket.min.css" />
+    <Content Include="assets\apps\css\todo-2.css" />
+    <Content Include="assets\apps\css\todo-2.min.css" />
+    <Content Include="assets\apps\css\todo.css" />
+    <Content Include="assets\apps\css\todo.min.css" />
+    <Content Include="assets\apps\scripts\calendar.js" />
+    <Content Include="assets\apps\scripts\calendar.min.js" />
+    <Content Include="assets\apps\scripts\inbox.js" />
+    <Content Include="assets\apps\scripts\inbox.min.js" />
+    <Content Include="assets\apps\scripts\todo-2.js" />
+    <Content Include="assets\apps\scripts\todo-2.min.js" />
+    <Content Include="assets\apps\scripts\todo.js" />
+    <Content Include="assets\apps\scripts\todo.min.js" />
     <Content Include="assets\layouts\global\scripts\cookie-consent.js" />
     <Content Include="assets\layouts\global\scripts\cookie-consent.min.js" />
     <Content Include="assets\layouts\global\scripts\hor-timeline.js" />
@@ -541,6 +557,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\apps\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
