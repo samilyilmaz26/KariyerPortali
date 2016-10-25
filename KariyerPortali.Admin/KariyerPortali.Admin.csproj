@@ -4142,6 +4142,10 @@
     <Content Include="assets\global\plugins\wysihtml\wysihtml.js" />
     <Content Include="assets\global\plugins\wysihtml\wysihtml.table_editing.js" />
     <Content Include="assets\global\plugins\wysihtml\wysihtml.toolbar.js" />
+    <Content Include="assets\global\scripts\app.js" />
+    <Content Include="assets\global\scripts\app.min.js" />
+    <Content Include="assets\global\scripts\datatable.js" />
+    <Content Include="assets\global\scripts\datatable.min.js" />
     <Content Include="assets\layouts\global\scripts\cookie-consent.js" />
     <Content Include="assets\layouts\global\scripts\cookie-consent.min.js" />
     <Content Include="assets\layouts\global\scripts\hor-timeline.js" />
