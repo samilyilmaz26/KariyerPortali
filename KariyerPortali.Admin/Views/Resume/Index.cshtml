@@ -5,12 +5,13 @@
     ViewBag.Title = "AllResumes";
 }
 
-<h2>Tüm Özgeçişler</h2>
+<h1 class="page-title">Tüm Özgeçmişler</h1>
+
 
 <div class="portlet light bordered">
     <div class="portlet-title">
         <div class="caption font-dark">
-            <i class="icon-settings font-dark"></i>
+            <i class="icon-note font-dark"></i>
             <span class="caption-subject bold uppercase">Özgeçmişler</span>
         </div>
         
@@ -18,15 +19,7 @@
     <div class="portlet-body">
         <div class="table-toolbar">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="btn-group">
-                        <button id="sample_editable_1_new" class="btn sbold green">
-                            Add New
-                            <i class="fa fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="btn-group pull-right">
                         <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">
                             Tools
@@ -35,19 +28,15 @@
                         <ul class="dropdown-menu pull-right">
                             <li>
                                 <a href="javascript:;">
-                                    <i class="fa fa-print"></i> Print
+                                    <i class="fa fa-print"></i> Yazdır
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:;">
-                                    <i class="fa fa-file-pdf-o"></i> Save as PDF
+                                    <i class="fa fa-file-pdf-o"></i> PDF Olarak Kaydet
                                 </a>
                             </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <i class="fa fa-file-excel-o"></i> Export to Excel
-                                </a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -62,13 +51,14 @@
                             <span></span>
                         </label>
                     </th>
-                    <th> CvID </th>
+                    <th> CVID </th>
                     <th> Ad </th>
                     <th> Soyad </th>
-                    <th> Email </th>
+                    <th> Cinsiyet </th>
+                    <th> Uzmanlık </th>
                     <th> Durum </th>
-                    <th> Joined </th>
-                    <th> Actions </th>
+                    <th> Notlar </th>
+                    
                 </tr>
             </thead>
             
