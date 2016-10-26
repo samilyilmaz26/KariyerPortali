@@ -5946,6 +5946,7 @@
     <Content Include="Views\Resume\Details.cshtml" />
     <Content Include="Views\Employer\Index.cshtml" />
     <Content Include="Views\Media\Index.cshtml" />
+    <Content Include="Views\Media\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
