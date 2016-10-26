@@ -169,7 +169,6 @@
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MediaController.cs" />
     <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Controllers\UniversityController.cs" />
     <Compile Include="Global.asax.cs">
@@ -5942,10 +5941,9 @@
     <Content Include="Views\Job\Index.cshtml" />
     <Content Include="Views\Resume\Index.cshtml" />
     <Content Include="Views\University\Index.cshtml" />
-    <Content Include="Views\Resume\Details.cshtml" />
-    <Content Include="Views\Employer\Index.cshtml" />
-    <Content Include="Views\Media\Index.cshtml" />
-    <Content Include="Views\Media\Create.cshtml" />
+    <Content Include="Views\Employer\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
