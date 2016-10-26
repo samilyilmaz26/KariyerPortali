@@ -5937,7 +5937,7 @@
     <Content Include="Views\Job\Index.cshtml" />
     <Content Include="Views\Job\Create.cshtml" />
     <Content Include="Views\Resume\Index.cshtml" />
-    <Content Include="Views\University\View.cshtml" />
+    <Content Include="Views\University\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
