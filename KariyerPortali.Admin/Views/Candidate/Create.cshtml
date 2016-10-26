@@ -4,8 +4,23 @@
 }
 
 <!-- BEGIN SAMPLE FORM PORTLET-->
-<div class="portlet light bordered">
-    
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+           @Html.ActionLink("Adaylar","Index","Candidate")
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>Yeni Adaylar</span>
+        </li>
+    </ul>
+    <div class="page-toolbar">
+        <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
+            
+        </div>
+    </div>
+</div>
+<div class="portlet light bordered">    
     <div class="portlet-body form">
         <form role="form">
             <div class="form-body">
