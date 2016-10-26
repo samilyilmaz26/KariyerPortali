@@ -5933,7 +5933,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Candidate\Create.cshtml" />
+    <Content Include="Views\Candidate\Edit.cshtml" />
     <Content Include="Views\Candidate\Index.cshtml" />
     <Content Include="Views\Language\Index.cshtml" />
     <Content Include="Views\Employer\Create.cshtml" />
@@ -5941,6 +5941,9 @@
     <Content Include="Views\Job\Index.cshtml" />
     <Content Include="Views\Resume\Index.cshtml" />
     <Content Include="Views\University\Index.cshtml" />
+    <Content Include="Views\Employer\Create.cshtml" />
+    <Content Include="Views\Resume\Details.cshtml" />
+    <Content Include="Views\Employer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -5968,7 +5971,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62710</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
