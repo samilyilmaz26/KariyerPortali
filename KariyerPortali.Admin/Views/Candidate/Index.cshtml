@@ -7,20 +7,14 @@
 <div class="page-bar">
     <ul class="page-breadcrumb">
         <li>
-            <a href="index.html">Adaylar</a>
+            @Html.ActionLink("Adaylar","Index","Candidate")
             <i class="fa fa-circle"></i>
         </li>
         <li>
             <span>Tüm Adaylar</span>
         </li>
     </ul>
-    <div class="page-toolbar">
-        <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
-            <i class="icon-calendar"></i>&nbsp;
-            <span class="thin uppercase hidden-xs"></span>&nbsp;
-            <i class="fa fa-angle-down"></i>
-        </div>
-    </div>
+    
 </div>
     <div class="portlet-body">
         <div class="table-toolbar">
@@ -69,11 +63,16 @@
                             <span></span>
                         </label>
                     </th>
+                    
                     <th> Kullanıcı Adı </th>
+                    <th> Ad </th>
+                    <th> Soyad </th>
+                    <th> Doğum Tarihi </th>
+                    <th> Telefon </th>
                     <th> Eposta </th>
                     <th> Durum </th>
                     <th> Kayıt Tarihi </th>
-                    <th> Site Hareketleri </th>
+                    <th> Eylemler </th>
                 </tr>
             </thead>
             <tbody>
@@ -84,18 +83,23 @@
                             <span></span>
                         </label>
                     </td>
+                    
                     <td> shuxer </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <a href="mailto:shuxer@gmail.com"> shuxer@gmail.com </a>
                     </td>
                     <td>
-                        <span class="label label-sm label-success"> Approved </span>
+                        <span class="label label-sm label-success"> Onaylanmış </span>
                     </td>
                     <td class="center"> 12 Jan 2012 </td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
+                                Eylemler
                                 <i class="fa fa-angle-down"></i>
                             </button>
                             <ul class="dropdown-menu pull-left" role="menu">
@@ -106,18 +110,14 @@
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
+                                        <i class="icon-tag"></i> Yeni Not
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
+                                
                                 <li class="divider"> </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
+                                        <i class="icon-flag"></i> Notlar
                                         <span class="badge badge-success">4</span>
                                     </a>
                                 </li>
@@ -133,17 +133,21 @@
                         </label>
                     </td>
                     <td> looper </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <a href="mailto:looper90@gmail.com"> looper90@gmail.com </a>
                     </td>
                     <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
+                        <span class="label label-sm label-warning"> Askıya Alınmış </span>
                     </td>
                     <td class="center"> 12.12.2011 </td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
+                                Eylemler
                                 <i class="fa fa-angle-down"></i>
                             </button>
                             <ul class="dropdown-menu" role="menu">
@@ -154,18 +158,14 @@
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
+                                        <i class="icon-tag"></i> Yeni Not
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
+                               
                                 <li class="divider"> </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
+                                        <i class="icon-flag"></i> Notlar
                                         <span class="badge badge-success">4</span>
                                     </a>
                                 </li>
@@ -181,17 +181,21 @@
                         </label>
                     </td>
                     <td> userwow </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <a href="mailto:userwow@yahoo.com"> userwow@yahoo.com </a>
                     </td>
                     <td>
-                        <span class="label label-sm label-success"> Approved </span>
+                        <span class="label label-sm label-success"> Onaylanmış </span>
                     </td>
                     <td class="center"> 12.12.2011 </td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
+                                Eylemler
                                 <i class="fa fa-angle-down"></i>
                             </button>
                             <ul class="dropdown-menu" role="menu">
@@ -202,18 +206,14 @@
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
+                                        <i class="icon-tag"></i> Yeni Not
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
+                                
                                 <li class="divider"> </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
+                                        <i class="icon-flag"></i> Notlar
                                         <span class="badge badge-success">4</span>
                                     </a>
                                 </li>
@@ -229,17 +229,21 @@
                         </label>
                     </td>
                     <td> user1wow </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
                     </td>
                     <td>
-                        <span class="label label-sm label-danger"> Blocked </span>
+                        <span class="label label-sm label-danger"> Engellenmiş </span>
                     </td>
                     <td class="center"> 12.12.2011 </td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
+                                Eylemler
                                 <i class="fa fa-angle-down"></i>
                             </button>
                             <ul class="dropdown-menu" role="menu">
@@ -250,18 +254,14 @@
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
+                                        <i class="icon-tag"></i> Yeni Not
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
+                                
                                 <li class="divider"> </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
+                                        <i class="icon-flag"></i> Notlar
                                         <span class="badge badge-success">4</span>
                                     </a>
                                 </li>
@@ -269,294 +269,7 @@
                         </div>
                     </td>
                 </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> restest </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-success"> Approved </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> foopl </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-info"> Info </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> weep </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-danger"> Rejected </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> coop </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-info"> Info </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> pppol </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-danger"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> test </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
+                
                 <tr class="odd gradeX">
                     <td>
                         <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
@@ -565,17 +278,21 @@
                         </label>
                     </td>
                     <td> userwow </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
                     </td>
                     <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
+                        <span class="label label-sm label-warning"> Askıya Alınmış </span>
                     </td>
                     <td class="center"> 12.12.2011 </td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
+                                Eylemler
                                 <i class="fa fa-angle-down"></i>
                             </button>
                             <ul class="dropdown-menu" role="menu">
@@ -586,18 +303,14 @@
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
+                                        <i class="icon-tag"></i> Yeni Not
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
+                               
                                 <li class="divider"> </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
+                                        <i class="icon-flag"></i> Notlar
                                         <span class="badge badge-success">4</span>
                                     </a>
                                 </li>
@@ -605,680 +318,9 @@
                         </div>
                     </td>
                 </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> test </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> goop </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> weep </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> toopl </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> userwow </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> tes21t </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> fop </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> kop </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> vopl </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> userwow </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> wap </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> test@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> test </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> toop </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="odd gradeX">
-                    <td>
-                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                            <input type="checkbox" class="checkboxes" value="1" />
-                            <span></span>
-                        </label>
-                    </td>
-                    <td> weep </td>
-                    <td>
-                        <a href="mailto:userwow@gmail.com"> good@gmail.com </a>
-                    </td>
-                    <td>
-                        <span class="label label-sm label-warning"> Suspended </span>
-                    </td>
-                    <td class="center"> 12.12.2011 </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-docs"></i> New Post
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-tag"></i> New Comment
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-user"></i> New User
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-flag"></i> Comments
-                                        <span class="badge badge-success">4</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
-</div>
+
 
