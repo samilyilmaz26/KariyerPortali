@@ -5941,7 +5941,6 @@
     <Content Include="Views\Job\Index.cshtml" />
     <Content Include="Views\Resume\Index.cshtml" />
     <Content Include="Views\University\Index.cshtml" />
-    <Content Include="Views\Employer\Create.cshtml" />
     <Content Include="Views\Resume\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
