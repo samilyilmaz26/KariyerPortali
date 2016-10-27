@@ -5902,6 +5902,7 @@
     <Content Include="Scripts\pages\application-index.js" />
     <Content Include="Scripts\pages\city-index.js" />
     <Content Include="Scripts\pages\department-index.js" />
+    <Content Include="Scripts\pages\employer-index.js" />
     <Content Include="Scripts\pages\job-index.js" />
     <Content Include="Scripts\pages\language-index.js" />
     <Content Include="Scripts\pages\Media-Index.js" />
