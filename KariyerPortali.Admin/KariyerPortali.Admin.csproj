@@ -5963,6 +5963,7 @@
     <Content Include="Views\City\Index.cshtml" />
     <Content Include="Views\Applications\Index.cshtml" />
     <Content Include="Views\Applications\Liste.cshtml" />
+    <Content Include="Views\University\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
