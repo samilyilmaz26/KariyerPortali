@@ -11,7 +11,7 @@
                 "sortDescending": ": activate to sort column descending"
             },
             "emptyTable": "No data available in table",
-            "info": " _START_ - _END_ of _TOTAL_ Arasındaki Kayıtlar Gösteriliyor ",
+            "info": " _START_ - _END_ Arasındaki Tolam ' _TOTAL_ ' Kayıt Gösteriliyor ",
             "infoEmpty": "No records found",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
             "lengthMenu": "Show _MENU_",
