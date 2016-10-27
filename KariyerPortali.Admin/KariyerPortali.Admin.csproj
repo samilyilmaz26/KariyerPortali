@@ -5905,7 +5905,6 @@
     <Content Include="Scripts\pages\employer-index.js" />
     <Content Include="Scripts\pages\Employer-Index.js" />
     <Content Include="Scripts\pages\Candidate-Index.js" />
-    <Content Include="Scripts\pages\Media-Index.js" />
     <Content Include="Scripts\pages\resume-index.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
