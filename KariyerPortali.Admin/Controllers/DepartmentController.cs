@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace KariyerPortali.Admin.Controllers
 {
-    public class MediaController : Controller
+    public class DepartmentController : Controller
     {
-        // GET: Media
+        // GET: Department
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult Create()
         {
             return View();
         }
