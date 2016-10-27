@@ -10,12 +10,12 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "No data available in table",
+            "emptyTable": "Tabloda Sonuç Bulunamadı",
             "info": " _START_ - _END_ Arasındaki Toplam ' _TOTAL_ ' Kayıt Gösteriliyor ",
             "infoEmpty": "No records found",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
             "lengthMenu": "Göster _MENU_",
-            "search": "Search:",
+            "search": "Ara :",
             "zeroRecords": "Sonuç Bulunamadı",
             "paginate": {
                 "previous": "Prev",
