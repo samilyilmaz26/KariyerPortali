@@ -15,9 +15,16 @@ namespace KariyerPortali.Admin.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            System.Net.WebClient myWebClient;
+            myWebClient = new System.Net.WebClient();
 
-            return View();
+            Byte[] buffer;
+            buffer = myWebClient.DownloadData("http://connect.kliksoft.net/rh/?launcher=false&guestname=Murat%20Demirci");
+            string content;
+
+            content = System.Text.Encoding.UTF8.GetString(buffer);
+
+            return View(model:content);
         }
 
         public ActionResult Contact()
