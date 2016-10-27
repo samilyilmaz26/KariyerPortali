@@ -2,15 +2,35 @@
 @{
     ViewBag.Title = "Index";
 }
+
 <link href="/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
 <link href="/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="index.html">İşverenler</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>Tüm İşverenler</span>
+        </li>
+    </ul>
+    <div class="page-toolbar">
+        <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
+            <i class="icon-calendar"></i>&nbsp;
+            <span class="thin uppercase hidden-xs"></span>&nbsp;
+            <i class="fa fa-angle-down"></i>
+        </div>
+    </div>
+</div>
 <h2>Tüm İşverenler</h2>
+
 <!-- BEGIN EXAMPLE TABLE PORTLET-->
 <body>
     <div class="portlet light bordered">
         <div class="portlet-title">
             <div class="caption font-dark">
-                <i class="icon-settings font-dark"></i>
+                <i class="icon-user font-dark"></i>
                 <span class="caption-subject bold uppercase"> İşveren Tablosu</span>
             </div>
         </div>
