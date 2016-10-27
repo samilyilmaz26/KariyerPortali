@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#universitiesTable');
+    var table = $('#allCandidateTable');
     // begin first table
     table.dataTable({
 
@@ -15,7 +15,7 @@
             "infoEmpty": "No records found",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
             "lengthMenu": "Show _MENU_",
-            "search": "Search:",
+            "search": "Ara:",
             "zeroRecords": "No matching records found",
             "paginate": {
                 "previous": "Prev",
@@ -63,7 +63,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#universitiesTable_wrapper');
+    var tableWrapper = jQuery('#allCandidateTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
