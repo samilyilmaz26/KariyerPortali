@@ -10,7 +10,7 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "No data available in table",
+            "emptyTable": "Tabloda veri yok.",
             "info": "Showing _START_ to _END_ of _TOTAL_ records",
             "infoEmpty": "No records found",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
