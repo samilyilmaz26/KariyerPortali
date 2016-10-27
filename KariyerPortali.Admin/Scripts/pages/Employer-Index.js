@@ -11,12 +11,12 @@
                 "sortDescending": ": activate to sort column descending"
             },
             "emptyTable": "Tabloda veri yok.",
-            "info": "Showing _START_ to _END_ of _TOTAL_ records",
-            "infoEmpty": "No records found",
-            "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Show _MENU_",
-            "search": "Search:",
-            "zeroRecords": "No matching records found",
+            "info": " _START_ ile _END_ arasında toplam _TOTAL_ kayıt gösteriliyor.",
+            "infoEmpty": "Kayıt bulunamadı.",
+            "infoFiltered": "( _MAX_ adet kayıttan arananlar)",
+            "lengthMenu": "Göster _MENU_",
+            "search": "Ara:",
+            "zeroRecords": "Eşleşen kayıt bulunamadı.",
             "paginate": {
                 "previous": "Prev",
                 "next": "Next",
