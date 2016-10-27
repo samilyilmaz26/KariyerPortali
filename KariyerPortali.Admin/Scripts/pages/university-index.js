@@ -10,13 +10,13 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "No data available in table",
-            "info": " _START_ - _END_ of _TOTAL_ Arasındaki Kayıtlar Gösteriliyor ",
-            "infoEmpty": "No records found",
-            "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Show _MENU_",
-            "search": "Search:",
-            "zeroRecords": "No matching records found",
+            "emptyTable": "Tabloda Sonuç Bulunamadı",
+            "info": " _START_ - _END_ Arasındaki Toplam ' _TOTAL_ ' Kayıt Gösteriliyor ",
+            "infoEmpty": "Kayıt Bulunamadı",
+            "infoFiltered": "(_MAX_ Kayıt Arasından)",
+            "lengthMenu": "Göster _MENU_",
+            "search": "Ara :",
+            "zeroRecords": "Sonuç Bulunamadı",
             "paginate": {
                 "previous": "Prev",
                 "next": "Next",
@@ -39,7 +39,7 @@
 
         "lengthMenu": [
             [5, 15, 20, -1],
-            [5, 15, 20, "All"] // change per page values here
+            [5, 15, 20, "Tümü"] // change per page values here
         ],
         // set the initial value
         "pageLength": 5,
