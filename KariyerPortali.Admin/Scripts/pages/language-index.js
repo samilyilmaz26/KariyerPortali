@@ -14,7 +14,7 @@
             "info": "Gösterilen _START_ ile _END_ toplam _TOTAL_ kayıt",
             "infoEmpty": "Kayıt bulunamadı",
             "infoFiltered": "(Filitrenilen toplam _MAX_ kayıt)",
-            "lengthMenu": "Show _MENU_",
+            "lengthMenu": "Göster _MENU_",
             "search": "Arama:",
             "zeroRecords": "Eşleşen kayıt bulunmamaktadır",
             "paginate": {
@@ -39,7 +39,7 @@
 
         "lengthMenu": [
             [5, 15, 20, -1],
-            [5, 15, 20, "All"] // change per page values here
+            [5, 15, 20, "Hepsi"] // change per page values here
         ],
         // set the initial value
         "pageLength": 5,
