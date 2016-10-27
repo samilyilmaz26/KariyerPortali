@@ -14,9 +14,9 @@
             "info": " _START_ - _END_ Arasındaki Toplam ' _TOTAL_ ' Kayıt Gösteriliyor ",
             "infoEmpty": "No records found",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Show _MENU_",
+            "lengthMenu": "Göster _MENU_",
             "search": "Search:",
-            "zeroRecords": "No matching records found",
+            "zeroRecords": "Sonuç Bulunamadı",
             "paginate": {
                 "previous": "Prev",
                 "next": "Next",
