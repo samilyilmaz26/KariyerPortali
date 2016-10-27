@@ -13,8 +13,8 @@
             "emptyTable": "Tabloda Sonuç Bulunamadı",
             "info": " _START_ - _END_ Arasındaki Toplam ' _TOTAL_ ' Kayıt Gösteriliyor ",
             "infoEmpty": "Kayıt Bulunamadı",
-            "infoFiltered": "(_MAX_ Kayıt Arasından)",
-            "lengthMenu": "Göster _MENU_",
+            "infoFiltered": "(Toplam _MAX_ Kayıt Arasından)",
+            "lengthMenu": "Göster : _MENU_",
             "search": "Ara :",
             "zeroRecords": "Sonuç Bulunamadı",
             "paginate": {
