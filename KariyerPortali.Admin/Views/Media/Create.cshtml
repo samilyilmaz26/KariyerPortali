@@ -49,36 +49,34 @@ License: You must have a valid license purchased only from themeforest(the above
 </head>
 <!-- END HEAD -->
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="/Home/Index">Başlangıç</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Giriş</span>
+            </li>
+        </ul>
+        <div class="page-toolbar">
+            <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
+                <i class="icon-calendar"></i>&nbsp;
+                <span class="thin uppercase hidden-xs"></span>&nbsp;
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </div>
+    </div>
     <div class="row">
-        <div class="col-md-6 ">
+        <div class="col-md-12 ">
             <!-- BEGIN SAMPLE FORM PORTLET-->
             <div class="portlet light bordered">
                 <div class="portlet-title">
-                    <div class="caption font-red-sunglo">
-                        <i class="icon-settings font-red-sunglo"></i>
+                    <div class="caption block">
+                        <i class="icon-settings block"></i>
                         <span class="caption-subject bold uppercase"> Yeni Dosya Ekleme</span>
                     </div>
-                    <div class="actions">
-                        <div class="btn-group">
-                            <a class="btn btn-sm green dropdown-toggle" href="javascript:;" data-toggle="dropdown">
-                                Actions
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="fa fa-pencil"></i> Düzenle
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="fa fa-trash-o"></i> Sil
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="portlet-body form">
                     <form role="form">
@@ -92,27 +90,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                     
                                 </div>
                             </div>
+                            
                             <div class="form-group">
-                                <label>Dosya Tarihi</label>
-                                <div class="input-group">
-                                    <input type="date" class="form-control" placeholder="Time">
-
-                                </div>
-                            </div>
-
-                           
-                            <div class="form-group">
-                                <label>Uzantısı</label>
-                                <select class="form-control">
-                                    <option>.txt</option>
-                                    <option>.jpg</option>
-                                    <option>.doc</option>
-                                    <option>.dot</option>
-                                </select>
+                                <label>Açıklama</label>
+                                <textarea class="form-control" rows="3"></textarea>
                             </div>
                             
                             <div class="form-group">
-                                <label for="exampleInputFile1">File input</label>
+                                <label for="exampleInputFile1">Dosya Girişi</label>
                                 <input type="file" id="exampleInputFile1">
                                 
                             </div>
