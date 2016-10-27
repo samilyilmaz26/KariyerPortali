@@ -11,11 +11,11 @@
                 "sortDescending": ": activate to sort column descending"
             },
             "emptyTable": "No data available in table",
-            "info": "Showing _START_ to _END_ of _TOTAL_ records",
+            "info": " _START_ Sayfadaki _END_ Kayıttan _TOTAL_ 'si Gösteriliyor.",
             "infoEmpty": "No records found",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Show _MENU_",
-            "search": "Search:",
+            "lengthMenu": "Sayfa başına _MENU_ kayıt göster",
+            "search": "Ara:",
             "zeroRecords": "No matching records found",
             "paginate": {
                 "previous": "Prev",
