@@ -23,7 +23,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>Metronic Admin Theme #1 | Bootstrap Form Controls</title>
+    <title>@ViewBag.Title-Kariyer Portalı</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Preview page of Metronic Admin Theme #1 for bootstrap inputs, input groups, custom checkboxes and radio controls and more" name="description" />
@@ -55,23 +55,23 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="portlet-title">
                     <div class="caption font-red-sunglo">
                         <i class="icon-settings font-red-sunglo"></i>
-                        <span class="caption-subject bold uppercase"> Default Form</span>
+                        <span class="caption-subject bold uppercase"> Yeni İş İlanı</span>
                     </div>
                     <div class="actions">
                         <div class="btn-group">
                             <a class="btn btn-sm green dropdown-toggle" href="javascript:;" data-toggle="dropdown">
-                                Actions
+                                Düzenleme
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu pull-right">
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="fa fa-pencil"></i> Edit
+                                        <i class="fa fa-pencil"></i> Düzenle
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="fa fa-trash-o"></i> Delete
+                                        <i class="fa fa-trash-o"></i> Sil
                                     </a>
                                 </li>
                                 <li>
@@ -90,16 +90,16 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="portlet-body form">
                     <form role="form">
                         <div class="form-body">
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <div class="input-group">
+                          <!--   <div class="form-group">
+                                <label>E-Mail Address</label>
+                               <div class="input-group">
                                     <span class="input-group-addon">
                                         <i class="fa fa-envelope"></i>
                                     </span>
                                     <input type="text" class="form-control" placeholder="Email Address">
                                 </div>
                             </div>
-                            <div class="form-group">
+                           <div class="form-group">
                                 <label>Circle Input</label>
                                 <div class="input-group">
                                     <span class="input-group-addon input-circle-left">
@@ -108,6 +108,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <input type="text" class="form-control input-circle-right" placeholder="Email Address">
                                 </div>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
                                 <div class="input-group">
@@ -175,11 +176,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <i class="fa fa-exclamation tooltips" data-original-title="Invalid email." data-container="body"></i>
                                     <input id="email" class="input-error form-control" type="text" value="">
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="form-group">
-                                <label>Input With Spinner</label>
-                                <input class="form-control spinner" type="text" placeholder="Process something" />
+                                <label>Şirket Adı</label>
+                                <input class="form-control spinner" type="text" placeholder="Kurum Adınız" />
                             </div>
+                            <!--
                             <div class="form-group">
                                 <label>Static Control</label>
                                 <p class="form-control-static"> email@example.com </p>
@@ -191,18 +193,48 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group">
                                 <label>Readonly</label>
                                 <input type="text" class="form-control" placeholder="Readonly" readonly>
-                            </div>
+                            </div>-->
                             <div class="form-group">
-                                <label>Dropdown</label>
+                                <label>Firma Sektörü</label>
                                 <select class="form-control">
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
-                                    <option>Option 5</option>
+                                    <option>Bilişim</option>
+                                    <option>Eğitim</option>
+                                    <option>Sağlık</option>
+                                    <option>Logistik</option>
+                                    <option>Kamu</option>
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label>Çalışma Şekli</label>
+                                <select class="form-control">
+                                    <option>Hafta İçi 08:00-18:00</option>
+                                    <option>Hafta İçi 09:00-19:00</option>
+                                    <option>Hafta İçi+Cumartesi 08:00-18:00</option>
+                                    <option>Hafta İçi+Cumartesi 09:00-19:00</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Sosyal/Yan Haklar</label>
+                                <div class="mt-checkbox-list">
+                                    <label class="mt-checkbox">
+                                        Yemek
+                                        <input type="checkbox" value="1" name="test" />
+                                        <span></span>
+                                    </label>
+                                    <label class="mt-checkbox">
+                                        Servis
+                                        <input type="checkbox" value="1" name="test" />
+                                        <span></span>
+                                    </label>
+                                    <label class="mt-checkbox">
+                                        Sigorta
+                                        <input type="checkbox" value="1" name="test" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
                                 <label>Multiple Select</label>
                                 <select multiple class="form-control">
                                     <option>Option 1</option>
@@ -211,36 +243,127 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <option>Option 4</option>
                                     <option>Option 5</option>
                                 </select>
-                            </div>
+                            </div>-->
+                           
                             <div class="form-group">
-                                <label>Textarea</label>
+                                <label>İş Tanımı</label>
                                 <textarea class="form-control" rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputFile1">File input</label>
-                                <input type="file" id="exampleInputFile1">
-                                <p class="help-block"> some help text here. </p>
+                                <label>Aranan Nitelikler</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                            <label>Firma Lokasyonu</label>
+                            <div class="form-actions"></div>
+                            <div class="form-group">
+                                <label>Ülke</label>
+                                <select class="form-control">
+                                    <option>Türkiye</option>
+                                    <option>İngiltere</option>
+                                    <option>Fransa</option>
+                                    <option>Amerika</option>
+                                    <option>Kanada</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label>Checkboxes</label>
-                                <div class="mt-checkbox-list">
-                                    <label class="mt-checkbox">
-                                        Checkbox 1
-                                        <input type="checkbox" value="1" name="test" />
+                                <label>Şehir</label>
+                                <select class="form-control">
+                                    <option>İstanbul/Avr</option>
+                                    <option>İstanbul/Asya</option>
+                                    <option>Ankara</option>
+                                    <option>İzmir</option>
+                                    <option>Gaziantep</option>
+                                    <option>Antalya</option>
+                                </select>
+                            </div>
+                            <label>Aranan Kriterler</label>
+                            <div class="form-actions"></div>
+                            <div class="form-group">
+                                <label>Tecrübe</label>
+                                <input class="form-control spinner" type="text" placeholder="Aranan Personel Tecrübe Seviyesi" />
+                            </div>
+                            <div class="form-group">
+                                <label>Askerlik Durumu</label>
+                                <div class="mt-radio-list">
+                                    <label class="mt-radio">
+                                        Yapıldı
+                                        <input type="radio" value="1" name="test" />
                                         <span></span>
                                     </label>
-                                    <label class="mt-checkbox">
-                                        Checkbox 2
-                                        <input type="checkbox" value="1" name="test" />
+                                    <label class="mt-radio">
+                                        Yapılmadı
+                                        <input type="radio" value="1" name="test" />
                                         <span></span>
                                     </label>
-                                    <label class="mt-checkbox">
-                                        Checkbox 3
-                                        <input type="checkbox" value="1" name="test" />
+                                    <label class="mt-radio">
+                                        Tecilli
+                                        <input type="radio" value="1" name="test" />
                                         <span></span>
                                     </label>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label>Eğitim Seviyesi</label>
+                                <input class="form-control spinner" type="text" placeholder="Aranan Personel Eğitim Seviyesi" />
+                            </div>
+                            <label>Pozisyon Bilgileri</label>
+                            <div class="form-actions"></div>
+                            <div class="form-group">
+                                <label>Departman</label>
+                                <select class="form-control">
+                                    <option>Bilişim</option>
+                                    <option>İnsan Kaynakları</option>
+                                    <option>Temizlik</option>
+                                    <option>Logistik</option>
+                                    <option>Asistan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Çalışma Şekli</label>
+                                <div class="mt-radio-list">
+                                    <label class="mt-radio">
+                                       Sürekli/Tam Zamanlı
+                                        <input type="radio" value="1" name="test" />
+                                        <span></span>
+                                    </label>
+                                    <label class="mt-radio">
+                                        Part Time/Yarı Zamanlı
+                                        <input type="radio" value="1" name="test" />
+                                        <span></span>
+                                    </label>
+                                    
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Pozisyon Seviyesi</label>
+                                <div class="mt-radio-list">
+                                    <label class="mt-radio">
+                                      Uzman
+                                        <input type="radio" value="1" name="test" />
+                                        <span></span>
+                                    </label>
+                                    <label class="mt-radio">
+                                      Junior
+                                        <input type="radio" value="1" name="test" />
+                                        <span></span>
+                                    </label>
+                                    <label class="mt-radio">
+                                       Yeni Mezun
+                                        <input type="radio" value="1" name="test" />
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Personel Sayısı</label>
+                                <input class="form-control spinner" type="text" placeholder="Aranan Personel Sayısı" />
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="exampleInputFile1">File input</label>
+                                <input type="file" id="exampleInputFile1">
+                                <p class="help-block"> some help text here. </p>
+                            </div>
+                         
                             <div class="form-group">
                                 <label>Outline Checkboxes</label>
                                 <div class="mt-checkbox-list">
@@ -335,7 +458,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+                           
                         <div class="form-actions">
                             <button type="submit" class="btn blue">Submit</button>
                             <button type="button" class="btn default">Cancel</button>
