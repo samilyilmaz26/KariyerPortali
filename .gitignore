@@ -5,6 +5,8 @@
 *.suo
 *.user
 *.sln.docstates
+/KariyerPortali.Admin/bin/
+/KariyerPortali.Admin/obj/
 
 # Build results
 [Dd]ebug/
