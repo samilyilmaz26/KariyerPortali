@@ -173,6 +173,7 @@
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Controllers\UniversityController.cs" />
@@ -5971,6 +5972,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="assets\apps\img\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
+    <Folder Include="Views\Pages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
