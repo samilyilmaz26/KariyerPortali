@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#allDepartmentTable');
+    var table = $('#allPostTable');
     // begin first table
     table.dataTable({
 
@@ -11,17 +11,17 @@
                 "sortDescending": ": activate to sort column descending"
             },
             "emptyTable": "No data available in table",
-            "info": "Showing _START_ to _END_ of _TOTAL_ records",
-            "infoEmpty": "No records found",
+            "info": "_TOTAL_ Kaydın _START_ ile _END_ Arası Gösteriliyor",
+            "infoEmpty": "Herhangi bir kayıt bulunamadı.",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Show _MENU_",
-            "search": "Search:",
-            "zeroRecords": "No matching records found",
+            "lengthMenu": "Göster _MENU_",
+            "search": "Ara:",
+            "zeroRecords": "Eşleşen bir sonuç bulunamadı.",
             "paginate": {
-                "previous": "Prev",
-                "next": "Next",
-                "last": "Last",
-                "first": "First"
+                "previous": "Önceki",
+                "next": "Sonraki",
+                "last": "Son Sayfa",
+                "first": "İlk Sayfa"
             }
         },
 
@@ -63,7 +63,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allApplicationsTable_wrapper');
+    var tableWrapper = jQuery('#allPostTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
