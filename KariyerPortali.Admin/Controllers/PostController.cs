@@ -6,17 +6,12 @@ using System.Web.Mvc;
 
 namespace KariyerPortali.Admin.Controllers
 {
-    public class ApplicationsController : Controller
+    public class PostController : Controller
     {
-        // GET: Applications
+        // GET: Post
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Applicationss()
-        {
-            return View();
-        }
-
     }
 }
