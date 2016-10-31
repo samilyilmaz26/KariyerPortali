@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#allMediaTable');
+    var table = $('#pagesTable');
     // begin first table
     table.dataTable({
 
@@ -10,18 +10,18 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "Tabloda uygun veri yok",
-            "info": "_TOTAL_ kaydın _START_ ile _END_ arası gösteriliyor",
-            "infoEmpty": "Kayıt bulunamadı",
-            "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Sayfa başına _MENU_ kayıt göster",
-            "search": "Ara:",
-            "zeroRecords": "Arama kriterinizle eşleşen kayıt yok",
+            "emptyTable": "Tabloda Sonuç Bulunamadı",
+            "info": " _START_ - _END_ Arasındaki Toplam ' _TOTAL_ ' Kayıt Gösteriliyor ",
+            "infoEmpty": "Kayıt Bulunamadı",
+            "infoFiltered": "(Toplam _MAX_ Kayıt Arasından)",
+            "lengthMenu": "Göster : _MENU_",
+            "search": "Ara :",
+            "zeroRecords": "Sonuç Bulunamadı",
             "paginate": {
-                "previous": "Önceki",
-                "next": "Sonraki",
-                "last": "Son",
-                "first": "İlk"
+                "previous": "Prev",
+                "next": "Next",
+                "last": "Last",
+                "first": "First"
             }
         },
 
@@ -39,7 +39,7 @@
 
         "lengthMenu": [
             [5, 15, 20, -1],
-            [5, 15, 20, "All"] // change per page values here
+            [5, 15, 20, "Tümü"] // change per page values here
         ],
         // set the initial value
         "pageLength": 5,
@@ -63,7 +63,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allMediaTable_wrapper');
+    var tableWrapper = jQuery('#pagesTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
