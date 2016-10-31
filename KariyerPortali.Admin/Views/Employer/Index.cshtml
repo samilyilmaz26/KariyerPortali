@@ -5,44 +5,46 @@
 
 <link href="/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
 <link href="/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
-<div class="page-bar">
-    <ul class="page-breadcrumb">
-        <li>
-            <a href="index.html">İşverenler</a>
-            <i class="fa fa-circle"></i>
-        </li>
-        <li>
-            <span>Tüm İşverenler</span>
-        </li>
-    </ul>
-    <div class="page-toolbar">
-        <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
-            <i class="icon-calendar"></i>&nbsp;
-            <span class="thin uppercase hidden-xs"></span>&nbsp;
-            <i class="fa fa-angle-down"></i>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+    <br />
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="/Employer">İşverenler</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Tüm İşverenler</span>
+            </li>
+        </ul>
+        <div class="page-toolbar">
+            <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
+                <i class="icon-calendar"></i>&nbsp;
+                <span class="thin uppercase hidden-xs"></span>&nbsp;
+                <i class="fa fa-angle-down"></i>
+            </div>
         </div>
     </div>
-</div>
-<h2>Tüm İşverenler</h2>
+    <br />
 
-<!-- BEGIN EXAMPLE TABLE PORTLET-->
-<body>
+    <!-- BEGIN EXAMPLE TABLE PORTLET-->
+
     <div class="portlet light bordered">
         <div class="portlet-title">
-            <div class="caption font-dark">
-                <i class="icon-user font-dark"></i>
-                <span class="caption-subject bold uppercase"> İşveren Tablosu</span>
-            </div>
+            <h1 class="page-title">
+
+                İşveren Tablosu
+            </h1>
         </div>
         <div class="portlet-body">
             <div class="table-toolbar">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="btn-group">
-                            <button id="allEmployers_editable_1_new" class="btn sbold green">
+                            <a href="/Employer/Create" id="allEmployers_editable_1_new" class="btn sbold green">
                                 Yeni Ekle
                                 <i class="fa fa-plus"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-6">

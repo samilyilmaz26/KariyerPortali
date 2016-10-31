@@ -14,7 +14,7 @@
             "info": " _START_ ile _END_ arasında toplam _TOTAL_ kayıt gösteriliyor.",
             "infoEmpty": "Kayıt bulunamadı.",
             "infoFiltered": "( _MAX_ adet kayıttan arananlar)",
-            "lengthMenu": "Göster _MENU_",
+            "lengthMenu": "Göster _MENU_ ",
             "search": "Ara:",
             "zeroRecords": "Eşleşen kayıt bulunamadı.",
             "paginate": {
