@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#allDepartmentTable');
+    var table = $('#pagesTable');
     // begin first table
     table.dataTable({
 
@@ -10,13 +10,13 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "No data available in table",
-            "info": "Showing _START_ to _END_ of _TOTAL_ records",
-            "infoEmpty": "No records found",
-            "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Show _MENU_",
-            "search": "Search:",
-            "zeroRecords": "No matching records found",
+            "emptyTable": "Tabloda Sonuç Bulunamadı",
+            "info": " _START_ - _END_ Arasındaki Toplam ' _TOTAL_ ' Kayıt Gösteriliyor ",
+            "infoEmpty": "Kayıt Bulunamadı",
+            "infoFiltered": "(Toplam _MAX_ Kayıt Arasından)",
+            "lengthMenu": "Göster : _MENU_",
+            "search": "Ara :",
+            "zeroRecords": "Sonuç Bulunamadı",
             "paginate": {
                 "previous": "Prev",
                 "next": "Next",
@@ -39,7 +39,7 @@
 
         "lengthMenu": [
             [5, 15, 20, -1],
-            [5, 15, 20, "All"] // change per page values here
+            [5, 15, 20, "Tümü"] // change per page values here
         ],
         // set the initial value
         "pageLength": 5,
@@ -63,7 +63,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allApplicationsTable_wrapper');
+    var tableWrapper = jQuery('#pagesTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
