@@ -11,17 +11,17 @@
                 "sortDescending": ": activate to sort column descending"
             },
             "emptyTable": "No data available in table",
-            "info": "Gösterilen _TOTAL_ sayfada _END_ kayıt var.",
+            "info": "_TOTAL_ Kaydın _START_ ile _END_ Arası Gösteriliyor",
             "infoEmpty": "Herhangi bir kayıt bulunamadı.",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
             "lengthMenu": "Göster _MENU_",
             "search": "Ara:",
             "zeroRecords": "Eşleşen bir sonuç bulunamadı.",
             "paginate": {
-                "previous": "Prev",
-                "next": "Next",
-                "last": "Son",
-                "first": "İlk"
+                "previous": "Önceki",
+                "next": "Sonraki",
+                "last": "Son Sayfa",
+                "first": "İlk Sayfa"
             }
         },
 
