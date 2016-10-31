@@ -7,6 +7,7 @@
 *.sln.docstates
 /KariyerPortali.Admin/bin/
 /KariyerPortali.Admin/obj/
+/KariyerPortali.Admin/.vs/
 
 # Build results
 [Dd]ebug/
