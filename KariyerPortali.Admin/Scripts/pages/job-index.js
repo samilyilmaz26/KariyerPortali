@@ -16,7 +16,7 @@
             "infoFiltered": "(filtered1 from _MAX_ total records)",
             "lengthMenu": "Sayfa başına _MENU_ kayıt göster",
             "search": "Ara:",
-            "zeroRecords": "No matching records found",
+            "zeroRecords": "Sonuç Bulunamadı.",
             "paginate": {
                 "previous": "Prev",
                 "next": "Next",
