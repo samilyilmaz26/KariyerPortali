@@ -46,6 +46,7 @@
     <Compile Include="Models\Cv.cs" />
     <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobApplication.cs" />
     <Compile Include="Models\Sector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
