@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployerController.cs" />
+    <Compile Include="Controllers\ExpertiseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
@@ -5911,6 +5912,7 @@
     <Content Include="Scripts\pages\Country-Index.js" />
     <Content Include="Scripts\pages\department-index.js" />
     <Content Include="Scripts\pages\employer-index.js" />
+    <Content Include="Scripts\pages\expertise-index.js" />
     <Content Include="Scripts\pages\job-index.js" />
     <Content Include="Scripts\pages\language-index.js" />
     <Content Include="Scripts\pages\Media-Index.js" />
@@ -5988,6 +5990,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="assets\apps\img\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
+    <Folder Include="Views\Expertise\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
