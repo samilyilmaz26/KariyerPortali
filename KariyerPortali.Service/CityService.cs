@@ -31,7 +31,7 @@ namespace KariyerPortali.Service
             var cities = cityRepository.GetAll();
             return cities;
         }
-        public City GetCities(int id)
+        public City GetCity(int id)
         {
             var city = cityRepository.GetById(id);
             return city;
