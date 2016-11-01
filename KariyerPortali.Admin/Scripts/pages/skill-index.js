@@ -1,22 +1,22 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#sample_1');
+    var table = $('#allSkillsTable');
     // begin first table
     table.dataTable({
 
         // Internationalisation. For more info refer to http://datatables.net/manual/i18n
         "language": {
             "aria": {
-                "sortAscending": ": A'dan Z'ye sıralamayı etkinleştir.",
-                "sortDescending": ": Z'den A'ya sıralamayı etkinleştir."
+                "sortAscending": ": activate to sort column ascending",
+                "sortDescending": ": activate to sort column descending"
             },
             "emptyTable": "Tabloda veri yok.",
-            "info": " _START_ Sayfadaki _END_ Kayıttan _TOTAL_ 'si Gösteriliyor.",
+            "info": " _START_ ile _END_ arasında toplam _TOTAL_ kayıt gösteriliyor.",
             "infoEmpty": "Kayıt bulunamadı.",
-            "infoFiltered": "( _MAX_ sonuçtan filtrelendi.)",
-            "lengthMenu": "Sayfa başına _MENU_ kayıt göster",
+            "infoFiltered": "( _MAX_ adet kayıttan arananlar)",
+            "lengthMenu": "Göster _MENU_ ",
             "search": "Ara:",
-            "zeroRecords": "Sonuç Bulunamadı.",
+            "zeroRecords": "Eşleşen kayıt bulunamadı.",
             "paginate": {
                 "previous": "Prev",
                 "next": "Next",
@@ -63,7 +63,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#sample_1_wrapper');
+    var tableWrapper = jQuery('#allSkillsTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");

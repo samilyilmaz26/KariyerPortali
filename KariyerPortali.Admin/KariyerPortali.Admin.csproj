@@ -170,6 +170,7 @@
     <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployerController.cs" />
+    <Compile Include="Controllers\ExpertiseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
@@ -178,6 +179,7 @@
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ResumeController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\UniversityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -5914,6 +5916,7 @@
     <Content Include="Scripts\pages\pages-index.js" />
     <Content Include="Scripts\pages\post-index.js" />
     <Content Include="Scripts\pages\resume-index.js" />
+    <Content Include="Scripts\pages\skill-index.js" />
     <Content Include="Scripts\pages\university-index.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -5975,6 +5978,9 @@
     <Content Include="Views\Applications\Applicationss.cshtml" />
     <Content Include="Views\City\Create.cshtml" />
     <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
+    <Content Include="Views\Expertise\Index.cshtml" />
+    <Content Include="Views\Expertise\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
