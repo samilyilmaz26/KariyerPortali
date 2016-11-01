@@ -5,12 +5,7 @@ namespace KariyerPortali.Model
 {
    
 
-    public class SocialRight
-    {
-        string Food;
-        string Service;
-        string Insurance;
-    }
+  
 
     public class Job
     {

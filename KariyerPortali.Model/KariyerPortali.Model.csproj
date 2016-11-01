@@ -50,6 +50,7 @@
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobApplication.cs" />
     <Compile Include="Models\Sector.cs" />
+    <Compile Include="Models\SocialRight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
