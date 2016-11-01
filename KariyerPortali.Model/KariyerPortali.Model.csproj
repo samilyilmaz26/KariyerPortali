@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Candidate.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\Cv.cs" />
     <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\Sector.cs" />

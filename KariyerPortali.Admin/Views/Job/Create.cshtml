@@ -2,294 +2,148 @@
     ViewBag.Title = "Create";
 }
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
-Version: 4.7.1
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
-<head>
-    <meta charset="utf-8" />
-    <title>@ViewBag.Title-Kariyer Portalı</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Preview page of Metronic Admin Theme #1 for bootstrap inputs, input groups, custom checkboxes and radio controls and more" name="description" />
-    <meta content="" name="author" />
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
-    <link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
-    <!-- END THEME GLOBAL STYLES -->
-    <!-- BEGIN THEME LAYOUT STYLES -->
-    <link href="../assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
-    <link href="../assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
-    <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="favicon.ico" />
-</head>
-<!-- END HEAD -->
-<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
-    <br />
-    <div class="page-bar">
-        <ul class="page-breadcrumb">
-            <li>
-                <a href="/Job">İş İlanları</a>
-                <i class="fa fa-circle"></i>
-            </li>
-            <li>
-                <span>Yeni İş İlanı</span>
-            </li>
-        </ul>
-        <div class="page-toolbar">
+<meta charset="utf-8" />
+<title>@ViewBag.Title-Kariyer Portalı</title>
+<br />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="/Job">İş İlanları</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>Yeni İş İlanı</span>
+        </li>
+    </ul>
+    <div class="page-toolbar">
 
-        </div>
     </div>
-    <br />
-    <form role="form">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="portlet light bordered">
-                    <div class="portlet-title">
-                        <div class="caption font-dark">
-                            <i class="icon-settings font-dark"></i>
-                            <span class="caption-subject bold uppercase"> Yeni İş İlanı</span>
-                        </div>
-                        <div class="actions">
+</div>
+<br />
+<form role="form">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <i class="icon-settings font-dark"></i>
+                        <span class="caption-subject bold uppercase"> Yeni İş İlanı</span>
+                    </div>
+                    <div class="actions">
 
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6 ">
+                        <!-- BEGIN SAMPLE FORM PORTLET-->
+                        <div class="portlet light bordered">
+
+                            <!--İLAN VERİLİŞ TARİHİ O AN ALINACAK-->
+
+
+
+                            <div class="portlet-body form">
+
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label>Firma Adı</label>
+                                        <select class="form-control">
+                                            <option>ad1</option>
+                                            <option>ad2</option>
+                                            <option>ad3</option>
+                                            <option>ad4</option>
+                                            <option>ad5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Lokasyon</label>
+                                        <select class="form-control">
+                                            <option>İstanbul/Avr</option>
+                                            <option>İstanbul/Asya</option>
+                                            <option>Ankara</option>
+                                            <option>İzmir</option>
+                                            <option>Gaziantep</option>
+                                            <option>Antalya</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Çalışma Şekli</label>
+                                        <select class="form-control">
+                                            <option>Tam Zamanlı / Full Time</option>
+                                            <option>Yarı Zamanlı / Part Time</option>
+                                            <option>Stajer</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Alan</label> @*Experiance*@
+                                        <select class="form-control">
+                                            <option>Yazılım</option>
+                                            <option>Donanım</option>
+                                            <option>Network</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Sosyal / Yan Haklar</label>
+                                        <div class="mt-checkbox-list">
+                                            <label class="mt-checkbox">
+                                                Yemek
+                                                <input type="checkbox" value="1" name="test" />
+                                                <span></span>
+                                            </label>
+                                            <label class="mt-checkbox">
+                                                Servis
+                                                <input type="checkbox" value="1" name="test" />
+                                                <span></span>
+                                            </label>
+                                            <label class="mt-checkbox">
+                                                Sigorta
+                                                <input type="checkbox" value="1" name="test" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- END SAMPLE FORM PORTLET-->
+                            <!-- BEGIN SAMPLE FORM PORTLET-->
                         </div>
                     </div>
-                    <div class="row">
 
-                        <div class="col-md-6 ">
-                            <!-- BEGIN SAMPLE FORM PORTLET-->
-                            <div class="portlet light bordered">
+                    <div class="col-md-6 ">
+                        <!-- BEGIN SAMPLE FORM PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-body form">
 
-                                <!--İLAN VERİLİŞ TARİHİ O AN ALINACAK-->
+                                <div class="form-body">
 
+                                    <div class="form-group">
+                                        <label>İş Tanımı</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Aranan Sorumluluklar</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Aranan Nitelikler</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
 
-
-                                <div class="portlet-body form">
-
-                                    <div class="form-body">
-
-                                        <div class="form-group">
-                                            <label>Şirket Adı</label>
-                                            <input class="form-control spinner" type="text" placeholder="Kurum Adınız" />
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Firma Sektörü</label>
-                                            <select class="form-control">
-                                                <option>Bilişim</option>
-                                                <option>Eğitim</option>
-                                                <option>Sağlık</option>
-                                                <option>Logistik</option>
-                                                <option>Kamu</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Çalışma Zamanı</label>
-                                            <select class="form-control">
-                                                <option>Hafta İçi 08:00-18:00</option>
-                                                <option>Hafta İçi 09:00-19:00</option>
-                                                <option>Hafta İçi+Cumartesi 08:00-18:00</option>
-                                                <option>Hafta İçi+Cumartesi 09:00-19:00</option>
-
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Sosyal / Yan Haklar</label>
-                                            <div class="mt-checkbox-list">
-                                                <label class="mt-checkbox">
-                                                    Yemek
-                                                    <input type="checkbox" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-checkbox">
-                                                    Servis
-                                                    <input type="checkbox" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-checkbox">
-                                                    Sigorta
-                                                    <input type="checkbox" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="form-group">
-                                            <label>İş Tanımı</label>
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Aranan Nitelikler</label>
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-
-                                        <label>Firma Lokasyonu</label>
-                                        <div class="form-actions"></div>
-                                        <div class="form-group">
-                                            <label>Ülke</label>
-                                            <select class="form-control">
-                                                <option>Türkiye</option>
-                                                <option>İngiltere</option>
-                                                <option>Fransa</option>
-                                                <option>Amerika</option>
-                                                <option>Kanada</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Şehir</label>
-                                            <select class="form-control">
-                                                <option>İstanbul/Avr</option>
-                                                <option>İstanbul/Asya</option>
-                                                <option>Ankara</option>
-                                                <option>İzmir</option>
-                                                <option>Gaziantep</option>
-                                                <option>Antalya</option>
-                                            </select>
-                                        </div>
-
-
-
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn blue">Gönder</button>
+                                        <button type="button" class="btn default">Çıkış</button>
                                     </div>
                                 </div>
-
-
-                                <!-- END SAMPLE FORM PORTLET-->
-                                <!-- BEGIN SAMPLE FORM PORTLET-->
                             </div>
-                        </div>
 
-                        <div class="col-md-6 ">
-                            <!-- BEGIN SAMPLE FORM PORTLET-->
-                            <div class="portlet light bordered">
-                                <div class="portlet-body form">
-
-                                    <div class="form-body">
-                                        <label>Aranan Kriterler</label>
-                                        <div class="form-actions"></div>
-                                        <div class="form-group">
-                                            <label>Tecrübe</label>
-                                            <input class="form-control spinner" type="text" placeholder="Aranan Personel Tecrübe Seviyesi" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Askerlik Durumu</label>
-                                            <div class="mt-radio-list">
-                                                <label class="mt-radio">
-                                                    Yapıldı
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    Yapılmadı
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    Tecilli
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                   Muaf
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Eğitim Seviyesi</label>
-                                            <input class="form-control spinner" type="text" placeholder="Aranan Personel Eğitim Seviyesi" />
-                                        </div>
-                                        <label>Pozisyon Bilgileri</label>
-                                        <div class="form-actions"></div>
-                                        <div class="form-group">
-                                            <label>Departman</label>
-                                            <select class="form-control">
-                                                <option>Bilişim</option>
-                                                <option>İnsan Kaynakları</option>
-                                                <option>Temizlik</option>
-                                                <option>Logistik</option>
-                                                <option>Asistan</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Çalışma Şekli</label>
-                                            <div class="mt-radio-list">
-                                                <label class="mt-radio">
-                                                    Sürekli / Tam Zamanlı
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    Part Time / Yarı Zamanlı
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Pozisyon Seviyesi</label>
-                                            <div class="mt-radio-list">
-                                                <label class="mt-radio">
-                                                    Uzman
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    Junior
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    Yeni Mezun
-                                                    <input type="radio" value="1" name="test" />
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Personel Sayısı</label>
-                                            <input class="form-control spinner" type="text" placeholder="Aranan Personel Sayısı" />
-                                        </div>
-
-
-                                        <div class="form-actions">
-                                            <button type="submit" class="btn blue">Gönder</button>
-                                            <button type="button" class="btn default">Çıkış</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
-</body>
-</html>
+    </div>
+</form>
+
