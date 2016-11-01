@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace KariyerPortali.Admin.Controllers
 {
-    public class DepartmentController : Controller
+    public class CountryController : Controller
     {
-        // GET: Department
+        // GET: Country
         public ActionResult Index()
         {
             return View();
