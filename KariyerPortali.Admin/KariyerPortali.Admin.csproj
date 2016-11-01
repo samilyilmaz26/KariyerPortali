@@ -5990,6 +5990,7 @@
     <Content Include="Views\Skill\Create.cshtml" />
     <Content Include="Views\Expertise\Index.cshtml" />
     <Content Include="Views\Expertise\Create.cshtml" />
+    <Content Include="Views\Page\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
