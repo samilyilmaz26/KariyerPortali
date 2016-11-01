@@ -346,13 +346,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <span class="title">Tüm Adaylar</span>
                                     </a>
                                 </li>
-                                @* Create Edit olarak değiştirildi bağlantı, Tüm adaylar içerisinden verildi
+                               
                                     <li class="nav-item  ">
-                                        <a href="@Url.Action("Create","Candidate")" class="nav-link ">
+                                        <a href="@Url.Action("Edit","Candidate")" class="nav-link ">
                                             <span class="title">Yeni Aday</span>
                                         </a>
                                     </li>
-                                *@
+                                
                             </ul>
                         </li>
                         <li class="nav-item  ">
@@ -478,13 +478,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="ui_bootstrap_growl.html" class="nav-link ">
+                                    <a href="@Url.Action("Index","Expertise")" class="nav-link ">
                                         <span class="title">Uzmanlıklar</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
                                     <a href="@Url.Action("Index","Skill")" class="nav-link ">
                                         <span class="title">Yetenekler</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="@Url.Action("Index","Exam")" class="nav-link ">
+                                        <span class="title">Sınavlar</span>
                                     </a>
                                 </li>
                             </ul>
@@ -497,7 +502,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="ui_toastr.html" class="nav-link ">
+                                    <a href="@Url.Action("Index", "Settings")" class="nav-link ">
                                         <span class="title">Genel Ayarlar</span>
                                     </a>
                                 </li>
