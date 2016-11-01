@@ -15,7 +15,7 @@ namespace KariyerPortali.Admin.Controllers
         }
         public ActionResult MyProfile()
         {
-
+            return View();
         }
     }
 }
