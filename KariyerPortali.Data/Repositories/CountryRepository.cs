@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Repositories
 {
-    public class CandidateRepository : RepositoryBase<Candidate>, ICandidateRepository
+    public class CountryRepository : RepositoryBase<Country>, ICountryRepository
     {
-        public CandidateRepository(IDbFactory dbFactory)
+        public CountryRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
-    public interface ICandidateRepository : IRepository<Candidate>
+    public interface ICountryRepository : IRepository<Country>
     {
 
     }

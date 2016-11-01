@@ -13,5 +13,11 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
     }
 }
