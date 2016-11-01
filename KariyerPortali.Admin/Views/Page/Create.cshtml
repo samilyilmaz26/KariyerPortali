@@ -7,7 +7,7 @@
     <!-- BEGIN THEME PANEL -->
     <!-- END THEME PANEL -->
     <!-- BEGIN PAGE BAR -->
-
+ <script src="/Scripts/ckeditor/ckeditor.js"></script>
     <br />
     <div class="page-bar">
         <ul class="page-breadcrumb">
@@ -59,8 +59,19 @@
                                     <input type="text" class="form-control" placeholder="BAŞLIĞI GİRİNİZ">
                                 </div>
                             </div>
-                      
-                            <textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2"></textarea>
+
+                            
+                                <p>
+                                   <br>
+
+                                    <textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="2"></textarea>
+                                    <script>
+                                        CKEDITOR.replace('editor1');
+                                    </script>
+                                </p>
+                                
+
+
 
                             <div id="content2" style="display: none" data-sample="2">
                                 <p>The number of <code>change</code> events: <strong><span id="changes"></span></strong>.</p>
