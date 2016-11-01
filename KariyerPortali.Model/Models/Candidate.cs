@@ -15,7 +15,7 @@ namespace KariyerPortali.Model
         public string Email { get; set; }
         public string Phone { get; set; }
         public DateTime BirthDate { get; set; }
-        public string image { get; set; }
+        public string Photo { get; set; }
         public DateTime CreateDate{ get; set; }
         public bool State { get; set; }
         public string UpdatedBy { get; set; }
