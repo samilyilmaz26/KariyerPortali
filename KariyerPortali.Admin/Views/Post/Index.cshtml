@@ -1,55 +1,76 @@
 ﻿@{
-    ViewBag.Title = "Tüm Adaylar";
+    ViewBag.Title = "Tüm Yazılar";
 }
 <link href="/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
 <link href="/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
 
+
+<br />
 <div class="page-bar">
     <ul class="page-breadcrumb">
         <li>
-            @Html.ActionLink("Yazılar", "Index", "Post")
+            <a href="/Job"> Yazılar </a>
             <i class="fa fa-circle"></i>
         </li>
         <li>
-            <span>Tüm Yazılar</span>
+            <span> Tüm Yazılar </span>
         </li>
     </ul>
+    <div class="page-toolbar">
 
+    </div>
 </div>
-<div class="portlet-body">
-    <div class="table-toolbar">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="btn-group">
-                    <button id="sample_editable_1_new" class="btn sbold green">
-                        Yeni Ekle
-                        <i class="fa fa-plus"></i>
-                    </button>
-                </div>
+<br />
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <h1 class="page-title">
+                    Tüm Yazılar
+                </h1>
             </div>
-            <div class="col-md-6">
-                <div class="btn-group pull-right">
-                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">
-                        Araçlar
-                        <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu pull-right">
-                        <li>
-                            <a href="javascript:;">
-                                <i class="fa fa-print"></i> Yazdır
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <i class="fa fa-file-pdf-o"></i> PDF olarak Kaydet
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <i class="fa fa-file-excel-o"></i> Excel'e Dönüştür
-                            </a>
-                        </li>
-                    </ul>
+
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                <a href="/Job/Create" id="sample_editable_1_new" class=" btn sbold green">
+                                    Yeni Yazı
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">
+                                    Araçlar
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-print"></i> Yazdır
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-file-pdf-o"></i> PDF Olarak Kaydet
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-file-excel-o"></i> Excel'e Aktar
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,7 +132,7 @@
                     </div>
                 </td>
             </tr>
-           
+
 
         </tbody>
 
@@ -127,4 +148,4 @@
             initTable1();
         });
     </script>
-    }
+}
