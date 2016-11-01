@@ -1,7 +1,60 @@
 ﻿
+
+@model IEnumerable<KariyerPortali.Admin.Controllers.SectorController>
 @{
     ViewBag.Title = "Create";
 }
+<!DOCTYPE html>
 
-<h2>Create</h2>
+
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="@Url.Action("Index","Sector")" class="nav-link ">Tanımlamalar</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Yeni Sektör</span>
+            </li>
+        </ul>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12 ">
+            <!-- BEGIN SAMPLE FORM PORTLET-->
+            <div class="portlet light bordered" style="width:300px;">
+                <div class=" portlet-title">
+                    <div class="caption block">
+                        <i class="icon-settings block"></i>
+                        <span class="caption-subject bold uppercase">YENİ SEKTÖR EKLEME</span>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <form role="form">
+                        <div class="form-body">
+
+
+
+                            <div class="form-group">
+                                <label>Sektör Adı</label>
+                                <div class="input-icon right">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn blue">Gönder</button>
+                            <button type="button" class="btn default">İptal</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SAMPLE FORM PORTLET-->
+    <!-- BEGIN SAMPLE FORM PORTLET-->
+
+
+
 
