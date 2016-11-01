@@ -5924,6 +5924,7 @@
     <Content Include="Scripts\pages\pages-index.js" />
     <Content Include="Scripts\pages\post-index.js" />
     <Content Include="Scripts\pages\resume-index.js" />
+    <Content Include="Scripts\pages\sector-index.js" />
     <Content Include="Scripts\pages\skill-index.js" />
     <Content Include="Scripts\pages\university-index.js" />
     <Content Include="Scripts\respond.js" />
