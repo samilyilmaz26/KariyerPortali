@@ -57,7 +57,14 @@
     <Compile Include="KariyerPortaliEntities.cs" />
     <Compile Include="KariyerPortaliSeedData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CandidateRepository.cs" />
+    <Compile Include="Repositories\CityRepository.cs" />
+    <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Repositories\CvRepository.cs" />
+    <Compile Include="Repositories\EmployerRepository.cs" />
+    <Compile Include="Repositories\FileRepository.cs" />
+    <Compile Include="Repositories\JobApplicationRepository.cs" />
+    <Compile Include="Repositories\SectorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KariyerPortali.Model\KariyerPortali.Model.csproj">
