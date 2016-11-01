@@ -8,5 +8,7 @@ namespace KariyerPortali.Model
         public string CityName { get; set; }
 
         public ICollection<Employer> Employers { get; set; }
+
+        public ICollection<Job> Jobs { get; set; }
     }
 }

@@ -39,6 +39,8 @@ namespace KariyerPortali.Model
 
         public ICollection<JobApplication> JobApplications { get; set; }
 
+        public ICollection<Job> Jobs { get; set; }
+
 
 
 

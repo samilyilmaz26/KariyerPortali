@@ -45,6 +45,7 @@
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Cv.cs" />
     <Compile Include="Models\Employer.cs" />
+    <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\File.cs" />
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobApplication.cs" />
