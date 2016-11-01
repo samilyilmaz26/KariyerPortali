@@ -12,6 +12,10 @@ namespace KariyerPortali.Model
         public string Logo { get; set; }
         public string UserName { get; set; }
         public string EmployerName { get; set; }
+        
+        public Sector Sector { get; set; }
+
+        
 
 
     }
