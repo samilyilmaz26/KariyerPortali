@@ -1,16 +1,30 @@
-﻿
-@model IEnumerable<KariyerPortali.Admin.Controllers.LanguageController>
+﻿@model IEnumerable<KariyerPortali.Admin.Controllers.LanguageController>
 @{
     ViewBag.Title = "Create";
 }
 <!DOCTYPE html>
-
+<!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
+Version: 4.7.1
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
 <html lang="en">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>Metronic Admin Theme #1 | Bootstrap Form Controls</title>
+    <title>@ViewBag.Title-Kariyer Portalı</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Preview page of Metronic Admin Theme #1 for bootstrap inputs, input groups, custom checkboxes and radio controls and more" name="description" />
@@ -35,6 +49,7 @@
 </head>
 <!-- END HEAD -->
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+    <br />
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
@@ -45,25 +60,20 @@
                 <span>Yeni Kayıt</span>
             </li>
         </ul>
-        <div class="page-toolbar">
-            <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
-                <i class="icon-calendar"></i>&nbsp;
-                <span class="thin uppercase hidden-xs"></span>&nbsp;
-                <i class="fa fa-angle-down"></i>
-            </div>
-        </div>
+   
     </div>
+    <br />
     <div class="row">
         <div class="col-md-12 ">
             <!-- BEGIN SAMPLE FORM PORTLET-->
             <div class="portlet light bordered">
                 <div class="portlet-title">
-                    <div class="caption block">
-                        <i class="icon-settings block"></i>
-                        <span class="caption-subject bold uppercase"> Yeni Dil Ekleme</span>
-                    </div>
+                    <h1 class="page-title">
+                        Yeni Dil Ekleme
+                    </h1>
 
                 </div>
+
                 <div class="portlet-body form">
                     <form role="form">
                         <div class="form-body">
@@ -76,8 +86,6 @@
 
                                 </div>
                             </div>
-
-
                         </div>
                         <div class="form-actions">
                             <button type="submit" class="btn blue">Gönder</button>
