@@ -37,6 +37,7 @@ namespace KariyerPortali.Model
         public DateTime UpdateDate { get; set; }
 
 
+        public ICollection<JobApplication> JobApplications { get; set; }
 
 
 
