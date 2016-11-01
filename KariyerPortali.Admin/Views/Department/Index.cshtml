@@ -9,12 +9,9 @@
 <div class="page-bar">
     <ul class="page-breadcrumb">
 
+      
         <li>
-            <a href="index.html">Başlangıç</a>
-            <i class="fa fa-circle"></i>
-        </li>
-        <li>
-            <a href="#">Tanımlamalar</a>
+            <a href="@Url.Action("Index", "Department")">Tanımlamalar</a>
             <i class="fa fa-circle"></i>
         </li>
         <li>
@@ -39,10 +36,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="btn-group">
-                        <button id="sample_editable_1_2_new" class="btn sbold green">
+                        <a href="/Department/Create" id="sample_editable_1_2_new" class="btn sbold green">
                             Bölüm Ekle
                             <i class="fa fa-plus"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -84,7 +81,6 @@
                     </th>
                     <th>Bölüm No</th>
                     <th> Bölüm Adı</th>
-                    <th> Üniversite Adı</th>
                     <th> Eylemler </th>
                 </tr>
             </thead>
@@ -99,10 +95,7 @@
                     </td>
                     <td> 1</td>
                     <td>Bilgisayar Yazılım </td>
-
-                    <td>
-                        İstanbul Üniversitesi
-                    </td>
+        
                     <td>
 
                         <div class="btn-group">
@@ -141,7 +134,7 @@
                     </td>
                     <td> 2 </td>
                     <td>Bilgisayar Yazılım</td>
-                    <td>Yıldız Teknik</td>
+                   
 
                     <td>
                         <div class="btn-group">

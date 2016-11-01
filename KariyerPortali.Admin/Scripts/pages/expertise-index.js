@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#allApplicationsTable');
+    var table = $('#allExpertiseTable');
     // begin first table
     table.dataTable({
 
@@ -10,18 +10,20 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "Tabloda Sonuç Bulunamadı",
-            "info": " _START_ - _END_ Arasındaki Toplam ' _TOTAL_ ' Kayıt Gösteriliyor ",
-            "infoEmpty": "Kayıt Bulunamadı",
-            "infoFiltered": "(Toplam _MAX_ Kayıt Arasından)",
-            "lengthMenu": "Göster : _MENU_",
-            "search": "Ara :",
-            "zeroRecords": "Sonuç Bulunamadı",
+
+
+            "emptyTable": "Böyle bir kayıt bulunamamaktadır",
+            "info": "Gösterilen _START_ ile _END_ toplam _TOTAL_ kayıt",
+            "infoEmpty": "Kayıt bulunamadı",
+            "infoFiltered": "(Filitrenilen toplam _MAX_ kayıt)",
+            "lengthMenu": "Göster _MENU_",
+            "search": "Arama:",
+            "zeroRecords": "Eşleşen kayıt bulunmamaktadır",
             "paginate": {
-                "previous": "Prev",
-                "next": "Next",
-                "last": "Last",
-                "first": "First"
+                "previous": "Önceki",
+                "next": "Sonraki",
+                "last": "Son",
+                "first": "İlk"
             }
         },
 
@@ -63,7 +65,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allApplicationsTable_wrapper');
+    var tableWrapper = jQuery('#allExpertiseTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");

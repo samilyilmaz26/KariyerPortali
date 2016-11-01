@@ -1,30 +1,17 @@
-﻿@model IEnumerable<KariyerPortali.Admin.Controllers.LanguageController>
+﻿
+
+@model IEnumerable<KariyerPortali.Admin.Controllers.ExpertiseController>
 @{
     ViewBag.Title = "Create";
 }
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
-Version: 4.7.1
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
+
 <html lang="en">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title-Kariyer Portalı</title>
+    <title>Metronic Admin Theme #1 | Bootstrap Form Controls</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Preview page of Metronic Admin Theme #1 for bootstrap inputs, input groups, custom checkboxes and radio controls and more" name="description" />
@@ -49,50 +36,41 @@ License: You must have a valid license purchased only from themeforest(the above
 </head>
 <!-- END HEAD -->
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
-    <br />
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
-                <a href="@Url.Action("Index","Language")" class="nav-link ">Tanımlamalar</a>
+                <a href="@Url.Action("Index","Expertise")" class="nav-link ">Tanımlamalar</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Yeni Kayıt</span>
+                <span>Yeni Uzmanlık</span>
             </li>
         </ul>
-   
+
     </div>
-    <br />
     <div class="row">
         <div class="col-md-12 ">
             <!-- BEGIN SAMPLE FORM PORTLET-->
-            <div class="portlet light bordered">
-                <div class="portlet-title">
-                    <h1 class="page-title">
-                        Yeni Dil Ekleme
-                    </h1>
-
+            <div class="portlet light bordered" style="width:300px;">
+                <div class=" portlet-title">
+                    <div class="caption block">
+                        <i class="icon-settings block"></i>
+                        <span class="caption-subject bold uppercase">YENİ UZMANLIK EKLEME</span>
+                    </div>
                 </div>
-
                 <div class="portlet-body form">
                     <form role="form">
                         <div class="form-body">
-                            <div class="form-group">
-                                <label>Dil ID</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Dil ID Giriniz">
 
+
+                          
+                            <div class="form-group">
+                                <label>Uzmanlık Adı</label>
+                                <div class="input-icon right">
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>
 
-
-                            <div class="form-group">
-                                <label>Dil Adı</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Dil Adı Giriniz">
-
-                                </div>
-                            </div>
                         </div>
                         <div class="form-actions">
                             <button type="submit" class="btn blue">Gönder</button>
@@ -106,6 +84,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END SAMPLE FORM PORTLET-->
     <!-- BEGIN SAMPLE FORM PORTLET-->
 
-
 </body>
 </html>
+
+
+

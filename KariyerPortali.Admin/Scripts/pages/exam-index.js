@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#allApplicationsTable');
+    var table = $('#allExamsTable');
     // begin first table
     table.dataTable({
 
@@ -39,7 +39,7 @@
 
         "lengthMenu": [
             [5, 15, 20, -1],
-            [5, 15, 20, "All"] // change per page values here
+            [5, 15, 20, "Tümü"] // change per page values here
         ],
         // set the initial value
         "pageLength": 5,
@@ -63,7 +63,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allApplicationsTable_wrapper');
+    var tableWrapper = jQuery('#allExamsTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
