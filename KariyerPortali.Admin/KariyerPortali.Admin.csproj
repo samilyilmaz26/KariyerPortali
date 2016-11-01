@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployerController.cs" />
+    <Compile Include="Controllers\ExamController.cs" />
     <Compile Include="Controllers\ExpertiseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
@@ -5913,6 +5914,7 @@
     <Content Include="Scripts\pages\Country-Index.js" />
     <Content Include="Scripts\pages\department-index.js" />
     <Content Include="Scripts\pages\employer-index.js" />
+    <Content Include="Scripts\pages\exam-index.js" />
     <Content Include="Scripts\pages\expertise-index.js" />
     <Content Include="Scripts\pages\job-index.js" />
     <Content Include="Scripts\pages\language-index.js" />
@@ -5988,12 +5990,15 @@
     <Content Include="Views\Settings\Index.cshtml" />
     <Content Include="Views\Skill\Index.cshtml" />
     <Content Include="Views\Skill\Create.cshtml" />
+    <Content Include="Views\Expertise\Index.cshtml" />
+    <Content Include="Views\Expertise\Create.cshtml" />
+    <Content Include="Views\Page\Create.cshtml" />
+    <Content Include="Views\Exam\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\apps\img\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
-    <Folder Include="Views\Expertise\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
