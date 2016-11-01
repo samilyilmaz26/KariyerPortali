@@ -6332,6 +6332,7 @@
     <Content Include="Views\Sector\Index.cshtml" />
     <Content Include="Views\Sector\Create.cshtml" />
     <Content Include="Views\Settings\Theme.cshtml" />
+    <Content Include="Views\Post\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
