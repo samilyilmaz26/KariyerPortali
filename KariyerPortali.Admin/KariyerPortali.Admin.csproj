@@ -181,6 +181,7 @@
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\UniversityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -5919,6 +5920,7 @@
     <Content Include="Scripts\pages\pages-index.js" />
     <Content Include="Scripts\pages\post-index.js" />
     <Content Include="Scripts\pages\resume-index.js" />
+    <Content Include="Scripts\pages\skill-index.js" />
     <Content Include="Scripts\pages\university-index.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -5984,6 +5986,7 @@
     </Content>
     <Content Include="Views\Country\Create.cshtml" />
     <Content Include="Views\Settings\Index.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
