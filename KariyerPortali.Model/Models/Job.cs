@@ -21,25 +21,25 @@ namespace KariyerPortali.Model
 
         public string JobType { get; set; }
 
-        public string Experience { get; set; }
-        public Experience Experience { get; set; }
+        //public string Experience { get; set; }
+        //public Experience Experience { get; set; }
 
-        public ICollection<SocialRight> SocialRights { get; set; }
+        //public ICollection<SocialRight> SocialRights { get; set; }
 
-        public string Description { get; set; }
+        //public string Description { get; set; }
 
-        public string Responsibilities { get; set; }
+        //public string Responsibilities { get; set; }
 
-        public string Qualifications { get; set; }
+        //public string Qualifications { get; set; }
 
-        public DateTime Createdate { get; set; }
+        //public DateTime Createdate { get; set; }
 
-        [StringLenght(200)]
-        public string CreatedBy { get; set; }
+        //[StringLenght(200)]
+        //public string CreatedBy { get; set; }
 
-        public DateTime UpdateDate { get; set; }
+        //public DateTime UpdateDate { get; set; }
 
-        [StringLenght(200)]
-        public string UpdateBy { get; set; }
+        //[StringLenght(200)]
+        //public string UpdateBy { get; set; }
     }
 }

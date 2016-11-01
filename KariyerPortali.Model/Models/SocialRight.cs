@@ -8,8 +8,9 @@ namespace KariyerPortali.Model
 {
     public class SocialRight
     {
-        string Food;
-        string Service;
-        string Insurance;
+        public int SocialRightId { get; set; }
+        public string SocialRightName { get; set; }
+
+
     }
 }
