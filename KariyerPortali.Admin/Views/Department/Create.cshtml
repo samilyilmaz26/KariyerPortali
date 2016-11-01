@@ -1,5 +1,5 @@
 ﻿
-@model IEnumerable<KariyerPortali.Admin.Controllers.CityController>
+@model IEnumerable<KariyerPortali.Admin.Controllers.DepartmentController>
 @{
     ViewBag.Title = "Create";
 }
@@ -38,23 +38,24 @@
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
-                <a href="@Url.Action("Index","City")" class="nav-link ">Tanımlamalar</a>
+                <a href="@Url.Action("Index","Department")" class="nav-link ">Tanımlamalar</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Yeni Şehir</span>
+                <span>Yeni Bölüm</span>
             </li>
         </ul>
 
     </div>
+    <br />
     <div class="row">
         <div class="col-md-12 ">
             <!-- BEGIN SAMPLE FORM PORTLET-->
             <div class="portlet light bordered" style="width:300px;">
-                <div class=" portlet-title">
+                <div class="portlet-title">
                     <div class="caption block">
                         <i class="icon-settings block"></i>
-                        <span class="caption-subject bold uppercase">YENİ ŞEHİR EKLEME</span>
+                        <span class="caption-subject bold uppercase">YENİ BÖLÜM EKLEME</span>
                     </div>
                 </div>
                 <div class="portlet-body form">
@@ -63,13 +64,13 @@
 
 
                             <div class="form-group">
-                                <label>Şehir ID</label>
+                                <label>Bölüm ID</label>
                                 <div class="input-icon right">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Şehir Adı</label>
+                                <label>Bölüm Adı</label>
                                 <div class="input-icon right">
                                     <input type="text" class="form-control">
                                 </div>
