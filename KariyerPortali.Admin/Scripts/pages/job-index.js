@@ -7,13 +7,13 @@
         // Internationalisation. For more info refer to http://datatables.net/manual/i18n
         "language": {
             "aria": {
-                "sortAscending": ": A'dan Z'ye sıralamayı etkinleştir.",
-                "sortDescending": ": Z'den A'ya sıralamayı etkinleştir."
+                "sortAscending": ": activate to sort column ascending",
+                "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "Tabloda veri yok.",
+            "emptyTable": "No data available in table",
             "info": " _START_ Sayfadaki _END_ Kayıttan _TOTAL_ 'si Gösteriliyor.",
-            "infoEmpty": "Kayıt bulunamadı.",
-            "infoFiltered": "( _MAX_ sonuçtan filtrelendi.)",
+            "infoEmpty": "No records found",
+            "infoFiltered": "(filtered1 from _MAX_ total records)",
             "lengthMenu": "Sayfa başına _MENU_ kayıt göster",
             "search": "Ara:",
             "zeroRecords": "Sonuç Bulunamadı.",

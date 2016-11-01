@@ -10,18 +10,18 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "Böyke bir kayıt bulunamamaktadır",
-            "info": "Gösterilen _START_ ile _END_ toplam _TOTAL_ kayıt",
-            "infoEmpty": "Kayıt bulunamadı",
-            "infoFiltered": "(Filitrenilen toplam _MAX_ kayıt)",
-            "lengthMenu": "Göster _MENU_",
-            "search": "Arama:",
-            "zeroRecords": "Eşleşen kayıt bulunmamaktadır",
+            "emptyTable": "No data available in table",
+            "info": "Showing _START_ to _END_ of _TOTAL_ records",
+            "infoEmpty": "No records found",
+            "infoFiltered": "(filtered1 from _MAX_ total records)",
+            "lengthMenu": "Show _MENU_",
+            "search": "Search:",
+            "zeroRecords": "No matching records found",
             "paginate": {
-                "previous": "Önceki",
-                "next": "Sonraki",
-                "last": "Son",
-                "first": "İlk"
+                "previous": "Prev",
+                "next": "Next",
+                "last": "Last",
+                "first": "First"
             }
         },
 
@@ -63,7 +63,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allDepartmentTable_wrapper');
+    var tableWrapper = jQuery('#allApplicationsTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
