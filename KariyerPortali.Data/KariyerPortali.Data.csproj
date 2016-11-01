@@ -63,6 +63,7 @@
     <Compile Include="Repositories\CvRepository.cs" />
     <Compile Include="Repositories\EmployerRepository.cs" />
     <Compile Include="Repositories\FileRepository.cs" />
+    <Compile Include="Repositories\JobApplicationRepository.cs" />
     <Compile Include="Repositories\SectorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
