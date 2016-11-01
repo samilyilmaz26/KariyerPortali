@@ -8,5 +8,11 @@ namespace KariyerPortali.Model
 {
    public class Employer
     {
+        public int EmployerId { get; set; }
+        public string Logo { get; set; }
+        public string UserName { get; set; }
+        public string EmployerName { get; set; }
+
+
     }
 }
