@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#sample_1');
+    var table = $('#allCountryTable');
     // begin first table
     table.dataTable({
 
@@ -10,18 +10,18 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "No data available in table",
-            "info": " _START_ Sayfadaki _END_ Kayıttan _TOTAL_ 'si Gösteriliyor.",
-            "infoEmpty": "No records found",
+            "emptyTable": "Tabloda uygun veri yok",
+            "info": "_TOTAL_ kaydın _START_ ile _END_ arası gösteriliyor",
+            "infoEmpty": "Kayıt bulunamadı",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
             "lengthMenu": "Sayfa başına _MENU_ kayıt göster",
             "search": "Ara:",
-            "zeroRecords": "Sonuç Bulunamadı.",
+            "zeroRecords": "Arama kriterinizle eşleşen kayıt yok",
             "paginate": {
-                "previous": "Prev",
-                "next": "Next",
-                "last": "Last",
-                "first": "First"
+                "previous": "Önceki",
+                "next": "Sonraki",
+                "last": "Son",
+                "first": "İlk"
             }
         },
 
@@ -63,7 +63,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#sample_1_wrapper');
+    var tableWrapper = jQuery('#allCountryTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
