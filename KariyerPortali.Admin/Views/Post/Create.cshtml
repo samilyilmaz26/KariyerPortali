@@ -1,7 +1,105 @@
 ﻿
+
 @{
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<!-- BEGIN PAGE HEADER-->
+<!-- BEGIN THEME PANEL -->
+<!-- END THEME PANEL -->
+<!-- BEGIN PAGE BAR -->
+<script src="/Scripts/ckeditor/ckeditor.js"></script>
+<br />
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="http://localhost:62710/Page">Yazılar</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>Yeni Yazı</span>
+        </li>
+    </ul>
+    <div class="page-toolbar">
 
+    </div>
+</div>
+<br />
+<!-- END PAGE BAR -->
+<!-- BEGIN PAGE TITLE-->
+<h1 class="page-title">
+    <small></small>
+</h1>
+<!-- END PAGE TITLE-->
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-6 ">
+        <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet light bordered" style="
+    width: 1000px;
+">
+            <div class="portlet-title">
+                <div class="caption font-dark">
+                    <i class="icon-settings font-black-sunglo"></i>
+                    <span class="caption-subject bold uppercase">
+                        YENİ YAZI EKLE
+                    </span>
+                </div>
+
+            </div>
+            <div class="portlet-body form">
+                <form role="form">
+                    <div class="form-body">
+
+
+
+                        <div class="form-group">
+                            <label></label>
+                            <div class="input-icon right">
+
+                                <input type="text" class="form-control" placeholder="BAŞLIĞI GİRİNİZ">
+                            </div>
+                        </div>
+
+
+                        <p>
+                            <br>
+
+                            <textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="2"></textarea>
+                            <script>
+                                    CKEDITOR.replace('editor1');
+                            </script>
+                        </p>
+
+
+
+                        <div id="content2" style="display: none" data-sample="2">
+                            <p>The number of <code>change</code> events: <strong><span id="changes"></span></strong>.</p>
+                            <h3>Mirrored Content</h3>
+                            <!-- This <div> will be used to display the editor content. -->
+                            <div id="editorcontent2">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn blue">
+                            Kaydet
+                        </button>
+                        <button type="button" class="btn default">
+                            İptal
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="row ">
+
+</div>
