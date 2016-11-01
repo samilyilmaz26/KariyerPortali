@@ -168,6 +168,7 @@
     <Compile Include="Controllers\ApplicationsController.cs" />
     <Compile Include="Controllers\CandidateController.cs" />
     <Compile Include="Controllers\CityController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -5975,6 +5976,10 @@
     <Content Include="Views\Applications\Applicationss.cshtml" />
     <Content Include="Views\City\Create.cshtml" />
     <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\Country\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Country\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
