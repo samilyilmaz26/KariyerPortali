@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployerController.cs" />
+    <Compile Include="Controllers\ExpertiseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
@@ -180,6 +181,7 @@
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\UniversityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -5908,14 +5910,17 @@
     <Content Include="Scripts\pages\application-index.js" />
     <Content Include="Scripts\pages\candidate-index.js" />
     <Content Include="Scripts\pages\city-index.js" />
+    <Content Include="Scripts\pages\Country-Index.js" />
     <Content Include="Scripts\pages\department-index.js" />
     <Content Include="Scripts\pages\employer-index.js" />
+    <Content Include="Scripts\pages\expertise-index.js" />
     <Content Include="Scripts\pages\job-index.js" />
     <Content Include="Scripts\pages\language-index.js" />
     <Content Include="Scripts\pages\Media-Index.js" />
     <Content Include="Scripts\pages\pages-index.js" />
     <Content Include="Scripts\pages\post-index.js" />
     <Content Include="Scripts\pages\resume-index.js" />
+    <Content Include="Scripts\pages\skill-index.js" />
     <Content Include="Scripts\pages\university-index.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -5974,7 +5979,6 @@
     <Content Include="Views\Post\Index.cshtml" />
     <Content Include="Views\Page\Index.cshtml" />
     <Content Include="Views\Language\Create.cshtml" />
-    <Content Include="Views\Applications\Applicationss.cshtml" />
     <Content Include="Views\City\Create.cshtml" />
     <Content Include="Views\Department\Create.cshtml" />
     <Content Include="Views\Country\Index.cshtml">
@@ -5982,11 +5986,13 @@
     </Content>
     <Content Include="Views\Country\Create.cshtml" />
     <Content Include="Views\Settings\Index.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\apps\img\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
+    <Folder Include="Views\Expertise\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
