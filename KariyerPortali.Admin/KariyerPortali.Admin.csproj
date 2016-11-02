@@ -6340,6 +6340,8 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\SocialRight\Index.cshtml" />
     <Content Include="Views\SocialRight\Create.cshtml" />
+    <Content Include="Views\Account\MyProfile.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
