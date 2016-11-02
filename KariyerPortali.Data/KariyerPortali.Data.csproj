@@ -71,17 +71,20 @@
     <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
     <Compile Include="Repositories\EmployerRepository.cs" />
+    <Compile Include="Repositories\ExamInfoRepository.cs" />
     <Compile Include="Repositories\ExamRepository.cs" />
     <Compile Include="Repositories\ExperienceRepository.cs" />
     <Compile Include="Repositories\ExpertiseRepository.cs" />
     <Compile Include="Repositories\FileRepository.cs" />
     <Compile Include="Repositories\JobApplicationRepository.cs" />
     <Compile Include="Repositories\JobRepository.cs" />
+    <Compile Include="Repositories\LanguageInfoRepository.cs" />
     <Compile Include="Repositories\LanguageRepository.cs" />
     <Compile Include="Repositories\PostRepository.cs" />
     <Compile Include="Repositories\ResumeRepository.cs" />
     <Compile Include="Repositories\SectorRepository.cs" />
     <Compile Include="Repositories\SkillRepository.cs" />
+    <Compile Include="Repositories\SkillsInfoRepository.cs" />
     <Compile Include="Repositories\SocialRightRepository.cs" />
     <Compile Include="Repositories\UniversityRepository.cs" />
   </ItemGroup>
