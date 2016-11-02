@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public enum WorkStatus
+    public enum LanguageLevel
     {
-        active=1,
-        passive=2
     }
 }
