@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\CandidateConfiguration.cs" />
     <Compile Include="Configuration\ResumeConfiguration.cs" />
+    <Compile Include="Configuration\UniversityConfiguration.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />
@@ -66,7 +68,6 @@
     <Compile Include="Repositories\ExperienceRepository.cs" />
     <Compile Include="Repositories\ExpertiseRepository.cs" />
     <Compile Include="Repositories\FileRepository.cs" />
-    <Compile Include="Repositories\Gender.cs" />
     <Compile Include="Repositories\GenderRepository.cs" />
     <Compile Include="Repositories\JobApplicationRepository.cs" />
     <Compile Include="Repositories\JobRepository.cs" />
