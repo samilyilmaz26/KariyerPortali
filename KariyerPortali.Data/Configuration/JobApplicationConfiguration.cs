@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KariyerPortali.Model
+namespace KariyerPortali.Data.Configuration
 {
-    public enum LanguageLevel
+    class JobApplicationConfiguration
     {
-        Beginner=1,
-        Good=2,
-        Advance=3
     }
 }

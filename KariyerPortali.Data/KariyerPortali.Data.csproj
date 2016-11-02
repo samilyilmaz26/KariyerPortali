@@ -50,6 +50,8 @@
     <Compile Include="Configuration\CityConfiguration.cs" />
     <Compile Include="Configuration\CountryConfiguration.cs" />
     <Compile Include="Configuration\DepartmentConfiguration.cs" />
+    <Compile Include="Configuration\EmployerConfiguration.cs" />
+    <Compile Include="Configuration\JobApplicationConfiguration.cs" />
     <Compile Include="Configuration\LanguageConfiguration.cs" />
     <Compile Include="Configuration\PostConfiguration.cs" />
     <Compile Include="Configuration\ResumeConfiguration.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Repositories\CandidateRepository.cs" />
     <Compile Include="Repositories\CityRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
+    <Compile Include="Repositories\CourseRepository.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
     <Compile Include="Repositories\EmployerRepository.cs" />
     <Compile Include="Repositories\ExamInfoRepository.cs" />

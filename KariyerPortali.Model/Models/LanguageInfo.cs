@@ -12,6 +12,8 @@ namespace KariyerPortali.Model
         [ForeignKey("Language")]
         public int LanguageId { get; set; }
         public Language Language { get; set; }
-        public LanguageLevel LanguageLevel { get; set; }
+        public LanguageLevel WritingLanguageLevel { get; set; }
+        public LanguageLevel ReadingLanguageLevel { get; set; }
+        public LanguageLevel SpeakingLanguageLevel { get; set; }
     }
 }
