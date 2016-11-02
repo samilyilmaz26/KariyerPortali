@@ -42,6 +42,7 @@ namespace KariyerPortali.Data
         {
             modelBuilder.Configurations.Add(new ResumeConfiguration());
             modelBuilder.Configurations.Add(new UniversityConfiguration());
+            modelBuilder.Configurations.Add(new CandidateConfiguration());
         }
     }
 }
