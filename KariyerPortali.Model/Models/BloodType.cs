@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public enum BloodTypes
+    public enum BloodType
     {
         ARhP = 1,
         ARhN = 2,
