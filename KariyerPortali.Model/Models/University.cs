@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public class Cv
+    public class University
     {
-        public int CvId { get; set; }
-        public string CvName { get; set; }
     }
 }
