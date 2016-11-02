@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public class SkillsInfo
+    public class SkillInfo
     {
 
         [ForeignKey("Skill")]
