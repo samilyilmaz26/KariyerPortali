@@ -23,6 +23,8 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+
+        [AllowAnonymous]
         public ActionResult MyProfile()
         {
             return View();

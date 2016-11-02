@@ -63,6 +63,7 @@
     <Compile Include="Models\JobApplication.cs" />
     <Compile Include="Models\Sector.cs" />
     <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\SkillsInfo.cs" />
     <Compile Include="Models\SocialRight.cs" />
     <Compile Include="Models\University.cs" />
     <Compile Include="Models\WorkStatus.cs" />
