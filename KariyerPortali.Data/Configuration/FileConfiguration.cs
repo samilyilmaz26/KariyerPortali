@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Configuration
 {
-    public class ExperienceConfiguration:EntityTypeConfiguration<Experience>
+    public class FileConfiguration:EntityTypeConfiguration<File>
     {
-        public ExperienceConfiguration()
+        public FileConfiguration()
         {
-            ToTable("Experiences");
-            HasKey<int>(c => c.ExperienceId);
-            Property(c => c.ExperienceName).IsRequired();
+            ToTable("Files");
+            HasKey<int>(c => c.FileId);
+            Property(c => c.FileName).IsRequired();
         }
     }
 }

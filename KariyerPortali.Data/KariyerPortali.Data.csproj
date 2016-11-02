@@ -53,6 +53,8 @@
     <Compile Include="Configuration\EmployerConfiguration.cs" />
     <Compile Include="Configuration\ExamConfiguration.cs" />
     <Compile Include="Configuration\ExperienceConfiguration.cs" />
+    <Compile Include="Configuration\ExpertiseConfiguration.cs" />
+    <Compile Include="Configuration\FileConfiguration.cs" />
     <Compile Include="Configuration\JobApplicationConfiguration.cs" />
     <Compile Include="Configuration\JobConfiguration.cs" />
     <Compile Include="Configuration\LanguageConfiguration.cs" />
@@ -90,8 +92,8 @@
     <Compile Include="Repositories\PostRepository.cs" />
     <Compile Include="Repositories\ResumeRepository.cs" />
     <Compile Include="Repositories\SectorRepository.cs" />
+    <Compile Include="Repositories\SkillInfoRepository.cs" />
     <Compile Include="Repositories\SkillRepository.cs" />
-    <Compile Include="Repositories\SkillsInfoRepository.cs" />
     <Compile Include="Repositories\SocialRightRepository.cs" />
     <Compile Include="Repositories\UniversityRepository.cs" />
   </ItemGroup>

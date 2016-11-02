@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Repositories
 {
-  
-    public class SkillsInfoRepository : RepositoryBase<SkillsInfo>, ISkillsInfoRepository
+   
+    public class SkillInfoRepository : RepositoryBase<SkillInfo>, ISkillInfoRepository
     {
-        public SkillsInfoRepository(IDbFactory dbFactory)
+        public SkillInfoRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
-    public interface ISkillsInfoRepository : IRepository<SkillsInfo>
+    public interface ISkillInfoRepository : IRepository<SkillInfo>
     {
 
     }

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Configuration
 {
-    public class ExperienceConfiguration:EntityTypeConfiguration<Experience>
+    public class ExpertiseConfiguration:EntityTypeConfiguration<Expertise>
     {
-        public ExperienceConfiguration()
+        public ExpertiseConfiguration()
         {
-            ToTable("Experiences");
-            HasKey<int>(c => c.ExperienceId);
-            Property(c => c.ExperienceName).IsRequired();
+            ToTable("Expertises");
+            HasKey<int>(c => c.ExpertiseId);
+            Property(c => c.ExpertiseName).IsRequired();
         }
     }
 }
