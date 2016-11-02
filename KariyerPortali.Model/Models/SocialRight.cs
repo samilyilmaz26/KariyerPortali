@@ -11,6 +11,6 @@ namespace KariyerPortali.Model
         public int SocialRightId { get; set; }
         public string SocialRightName { get; set; }
 
-
+        public ICollection<Job>Jobs { get; set; }
     }
 }
