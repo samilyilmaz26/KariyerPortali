@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public class Department
+    public class Language
+
     {
-        public int DepartmentId { get; set; }
-        public string DepartmentName { get; set; }
+        public string LanguageName { get; set; }
+        public int LanguageId { get; set; }
     }
 }
