@@ -18,6 +18,7 @@ namespace KariyerPortali.Data
         public DbSet<Country> Candidate { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employer> Employers { get; set; }
+        public DbSet<Exam> Exams { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Expertise> Expertises { get; set; }
         public DbSet<File> Files { get; set; }
