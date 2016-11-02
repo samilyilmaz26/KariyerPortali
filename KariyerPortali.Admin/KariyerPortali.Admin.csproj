@@ -6333,6 +6333,7 @@
     <Content Include="Views\Sector\Create.cshtml" />
     <Content Include="Views\Settings\Theme.cshtml" />
     <Content Include="Views\Post\Create.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

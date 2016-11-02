@@ -62,10 +62,12 @@
     <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Repositories\CvRepository.cs" />
     <Compile Include="Repositories\EmployerRepository.cs" />
+    <Compile Include="Repositories\ExperienceRepository.cs" />
     <Compile Include="Repositories\FileRepository.cs" />
     <Compile Include="Repositories\JobApplicationRepository.cs" />
     <Compile Include="Repositories\JobRepository.cs" />
     <Compile Include="Repositories\SectorRepository.cs" />
+    <Compile Include="Repositories\SocialRightRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KariyerPortali.Model\KariyerPortali.Model.csproj">
