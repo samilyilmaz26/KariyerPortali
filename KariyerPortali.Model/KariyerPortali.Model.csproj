@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\BloodTypes.cs" />
     <Compile Include="Models\Candidate.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Country.cs" />
