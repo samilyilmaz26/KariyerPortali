@@ -195,6 +195,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CityViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\apps\css\inbox.css" />
@@ -6341,7 +6342,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="assets\apps\img\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Views\SocialRight\" />
   </ItemGroup>
   <ItemGroup>
