@@ -6257,6 +6257,7 @@
     <Content Include="Scripts\pages\sector-index.js" />
     <Content Include="Scripts\pages\skill-index.js" />
     <Content Include="Scripts\pages\university-index.js" />
+    <Content Include="Scripts\pages\user-index.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
