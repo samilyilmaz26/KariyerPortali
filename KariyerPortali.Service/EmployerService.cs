@@ -14,6 +14,8 @@ namespace KariyerPortali.Service
         IEnumerable<Employer> GetEmployers();
         Employer GetEmployer(int id);
         void CreateEmployer(Employer employer);
+        void UpdateEmployer(Employer employer);
+        void DeleteEmployer(Employer employer);
         void SaveEmployer();
     }
     public class EmployerService:IEmployerService
@@ -39,6 +41,14 @@ namespace KariyerPortali.Service
         public void CreateEmployer(Employer employer)
         {
             employerRepository.Add(employer);
+        }
+        public void UpdateEmployer(Employer employer)
+        {
+            employerRepository.Update(employer);
+        }
+        public void DeleteEmployer(Employer employer)
+        {
+            employerRepository.Delete(employer);
         }
         public void SaveEmployer()
         {
