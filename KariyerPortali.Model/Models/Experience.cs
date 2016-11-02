@@ -8,8 +8,8 @@ namespace KariyerPortali.Model
 {
     public class Experience
     {
-        string Software;
-        string Hardware;
-        string Network;
+        public int ExperienceId { get; set; }
+        public string ExperienceName { get; set; }
+
     }
 }
