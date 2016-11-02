@@ -1,4 +1,5 @@
-﻿using KariyerPortali.Data;
+﻿using KariyerPortali.Admin.App_Start;
+using KariyerPortali.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,9 @@ namespace KariyerPortali.Admin
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Autofac and Automapper configurations
+            Bootstrapper.Run();
         }
     }
 }
