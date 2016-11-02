@@ -8,7 +8,12 @@ using System.Threading.Tasks;
 namespace KariyerPortali.Model
 {
    public class Employer
-    {
+   {
+       public Employer()
+       {
+           Jobs = new List<Job>();
+       }
+
         public int EmployerId { get; set; }
         public string Logo { get; set; }
         public string UserName { get; set; }
@@ -18,15 +23,11 @@ namespace KariyerPortali.Model
         public int SectorId { get; set; }
         public Sector Sector { get; set; }
 
-        public string Adress { get; set; }
+        public string Address { get; set; }
 
         [ForeignKey("City")]
         public int CityId { get; set; }
         public City City { get; set; }
-
-        [ForeignKey("Country")]
-        public int CountryId { get; set; }
-        public Country Country { get; set; }
 
         public string Phone { get; set; }
         public string Email { get; set; }

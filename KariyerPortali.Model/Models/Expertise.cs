@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace KariyerPortali.Model
 {
     public class Expertise
-
     {
         public int ExpertiseId { get; set; }
         public string ExpertiseName { get; set; }

@@ -15,7 +15,7 @@ namespace KariyerPortali.Data
 
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<City> Cities { get; set; }
-        public DbSet<Country> Candidate { get; set; }
+        public DbSet<Country> Countries { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Exam> Exams { get; set; }
@@ -40,10 +40,24 @@ namespace KariyerPortali.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new ResumeConfiguration());
-            modelBuilder.Configurations.Add(new UniversityConfiguration());
             modelBuilder.Configurations.Add(new CandidateConfiguration());
             modelBuilder.Configurations.Add(new CityConfiguration());
+            modelBuilder.Configurations.Add(new CountryConfiguration());
+            modelBuilder.Configurations.Add(new DepartmentConfiguration());
+            modelBuilder.Configurations.Add(new EmployerConfiguration());
+            modelBuilder.Configurations.Add(new ExamConfiguration());
+            modelBuilder.Configurations.Add(new ExperienceConfiguration());
+            modelBuilder.Configurations.Add(new ExpertiseConfiguration());
+            modelBuilder.Configurations.Add(new FileConfiguration());
+            modelBuilder.Configurations.Add(new JobConfiguration());
+            modelBuilder.Configurations.Add(new JobApplicationConfiguration());
+            modelBuilder.Configurations.Add(new LanguageConfiguration());
+            modelBuilder.Configurations.Add(new PostConfiguration());
+            modelBuilder.Configurations.Add(new ResumeConfiguration());
+            modelBuilder.Configurations.Add(new SectorConfiguration());
+            modelBuilder.Configurations.Add(new SkillConfiguration());
+            modelBuilder.Configurations.Add(new SocialRightConfiguration());
+            modelBuilder.Configurations.Add(new UniversityConfiguration());
         }
     }
 }

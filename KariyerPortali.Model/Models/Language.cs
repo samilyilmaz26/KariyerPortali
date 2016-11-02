@@ -9,8 +9,7 @@ namespace KariyerPortali.Model
     public class Language
 
     {
-        public string LanguageName { get; set; }
         public int LanguageId { get; set; }
-        public ICollection<Reference> References { get; set; }
+        public string LanguageName { get; set; }
     }
 }

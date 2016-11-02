@@ -8,7 +8,7 @@ namespace KariyerPortali.Model
 {
     public enum WorkStatus
     {
-        active=1,
-        passive=2
+        Active=1,
+        Passive=2
     }
 }

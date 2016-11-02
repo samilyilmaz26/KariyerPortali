@@ -12,9 +12,5 @@ namespace KariyerPortali.Model
         public int CountryId { get; set; }
         public Country Country { get;set;}
 
-
-        public ICollection<Employer> Employers { get; set; }
-
-        public ICollection<Job> Jobs { get; set; }
     }
 }
