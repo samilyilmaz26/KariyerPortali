@@ -15,6 +15,7 @@ namespace KariyerPortali.Data.Configuration
             /* Fluent-API */
             ToTable("Jobs");
             HasKey<int>(c=>c.JobId);
+            
             Property(c => c.JobType).HasMaxLength(500);
             Property(c => c.Responsibilities).IsRequired();
             Property(c => c.Qualifications).IsRequired();
