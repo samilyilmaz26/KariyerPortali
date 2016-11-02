@@ -10,5 +10,11 @@ namespace KariyerPortali.Data.Configuration
 {
     public class CountryConfiguration:EntityTypeConfiguration<Country>
     {
+        public CountryConfiguration()
+        {
+            ToTable("Countries");
+            HasKey<int>(c => c.CountryId);
+            Property(c => c.CountryName).HasMaxLength(25);
+        }
     }
 }
