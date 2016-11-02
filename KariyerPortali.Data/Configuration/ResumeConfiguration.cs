@@ -8,12 +8,12 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace KariyerPortali.Data.Configuration
 {
-    public class ResumeConfiguration: EntityTypeConfiguration<Cv>
+    public class ResumeConfiguration: EntityTypeConfiguration<Resume>
     {
         public ResumeConfiguration()
         {
             /* Fluent-API */
-            ToTable("Cvs");
+            ToTable("Resumes");
             Property(c => c.CvName).IsRequired().HasMaxLength(200);
         }
     }
