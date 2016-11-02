@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Configuration
 {
-    public class EmployerComfiguration:EntityTypeConfiguration<Employer>
+    public class EmployerConfiguration:EntityTypeConfiguration<Employer>
     {
-        public EmployerComfiguration()
+        public EmployerConfiguration()
         {
             ToTable("Employers");
             HasKey<int>(c => c.EmployerId);
