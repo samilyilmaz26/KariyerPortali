@@ -12,15 +12,15 @@ namespace KariyerPortali.Model
         public int ApplicationId { get; set; }
 
         [ForeignKey("Candidate")]
-        public Candidate CandidateId { get; set; }
+        public int CandidateId { get; set; }
         public Candidate Candidate { get; set; }
 
         [ForeignKey("Employer")]
-        public Employer EmployerId { get; set; }
+        public int EmployerId { get; set; }
         public Employer Employer { get; set; }
 
         [ForeignKey("Job")]
-        public Job JobId { get; set; }
+        public int JobId { get; set; }
         public Job Job { get; set; }
 
         public string CoverLetter { get; set; }
