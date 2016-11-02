@@ -46,6 +46,7 @@
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\Expertise.cs" />
+    <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Resume.cs" />
