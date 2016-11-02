@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Configuration
 {
-    public class CityConfiguration:EntityTypeConfiguration<City>
+    public class CountryConfiguration:EntityTypeConfiguration<Country>
     {
-        public CityConfiguration()
+        public CountryConfiguration()
         {
-            ToTable("Cities");
-            HasKey<int>(c => c.CityId);
-            Property(c => c.CityName).IsRequired().HasMaxLength(25);
+            ToTable("Countries");
+            HasKey<int>(c => c.CountryId);
+            Property(c => c.CountryName).IsRequired().HasMaxLength(25);
         }
-
     }
 }
