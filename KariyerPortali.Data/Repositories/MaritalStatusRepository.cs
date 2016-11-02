@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Repositories
 {
-    public class GenderRepository : RepositoryBase<Gender>, IGenderRepository
+
+    public class MaritalStatusRepository : RepositoryBase<MaritalStatus>, IMaritalStatusRepository
     {
-        public GenderRepository(IDbFactory dbFactory)
+        public MaritalStatusRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
-    public interface IGenderRepository : IRepository<Gender>
+    public interface IMaritalStatusRepository : IRepository<MaritalStatus>
     {
 
     }
