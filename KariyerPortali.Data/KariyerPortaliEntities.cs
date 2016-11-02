@@ -13,7 +13,7 @@ namespace KariyerPortali.Data
     {
         public KariyerPortaliEntities() : base("KariyerPortaliEntities") { }
 
-        public DbSet<Cv> Cvs { get; set; }
+        public DbSet<Resume> Resumes { get; set; }
 
         public virtual void Commit()
         {
@@ -22,7 +22,7 @@ namespace KariyerPortali.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new CvConfiguration());
+            modelBuilder.Configurations.Add(new ResumeConfiguration());
         }
     }
 }

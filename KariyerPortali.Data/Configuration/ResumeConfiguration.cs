@@ -8,9 +8,9 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace KariyerPortali.Data.Configuration
 {
-    public class CvConfiguration: EntityTypeConfiguration<Cv>
+    public class ResumeConfiguration: EntityTypeConfiguration<Cv>
     {
-        public CvConfiguration()
+        public ResumeConfiguration()
         {
             /* Fluent-API */
             ToTable("Cvs");
