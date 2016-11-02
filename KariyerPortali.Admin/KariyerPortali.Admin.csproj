@@ -4963,6 +4963,7 @@
     <Content Include="assets\layouts\layout7\scripts\layout.min.js" />
     <Content Include="assets\layouts\layout\css\custom.css" />
     <Content Include="assets\layouts\layout\css\custom.min.css" />
+    <Content Include="assets\layouts\layout\css\example.css" />
     <Content Include="assets\layouts\layout\css\layout.css" />
     <Content Include="assets\layouts\layout\css\layout.min.css" />
     <Content Include="assets\layouts\layout\css\themes\blue.css" />
