@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KariyerPortali.Model
+namespace KariyerPortali.Data.Configuration
 {
-   public enum MaritalStatus
+    class SocialRightConfiguration
     {
-        Single=1,
-        Married=2
     }
 }

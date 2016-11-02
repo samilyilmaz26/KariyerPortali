@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-   public enum MaritalStatus
+    public enum MilitaryService
     {
-        Single=1,
-        Married=2
+        Done=1,
+        Postpone=2,
+        Exempt=3
     }
 }
