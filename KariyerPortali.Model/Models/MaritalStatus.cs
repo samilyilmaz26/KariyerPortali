@@ -8,5 +8,7 @@ namespace KariyerPortali.Model
 {
    public enum MaritalStatus
     {
+        Single=1,
+        Married=2
     }
 }
