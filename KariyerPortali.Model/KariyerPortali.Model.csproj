@@ -64,6 +64,7 @@
     <Compile Include="Models\File.cs" />
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobApplication.cs" />
+    <Compile Include="Models\SalaryWaited.cs" />
     <Compile Include="Models\Sector.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\SkillsInfo.cs" />
