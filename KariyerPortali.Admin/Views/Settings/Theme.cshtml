@@ -7,6 +7,48 @@
 
 <link href="/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
 <link href="/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+<style>
+.theme-panel>.theme-option.theme-colors>ul {
+	list-style:none;
+	padding:0;
+	display:block;
+	margin-bottom:10px!important;
+	margin-top:15px
+}
+.theme-panel>.theme-option.theme-colors>ul>li {
+	width:40px;
+	height:40px;
+	margin:0 4px;
+	cursor:pointer;
+	list-style:none;
+	float:left;
+	border:1px solid #707070
+}
+.theme-panel>.theme-option.theme-colors>ul>li:first-child {
+	margin-left:0
+}
+.theme-panel>.theme-option.theme-colors>ul>li.current,.theme-panel>.theme-options>.theme-option.theme-colors>ul>li:hover {
+	border:2px solid #d64635
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-default {
+	background:#333438
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-darkblue {
+	background:#2b3643
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-blue {
+	background:#2D5F8B
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-grey {
+	background:#697380
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-light {
+	background:#F9FAFD
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-light2 {
+	background:#F1F1F1
+}
+</style>
 <div class="page-bar">
     <ul class="page-breadcrumb">
         <li>
@@ -25,8 +67,8 @@
             <!-- PORTLET MAIN -->
             <div class="portlet light profile-sidebar-portlet ">
                 <div class="theme-panel">
-                    
-                    <div class="theme-option theme-colors clearfix">
+
+                        <div class="theme-option theme-colors clearfix">
                             <span> THEME COLOR </span>
                             <ul>
                                 <li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default"> </li>
@@ -100,7 +142,6 @@
                                 <option value="default" selected="selected">Default</option>
                             </select>
                         </div>
-
                     </div>
             </div>
         </div>
