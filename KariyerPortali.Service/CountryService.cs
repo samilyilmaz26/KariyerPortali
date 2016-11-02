@@ -46,7 +46,7 @@ namespace KariyerPortali.Service
         {
             countryRepository.Update(country);
         }
-        public void DeleteExpertise(Country country)
+        public void DeleteCountry(Country country)
         {
             countryRepository.Delete(country);
         }
