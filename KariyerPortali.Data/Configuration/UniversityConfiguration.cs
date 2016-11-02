@@ -14,7 +14,7 @@ namespace KariyerPortali.Data.Configuration
         {
             /* Fluent-API */
             ToTable("Universities");
-
+         
             Property(c => c.UniversityName).IsRequired().HasMaxLength(200);
         }
 
