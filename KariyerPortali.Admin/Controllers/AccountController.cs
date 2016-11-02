@@ -18,6 +18,16 @@ namespace KariyerPortali.Admin.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult MyProfile()
+        {
+            return View();
+        }
+
         public AccountController()
         {
         }
