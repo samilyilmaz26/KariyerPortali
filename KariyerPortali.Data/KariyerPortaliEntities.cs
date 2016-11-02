@@ -14,6 +14,7 @@ namespace KariyerPortali.Data
         public KariyerPortaliEntities() : base("KariyerPortaliEntities") { }
 
         public DbSet<Resume> Resumes { get; set; }
+        public DbSet<University> Universities { get; set; }
 
         public virtual void Commit()
         {
