@@ -12,21 +12,21 @@ namespace KariyerPortali.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ICvService cvService;
+        private readonly IResumeService cvService;
 
-        public HomeController(ICvService cvService)
+        public HomeController(IResumeService resumeService)
         {
-            this.cvService = cvService;
+            this.cvService = resumeService;
         }
 
         public ActionResult Index()
         {
-            IEnumerable<CvViewModel> viewModelCvs;
-            IEnumerable<Cv> cvs;
+            IEnumerable<ResumeViewModel> viewModelCvs;
+            IEnumerable<Resume> cvs;
 
-            cvs = cvService.GetCvs().ToList();
+            cvs = cvService.GetResumes().ToList();
 
-            viewModelCvs = Mapper.Map<IEnumerable<Cv>, IEnumerable<CvViewModel>>(cvs);
+            viewModelCvs = Mapper.Map<IEnumerable<Resume>, IEnumerable<ResumeViewModel>>(cvs);
 
             return View(viewModelCvs);
         }

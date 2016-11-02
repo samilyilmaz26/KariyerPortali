@@ -5,7 +5,7 @@ using System.Web;
 
 namespace KariyerPortali.Web.ViewModels
 {
-    public class CvViewModel
+    public class ResumeViewModel
     {
         public int CvId { get; set; }
         public string CvName { get; set; }

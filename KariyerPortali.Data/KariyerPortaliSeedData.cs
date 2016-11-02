@@ -12,19 +12,19 @@ namespace KariyerPortali.Data
     {
         protected override void Seed(KariyerPortaliEntities context)
         {
-            GetCvs().ForEach(c => context.Cvs.Add(c));
+            GetResumes().ForEach(c => context.Resumes.Add(c));
 
             context.Commit();
         }
 
-        private static List<Cv> GetCvs()
+        private static List<Resume> GetResumes()
         {
-            return new List<Cv>
+            return new List<Resume>
             {
-                new Cv {
+                new Resume {
                     CvName = "Murat Demirci"
                 },
-                new Cv {
+                new Resume {
                     CvName = "Şamil Yılmaz"
                 }
             };

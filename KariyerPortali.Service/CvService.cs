@@ -9,42 +9,42 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Service
 {
-    public interface ICvService
+    public interface IResumeService
     {
-        IEnumerable<Cv> GetCvs();
-        Cv GetCv(int id);
-        void CreateCv(Cv cv);
-        void SaveCv();
+        IEnumerable<Resume> GetResumes();
+        Resume GetResume(int id);
+        void CreateResume(Resume resume);
+        void SaveResume();
     }
-    public class CvService : ICvService
+    public class ResumeService : IResumeService
     {
-        private readonly ICvRepository cvRepository;
+        private readonly IResumeRepository resumeRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public CvService(ICvRepository cvRepository, IUnitOfWork unitOfWork)
+        public ResumeService(IResumeRepository resumeRepository, IUnitOfWork unitOfWork)
         {
-            this.cvRepository = cvRepository;
+            this.resumeRepository = resumeRepository;
             this.unitOfWork = unitOfWork;
         }
-        #region ICvService Members
-        public IEnumerable<Cv> GetCvs()
+        #region IResumeService Members
+        public IEnumerable<Resume> GetResumes()
         {
-            var cvs = cvRepository.GetAll();
+            var cvs = resumeRepository.GetAll();
             return cvs;
         }
 
-        public Cv GetCv(int id)
+        public Resume GetResume(int id)
         {
-            var cv = cvRepository.GetById(id);
+            var cv = resumeRepository.GetById(id);
             return cv;
         }
 
-        public void CreateCv(Cv cv)
+        public void CreateResume(Resume resume)
         {
-            cvRepository.Add(cv);
+            resumeRepository.Add(resume);
         }
 
-        public void SaveCv()
+        public void SaveResume()
         {
             unitOfWork.Commit();
         }

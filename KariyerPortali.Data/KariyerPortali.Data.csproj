@@ -60,7 +60,6 @@
     <Compile Include="Repositories\CandidateRepository.cs" />
     <Compile Include="Repositories\CityRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
-    <Compile Include="Repositories\CvRepository.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
     <Compile Include="Repositories\EmployerRepository.cs" />
     <Compile Include="Repositories\ExperienceRepository.cs" />
