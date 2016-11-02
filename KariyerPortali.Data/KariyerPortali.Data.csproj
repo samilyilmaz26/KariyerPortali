@@ -68,7 +68,6 @@
     <Compile Include="Repositories\ExperienceRepository.cs" />
     <Compile Include="Repositories\ExpertiseRepository.cs" />
     <Compile Include="Repositories\FileRepository.cs" />
-    <Compile Include="Repositories\Gender.cs" />
     <Compile Include="Repositories\GenderRepository.cs" />
     <Compile Include="Repositories\JobApplicationRepository.cs" />
     <Compile Include="Repositories\JobRepository.cs" />
