@@ -11,4 +11,4 @@ namespace KariyerPortali.Admin.ViewModels
         public string CityName { get; set; }
         public string CountryName { get; set; }
     }
-}
+} 
