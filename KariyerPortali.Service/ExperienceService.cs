@@ -14,6 +14,8 @@ namespace KariyerPortali.Service
         IEnumerable<Experience> GetExperiences();
         Experience GetExperience(int id);
         void CreateExperience(Experience experience);
+        void UpdateExperience(Experience experience);
+        void DeleteExperience(Experience experience);
         void SaveExperience();
     }
     public class ExperienceService:IExperienceService
@@ -39,6 +41,14 @@ namespace KariyerPortali.Service
         public void CreateExperience(Experience experience)
         {
             experienceRepository.Add(experience);
+        }
+        public void UpdateExperience(Experience experience)
+        {
+            experienceRepository.Update(experience);
+        }
+        public void DeleteExperience(Experience experience)
+        {
+            experienceRepository.Delete(experience);
         }
         public void SaveExperience()
         {

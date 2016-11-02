@@ -14,6 +14,8 @@ namespace KariyerPortali.Service
         IEnumerable<Exam> GetExams();
         Exam GetExam(int id);
         void CreateExam(Exam exam);
+        void UpdateExam(Exam exam);
+        void DeleteExam(Exam exam);
         void SaveExam();
     }
     public class ExamService:IExamService
@@ -39,6 +41,14 @@ namespace KariyerPortali.Service
         public void CreateExam(Exam exam)
         {
             examRepository.Add(exam);
+        }
+        public void UpdateExam(Exam exam)
+        {
+            examRepository.Update(exam);
+        }
+        public void DeleteExam(Exam exam)
+        {
+            examRepository.Delete(exam);
         }
         public void SaveExam()
         {

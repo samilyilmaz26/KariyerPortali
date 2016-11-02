@@ -14,6 +14,8 @@ namespace KariyerPortali.Service
         IEnumerable<Department> GetDepartments();
         Department GetDepartment(int id);
         void CreateDepartment(Department department);
+        void UpdateDepartment(Department department);
+        void DeleteDepartment(Department department);
         void SaveDepartment();
     }
     public class DepartmentService:IDepartmentService
@@ -42,7 +44,14 @@ namespace KariyerPortali.Service
         {
             departmentRepository.Add(department);
         }
-
+        public void UpdateDepartment(Department department)
+        {
+            departmentRepository.Update(department);
+        }
+        public void DeleteDepartment(Department department)
+        {
+            departmentRepository.Delete(department);
+        }
         public void SaveDepartment()
         {
             unitOfWork.Commit();
