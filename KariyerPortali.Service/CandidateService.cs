@@ -14,6 +14,8 @@ namespace KariyerPortali.Service
         IEnumerable<Candidate> GetCandidates();
         Candidate GetCandidate(int id);
         void CreateCandidate(Candidate candidate);
+        void UpdateCandidate(Candidate candidate);
+        void DeleteCandidate(Candidate candidate);
         void SaveCandidate();
     }
     public class CandidateService : ICandidateService
@@ -39,6 +41,14 @@ namespace KariyerPortali.Service
         public void CreateCandidate(Candidate candidate)
         {
             candidateRepository.Add(candidate);
+        }
+        public void UpdateCandidate(Candidate candidate)
+        {
+            candidateRepository.Update(candidate);
+        }
+        public void DeleteCandidate(Candidate candidate)
+        {
+            candidateRepository.Delete(candidate);
         }
         public void SaveCandidate()
         {

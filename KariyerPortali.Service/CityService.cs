@@ -14,6 +14,8 @@ namespace KariyerPortali.Service
         IEnumerable<City> GetCities();
         City GetCity(int id);
         void CreateCity(City city);
+        void UpdateCity(City city);
+        void DeleteCity(City city);
         void SaveCity();
     }
     public class CityService : ICityService
@@ -39,6 +41,14 @@ namespace KariyerPortali.Service
         public void CreateCity(City city)
         {
             cityRepository.Add(city);
+        }
+        public void UpdateCity(City city)
+        {
+           cityRepository.Update(city);
+        }
+        public void DeleteCity(City city)
+        {
+            cityRepository.Delete(city);
         }
         public void SaveCity()
         {
