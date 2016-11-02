@@ -14,7 +14,7 @@ namespace KariyerPortali.Data.Configuration
         {
             /* Fluent-API */
             ToTable("Resumes");
-            HasKey<int>(c => c.CvId);
+            HasKey<int>(c => c.ResumeId);
             Property(c => c.CvName).IsRequired().HasMaxLength(200);
         }
     }

@@ -8,7 +8,7 @@ namespace KariyerPortali.Model
 {
     public class Resume
     {
-        public int CvId { get; set; }
+        public int ResumeId { get; set; }
         public string CvName { get; set; }
     }
 }
