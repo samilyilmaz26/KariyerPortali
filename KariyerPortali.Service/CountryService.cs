@@ -14,6 +14,8 @@ namespace KariyerPortali.Service
         IEnumerable<Country> GetCountries();
         Country GetCountry(int id);
         void CreateCountry(Country country);
+        void UpdateCountry(Country country);
+        void DeleteCountry(Country country);
         void SaveCountry();
     }
     public class CountryService: ICountryService
@@ -39,6 +41,14 @@ namespace KariyerPortali.Service
         public void CreateCountry(Country country)
         {
             countryRepository.Add(country);
+        }
+        public void UpdateCountry(Country country)
+        {
+            countryRepository.Update(country);
+        }
+        public void DeleteExpertise(Country country)
+        {
+            countryRepository.Delete(country);
         }
         public void SaveCountry()
         {
