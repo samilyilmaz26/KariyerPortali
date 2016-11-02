@@ -12,5 +12,6 @@ namespace KariyerPortali.Model
         public string SectorName { get; set; }
         
         public ICollection<Employer>Employers { get; set; }
+        public ICollection<Reference> References { get; set; }
     }
 }
