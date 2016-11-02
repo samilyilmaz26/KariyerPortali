@@ -43,6 +43,14 @@ namespace KariyerPortali.Service
         {
             resumeRepository.Add(resume);
         }
+        public void UpdateResume(Resume resume)
+        {
+            resumeRepository.Update(resume);
+        }
+        public void DeleteResume(Resume resume)
+        {
+            resumeRepository.Delete(resume);
+        }
 
         public void SaveResume()
         {
