@@ -12,7 +12,8 @@ namespace KariyerPortali.Data.Configuration
     {
         public CandidateConfiguration()
         {
-
+            ToTable("Candidates");
+            Property(c=>c.CandidateId).
         }
 
     }
