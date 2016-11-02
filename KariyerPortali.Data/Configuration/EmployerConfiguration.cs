@@ -15,7 +15,15 @@ namespace KariyerPortali.Data.Configuration
             ToTable("Employers");
             HasKey<int>(c => c.EmployerId);
             Property(c => c.Logo).HasMaxLength(250);
-            Property(c => c.UserName).HasMaxLength(250);
+            Property(c => c.UserName).IsRequired().HasMaxLength(250);
+            Property(c => c.EmployerName).IsRequired().HasMaxLength(250);
+            Property(c => c.Adress).IsRequired().HasMaxLength(250);
+            Property(c => c.Phone).IsRequired().HasMaxLength(15);
+            Property(c => c.Email).IsRequired().HasMaxLength(50);
+            Property(c => c.WebSite).IsRequired().HasMaxLength(50);
+            Property(c => c.CreateDate).IsRequired();
+            Property(c => c.UpdatedBy).IsRequired().HasMaxLength(100);
+            Property(c => c.UpdateDate).IsRequired();
         }
     }
 }
