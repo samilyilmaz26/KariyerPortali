@@ -10,6 +10,11 @@ namespace KariyerPortali.Data.Configuration
 {
     public class ExperienceConfiguration:EntityTypeConfiguration<Experience>
     {
-        public ExperienceConfiguration
+        public ExperienceConfiguration()
+        {
+            ToTable("Experiences");
+            HasKey<int>(c => c.ExperienceId);
+            Property(c => c.ExperienceName).IsRequired();
+        }
     }
 }
