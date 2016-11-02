@@ -195,6 +195,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CityViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\apps\css\inbox.css" />
@@ -6336,13 +6337,13 @@
     <Content Include="Views\Settings\Theme.cshtml" />
     <Content Include="Views\Post\Create.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\SocialRight\Index.cshtml" />
+    <Content Include="Views\SocialRight\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\apps\img\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\SocialRight\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

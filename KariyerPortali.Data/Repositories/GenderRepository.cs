@@ -1,4 +1,5 @@
 ﻿using KariyerPortali.Data.Infrastructure;
+using KariyerPortali.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

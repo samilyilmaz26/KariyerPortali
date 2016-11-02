@@ -41,6 +41,7 @@ namespace KariyerPortali.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ResumeConfiguration());
+            modelBuilder.Configurations.Add(new UniversityConfiguration());
         }
     }
 }
