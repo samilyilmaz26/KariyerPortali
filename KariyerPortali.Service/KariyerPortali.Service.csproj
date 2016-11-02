@@ -49,6 +49,7 @@
     <Compile Include="ExperienceService.cs" />
     <Compile Include="ExpertiseService.cs" />
     <Compile Include="FileService.cs" />
+    <Compile Include="JobApplicationService.cs" />
     <Compile Include="ResumeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
