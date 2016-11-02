@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Configuration\CandidateConfiguration.cs" />
     <Compile Include="Configuration\ResumeConfiguration.cs" />
+    <Compile Include="Configuration\SectorConfiguration.cs" />
     <Compile Include="Configuration\SkillConfiguration.cs" />
     <Compile Include="Configuration\SocialRightConfiguration.cs" />
     <Compile Include="Configuration\UniversityConfiguration.cs" />
