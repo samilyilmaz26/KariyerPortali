@@ -1,11 +1,12 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace KariyerPortali.Admin.Mappings
 {
-    public class ViewModelToDomainMappingProfile
+    public class ViewModelToDomainMappingProfile: Profile
     {
         public override string ProfileName
         {

@@ -30,11 +30,11 @@ namespace KariyerPortali.Admin.App_Start
             builder.RegisterType<DbFactory>().As<IDbFactory>().InstancePerRequest();
 
             // Repositories
-            builder.RegisterAssemblyTypes(typeof(ResumeRepository).Assembly)
+            builder.RegisterAssemblyTypes(typeof(CityRepository).Assembly)
                 .Where(t => t.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces().InstancePerRequest();
             // Services
-            builder.RegisterAssemblyTypes(typeof(ResumeService).Assembly)
+            builder.RegisterAssemblyTypes(typeof(CityService).Assembly)
                .Where(t => t.Name.EndsWith("Service"))
                .AsImplementedInterfaces().InstancePerRequest();
 
