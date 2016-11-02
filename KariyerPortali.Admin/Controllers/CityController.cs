@@ -15,23 +15,23 @@ namespace KariyerPortali.Admin.Controllers
     public class CityController : Controller
     {
         // GET: City
-        private readonly ICityService cvService;
+        private readonly ICityService cityService;
 
-        public CityController(ICityService CityService)
+        public CityController(ICityService cityService)
         {
-            this.cvService = CityService;
+            this.cityService = cityService;
         }
 
         public ActionResult Index()
         {
-            IEnumerable<CityViewModel> viewModelCvs;
-            IEnumerable<City> cvs;
+            IEnumerable<CityViewModel> viewModelCity;
+            IEnumerable<City> cty;
 
-            cvs = cvService.GetCities().ToList();
+            cty = cityService.GetCities().ToList();
 
-            viewModelCvs = Mapper.Map<IEnumerable<City>, IEnumerable<CityViewModel>>(cvs);
+            viewModelCity= Mapper.Map<IEnumerable<City>, IEnumerable<CityViewModel>>(cty);
 
-            return View(viewModelCvs);
+            return View(viewModelCity);
         }
 
         public ActionResult About()
