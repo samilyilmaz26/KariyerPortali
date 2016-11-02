@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KariyerPortali.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,9 @@ namespace KariyerPortali.Admin
     {
         protected void Application_Start()
         {
+            // Init database
+            System.Data.Entity.Database.SetInitializer(new KariyerPortaliSeedData());
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
