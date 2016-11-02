@@ -1,2 +1,17 @@
 ﻿body {
 }
+  .theme-panel > .color {
+    top: 4px;
+    right: 0;
+    padding: 20px;
+    cursor: pointer;
+    position: absolute;
+    background: #536881 url(../img/icon-color.png) center no-repeat;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px; }
+    .theme-panel > .color:hover {
+      background-color: #3f4f62 !important; }
+

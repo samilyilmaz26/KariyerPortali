@@ -14,7 +14,7 @@ namespace KariyerPortali.Data.Configuration
         {
             ToTable("Cities");
             HasKey<int>(c => c.CityId);
-            Property(c => c.CityName).HasMaxLength(25);
+            Property(c => c.CityName).IsRequired().HasMaxLength(25);
         }
 
     }

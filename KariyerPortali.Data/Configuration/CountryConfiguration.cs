@@ -14,7 +14,7 @@ namespace KariyerPortali.Data.Configuration
         {
             ToTable("Countries");
             HasKey<int>(c => c.CountryId);
-            Property(c => c.CountryName).HasMaxLength(25);
+            Property(c => c.CountryName).IsRequired().HasMaxLength(25);
         }
     }
 }
