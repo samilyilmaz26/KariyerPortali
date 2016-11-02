@@ -186,7 +186,6 @@
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\SocialRightController.cs" />
     <Compile Include="Controllers\UniversityController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -4963,6 +4962,7 @@
     <Content Include="assets\layouts\layout7\scripts\layout.min.js" />
     <Content Include="assets\layouts\layout\css\custom.css" />
     <Content Include="assets\layouts\layout\css\custom.min.css" />
+    <Content Include="assets\layouts\layout\css\example.css" />
     <Content Include="assets\layouts\layout\css\layout.css" />
     <Content Include="assets\layouts\layout\css\layout.min.css" />
     <Content Include="assets\layouts\layout\css\themes\blue.css" />
