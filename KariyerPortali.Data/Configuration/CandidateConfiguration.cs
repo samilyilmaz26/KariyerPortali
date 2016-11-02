@@ -13,7 +13,9 @@ namespace KariyerPortali.Data.Configuration
         public CandidateConfiguration()
         {
             ToTable("Candidates");
-            Property(c=>c.CandidateId).
+            Property(c => c.CandidateId).IsRequired().HasColumnName("Aday No");
+            Property(c => c.UserName).HasColumnName("Kullanıcı Adı").HasMaxLength(50);
+            Property(c=>c.FirstName)
         }
 
     }
