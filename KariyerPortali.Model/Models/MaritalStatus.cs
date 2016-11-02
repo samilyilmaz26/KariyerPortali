@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-   public enum Gender
+   public enum MaritalStatus
     {
-        Male=1,
-        Female=2
     }
 }
