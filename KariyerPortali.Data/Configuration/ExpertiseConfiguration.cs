@@ -10,5 +10,11 @@ namespace KariyerPortali.Data.Configuration
 {
     public class ExpertiseConfiguration:EntityTypeConfiguration<Expertise>
     {
+        public ExpertiseConfiguration()
+        {
+            ToTable("Expertises");
+            HasKey<int>(c => c.ExpertiseId);
+            Property(c => c.ExpertiseName).IsRequired();
+        }
     }
 }
