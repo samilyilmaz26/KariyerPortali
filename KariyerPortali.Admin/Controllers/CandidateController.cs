@@ -1,4 +1,7 @@
-﻿using KariyerPortali.Service;
+﻿using AutoMapper;
+using KariyerPortali.Admin.ViewModels;
+using KariyerPortali.Model;
+using KariyerPortali.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +22,16 @@ namespace KariyerPortali.Admin.Controllers
         // GET: Candidate
         public ActionResult Index()
         {
-            return View();
+            IEnumerable<CandidateViewModel> viewModelCandidate;
+
+            IEnumerable<Candidate> candidate;
+
+            candidate = candidateService.GetCandidates().ToList();
+
+            viewModelCandidate = Mapper.Map<IEnumerable<Candidate>, IEnumerable<CandidateViewModel>>(candidate);
+
+            return View(viewModelCandidate);
+
         }
 
         public ActionResult Edit()
