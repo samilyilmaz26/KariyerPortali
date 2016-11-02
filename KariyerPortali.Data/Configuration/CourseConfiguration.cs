@@ -12,7 +12,14 @@ namespace KariyerPortali.Data.Configuration
     {
         public CourseConfiguration()
         {
-
+            ToTable("Courses");
+            HasKey<int>(c => c.CourseId);
+            Property(c => c.CourseName).IsRequired();
+            Property(c => c.Institution).IsRequired();
+            Property(c => c.StartDate).IsRequired();
+            Property(c => c.FinishDate).IsRequired();
+            Property(c => c.Time).IsRequired();
+            Property(c => c.Statement).IsRequired();
         }
     }
 }

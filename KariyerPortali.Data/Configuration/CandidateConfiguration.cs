@@ -25,12 +25,12 @@ namespace KariyerPortali.Data.Configuration
 
             Property(c => c.Phone).HasMaxLength(24);
 
-            Property(c => c.BirthDate);
-            Property(c => c.Photo);
-            Property(c => c.CreateDate);
-            Property(c => c.State);
-            Property(c => c.UpdatedBy);
-            Property(c => c.UpdatedDate);
+            //Property(c => c.BirthDate);
+            //Property(c => c.Photo);
+            //Property(c => c.CreateDate);
+            //Property(c => c.State);
+            //Property(c => c.UpdatedBy);
+            //Property(c => c.UpdatedDate);
         }
 
         }
