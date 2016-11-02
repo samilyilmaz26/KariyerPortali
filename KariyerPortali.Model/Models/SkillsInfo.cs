@@ -13,5 +13,6 @@ namespace KariyerPortali.Model
         [ForeignKey("Skill")]
         public int SkillId { get; set; }
         public Skill Skill { get; set; }
+        public float Point { get; set; }
     }
 }
