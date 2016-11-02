@@ -5,7 +5,7 @@ using System.Web;
 
 namespace KariyerPortali.Admin.ViewModels
 {
-    public class CityViewModels
+    public class CityViewModel
     {
         public int CityId { get; set; }
         public string CityName { get; set; }
