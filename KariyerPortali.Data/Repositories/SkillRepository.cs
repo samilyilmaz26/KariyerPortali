@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 namespace KariyerPortali.Data.Repositories
 {
    
-    public class ExpertiseRepository : RepositoryBase<Expertise>, IExpertiseRepository
+    public class SkillRepository : RepositoryBase<Skill>, ISkillRepository
     {
-        public ExpertiseRepository(IDbFactory dbFactory)
+        public SkillRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
-    public interface IExpertiseRepository : IRepository<Expertise>
+    public interface ISkillRepository : IRepository<Skill>
     {
 
     }
