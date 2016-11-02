@@ -52,6 +52,7 @@
     <Compile Include="Configuration\DepartmentConfiguration.cs" />
     <Compile Include="Configuration\EmployerConfiguration.cs" />
     <Compile Include="Configuration\ExamConfiguration.cs" />
+    <Compile Include="Configuration\ExperienceConfiguration.cs" />
     <Compile Include="Configuration\JobApplicationConfiguration.cs" />
     <Compile Include="Configuration\LanguageConfiguration.cs" />
     <Compile Include="Configuration\PostConfiguration.cs" />
