@@ -42,6 +42,7 @@
     <Compile Include="CandidateService.cs" />
     <Compile Include="CityService.cs" />
     <Compile Include="CountryService.cs" />
+    <Compile Include="DepartmentService.cs" />
     <Compile Include="ResumeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
