@@ -6332,12 +6332,10 @@
     <Content Include="Views\Page\Create.cshtml" />
     <Content Include="Views\Exam\Index.cshtml" />
     <Content Include="Views\Exam\Create.cshtml" />
-    <Content Include="Views\User\MyProfile.cshtml" />
     <Content Include="Views\Sector\Index.cshtml" />
     <Content Include="Views\Sector\Create.cshtml" />
     <Content Include="Views\Settings\Theme.cshtml" />
     <Content Include="Views\Post\Create.cshtml" />
-    <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\SocialRight\Index.cshtml" />
     <Content Include="Views\SocialRight\Create.cshtml" />
     <Content Include="Views\Account\MyProfile.cshtml" />
