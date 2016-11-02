@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Configuration\CandidateConfiguration.cs" />
     <Compile Include="Configuration\CityConfiguration.cs" />
+    <Compile Include="Configuration\CountryConfiguration.cs" />
     <Compile Include="Configuration\PostConfiguration.cs" />
     <Compile Include="Configuration\ResumeConfiguration.cs" />
     <Compile Include="Configuration\SectorConfiguration.cs" />
