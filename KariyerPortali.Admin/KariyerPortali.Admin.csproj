@@ -4960,6 +4960,7 @@
     <Content Include="assets\layouts\layout7\img\m_toggler.png" />
     <Content Include="assets\layouts\layout7\scripts\layout.js" />
     <Content Include="assets\layouts\layout7\scripts\layout.min.js" />
+    <Content Include="assets\layouts\layout\css\color.css" />
     <Content Include="assets\layouts\layout\css\custom.css" />
     <Content Include="assets\layouts\layout\css\custom.min.css" />
     <Content Include="assets\layouts\layout\css\layout.css" />
