@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\CandidateConfiguration.cs" />
     <Compile Include="Configuration\ResumeConfiguration.cs" />
     <Compile Include="Configuration\UniversityConfiguration.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
