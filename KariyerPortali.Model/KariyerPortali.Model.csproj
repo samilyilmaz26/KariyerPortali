@@ -49,6 +49,7 @@
     <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\MaritalStatus.cs" />
+    <Compile Include="Models\MilitaryService.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Resume.cs" />
     <Compile Include="Models\Employer.cs" />
