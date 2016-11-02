@@ -14,7 +14,8 @@ namespace KariyerPortali.Data.Configuration
         {
             ToTable("Employers");
             HasKey<int>(c => c.EmployerId);
-            Property(c=>c.EmployerName).
+            Property(c => c.Logo).HasMaxLength(250);
+            Property(c => c.UserName).HasMaxLength(250);
         }
     }
 }
