@@ -10,5 +10,6 @@ namespace KariyerPortali.Model
     {
         public int SkillId { get; set; }
         public string SkillName { get; set; }
+        
     }
 }
