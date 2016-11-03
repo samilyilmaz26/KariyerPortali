@@ -19,10 +19,12 @@ namespace KariyerPortali.Admin.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        private ApplicationDbContext db = new ApplicationDbContext();
+
 
         public ActionResult Index()
-        {
-            return View();
+        {            
+            return View(db.Users.ToList());
         }
 
         [AllowAnonymous]
