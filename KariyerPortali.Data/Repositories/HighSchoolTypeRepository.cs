@@ -16,9 +16,7 @@ namespace KariyerPortali.Data.Repositories
     }
     public interface IHighSchoolTypeRepository : IRepository<HighSchoolType>
         {
-            ToTable("EducationInfos");
-            HasKey<int>(c => c.EducationInfoId);
-            HasOptional<Department>(c => c.Department).WithMany(c => c.EducationInfos).HasForeignKey(c => c.DepartmentId).WillCascadeOnDelete(false);
+           
         }
     }
-}
+
