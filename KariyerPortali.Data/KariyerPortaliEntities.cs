@@ -26,6 +26,7 @@ namespace KariyerPortali.Data
         public DbSet<Job> Jobs { get; set; }
         public DbSet<JobApplication> JobApplications { get; set; }
         public DbSet<Language> Languages { get; set; }
+        public DbSet<LanguageInfo> LanguageInfos { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Resume> Resumes { get; set; }
         public DbSet<Sector> Sectors { get; set; }
