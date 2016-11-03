@@ -82,6 +82,7 @@
     <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Repositories\CourseRepository.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
+    <Compile Include="Repositories\EducationInfoRepository.cs" />
     <Compile Include="Repositories\EmployerRepository.cs" />
     <Compile Include="Repositories\ExamInfoRepository.cs" />
     <Compile Include="Repositories\ExamRepository.cs" />
