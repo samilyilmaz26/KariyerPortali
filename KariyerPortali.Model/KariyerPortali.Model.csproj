@@ -59,6 +59,7 @@
     <Compile Include="Models\MilitaryService.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Reference.cs" />
+    <Compile Include="Models\ReferenceType.cs" />
     <Compile Include="Models\Resume.cs" />
     <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\Experience.cs" />
