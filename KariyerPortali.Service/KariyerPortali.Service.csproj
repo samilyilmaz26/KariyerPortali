@@ -58,6 +58,7 @@
     <Compile Include="ReferenceService.cs" />
     <Compile Include="ResumeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SectorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KariyerPortali.Data\KariyerPortali.Data.csproj">
