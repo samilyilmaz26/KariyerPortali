@@ -25,14 +25,7 @@ namespace KariyerPortali.Admin.Controllers
 
         public ActionResult Index()
         {
-            IEnumerable<CityViewModel> viewModelCity;
-            IEnumerable<City> cty;
-
-            cty = cityService.GetCities().ToList();
-
-            viewModelCity= Mapper.Map<IEnumerable<City>, IEnumerable<CityViewModel>>(cty);
-
-            return View(viewModelCity);
+            return View();
         }
         public ActionResult Create()
         {
