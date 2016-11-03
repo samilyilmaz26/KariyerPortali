@@ -43,7 +43,6 @@ namespace KariyerPortali.Data
             modelBuilder.Configurations.Add(new CandidateConfiguration());
             modelBuilder.Configurations.Add(new CityConfiguration());
             modelBuilder.Configurations.Add(new CountryConfiguration());
-            modelBuilder.Configurations.Add(new CourseConfiguration());
             modelBuilder.Configurations.Add(new DepartmentConfiguration());
             modelBuilder.Configurations.Add(new EmployerConfiguration());
             modelBuilder.Configurations.Add(new ExamConfiguration());
