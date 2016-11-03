@@ -20,7 +20,7 @@ namespace KariyerPortali.Admin.Mappings
 #pragma warning disable CS0618 // Type or member is obsolete
             Mapper.CreateMap<Resume, ResumeViewModel>();
             Mapper.CreateMap<Country, CountryViewModel>();
-            Mapper.CreateMap<Language, LanguageViewModel>();
+            Mapper.CreateMap<City, CityViewModel>();
 #pragma warning restore CS0618 // Type or member is obsolete
         }
     

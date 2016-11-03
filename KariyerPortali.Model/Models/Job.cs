@@ -11,13 +11,13 @@ namespace KariyerPortali.Model
 
         public string Description { get; set; }
 
-      
+        [ForeignKey("Employer")]
         public int EmployerId { get; set; }
         public Employer Employer { get; set; }
 
         public JobType JobType { get; set; }
 
-      
+        [ForeignKey("Experience")]
         public int ExperienceId { get; set; }
         public Experience Experience { get; set; }
 
