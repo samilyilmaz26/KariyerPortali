@@ -11,6 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface ICandidateService
     {
+        IList<Candidate> Search(string search);
         IEnumerable<Candidate> GetCandidates();
         Candidate GetCandidate(int id);
         void CreateCandidate(Candidate candidate);

@@ -37,62 +37,62 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
-        //public ActionResult AjaxHandler(jQueryDataTableParamModel param)
-        //{
+        public ActionResult AjaxHandler(jQueryDataTableParamModel param)
+        {
 
-        //    string sSearch = "";
-        //    if (param.sSearch != null) sSearch = param.sSearch;
-        //    var allCountries = new CountryService().GetAllForAdmin(sSearch);
-        //    IEnumerable<Country> filteredCountries = allCountries;
+            string sSearch = "";
+            if (param.sSearch != null) sSearch = param.sSearch;
+            var allCountries = countryService.Search(sSearch);
+            IEnumerable<Country> filteredCountries = allCountries;
 
-        //    var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
+            var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
 
 
-        //    var sortDirection = Request["sSortDir_0"]; // asc or desc
-        //    if (sortDirection == "asc")
-        //    {
-        //        switch (sortColumnIndex)
-        //        {
-        //            case 0:
-        //                filteredCountries = filteredCountries.OrderBy(c => c.CountryId);
-        //                break;
-        //            case 1:
-        //                filteredCountries = filteredCountries.OrderBy(c => c.CountryName)
-        //                break;
-                   
-        //            default:
-        //                filteredCountries = filteredCountries.OrderBy(c => c.CountryId);
-        //                break;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        switch (sortColumnIndex)
-        //        {
-        //            case 0:
-        //                filteredCountries = filteredCountries.OrderByDescending(c => c.CountryId);
-        //                break;
-        //            case 1:
-        //                filteredCountries = filteredCountries.OrderByDescending(c => c.CountryName);
-        //                break;
-                   
-        //            default:
-        //                filteredCountries = filteredCountries.OrderByDescending(c => c.CountryId);
-        //                break;
-        //        }
-        //    }
+            var sortDirection = Request["sSortDir_0"]; // asc or desc
+            if (sortDirection == "asc")
+            {
+                switch (sortColumnIndex)
+                {
+                    case 0:
+                        filteredCountries = filteredCountries.OrderBy(c => c.CountryId);
+                        break;
+                    case 1:
+                        filteredCountries = filteredCountries.OrderBy(c => c.CountryName);
+                        break;
 
-        //    var displayedCountries = filteredCountries.Skip(param.iDisplayStart).Take(param.iDisplayLength);
-        //    var result = from c in displayedCountries
-        //                 select new[] { c.CountryId ?? string.Empty, c.CountryName,  c.CountryId.ToString() };
-        //    return Json(new
-        //    {
-        //        sEcho = param.sEcho,
-        //        iTotalRecords = allCountries.Count(),
-        //        iTotalDisplayRecords = filteredCountries.Count(),
-        //        aaData = result
-        //    },
-        //        JsonRequestBehavior.AllowGet);
-        //}
+                    default:
+                        filteredCountries = filteredCountries.OrderBy(c => c.CountryId);
+                        break;
+                }
+            }
+            else
+            {
+                switch (sortColumnIndex)
+                {
+                    case 0:
+                        filteredCountries = filteredCountries.OrderByDescending(c => c.CountryId);
+                        break;
+                    case 1:
+                        filteredCountries = filteredCountries.OrderByDescending(c => c.CountryName);
+                        break;
+
+                    default:
+                        filteredCountries = filteredCountries.OrderByDescending(c => c.CountryId);
+                        break;
+                }
+            }
+
+            var displayedCountries = filteredCountries.Skip(param.iDisplayStart).Take(param.iDisplayLength);
+            var result = from c in displayedCountries
+                         select new[] { c.CountryId.ToString(), c.CountryName };
+            return Json(new
+            {
+                sEcho = param.sEcho,
+                iTotalRecords = allCountries.Count(),
+                iTotalDisplayRecords = filteredCountries.Count(),
+                aaData = result
+            },
+                JsonRequestBehavior.AllowGet);
+        }
     }
 }
