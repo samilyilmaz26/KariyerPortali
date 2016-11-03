@@ -4,8 +4,6 @@
     {
         
         public int EducationInfoId { get; set; }
-
-        public int EducationStatusId { get; set; }
         public EducationStatus EducationStatus { get; set; }
 
         public int UniversityId { get; set; }
