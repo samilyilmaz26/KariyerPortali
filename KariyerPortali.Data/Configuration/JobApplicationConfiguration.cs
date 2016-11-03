@@ -16,7 +16,7 @@ namespace KariyerPortali.Data.Configuration
             ToTable("JobApplications");
             HasKey<int>(c=>c.ApplicationId);
             Property(c => c.CoverLetter).HasMaxLength(500);
-
+            HasOptional<Employer>(c => c.Employer).WithMany().WillCascadeOnDelete(false);
            
         }
     }
