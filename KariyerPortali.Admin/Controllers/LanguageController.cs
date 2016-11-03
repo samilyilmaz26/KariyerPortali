@@ -42,7 +42,7 @@ namespace KariyerPortali.Admin.Controllers
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allLanguages = new LanguageService().GetAllForAdmin(sSearch);
+            var allLanguages = new LanguageService().GetAllSearch(sSearch);
             IEnumerable<Language> filteredLanguages = allLanguages;
 
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);

@@ -29,7 +29,7 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region ILanguageService Members
-        public IList<Language> Search(string search)
+        public IList<Language> GetAllSearch(string search)
         {
             search = search.ToLower().Trim();
             var searchWords = search.Split(' ');
