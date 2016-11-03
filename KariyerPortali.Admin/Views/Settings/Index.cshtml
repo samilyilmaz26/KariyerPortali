@@ -2,4 +2,51 @@
 @{
     ViewBag.Title = "Index";
 }
+<style>
+    .theme-option>textarea{
+        width:500px;
+    }
+</style>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="@Url.Action("Index", "Settings")" class="nav-link">Genel Ayarlar</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>Tema Ayarları</span>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PROFILE SIDEBAR -->
+        <div class="profile-sidebar">
+            <!-- PORTLET MAIN -->
+            <div class="portlet light profile-sidebar-portlet ">
+                <div class="theme-panel">
 
+                    
+                    <div class="theme-option">
+                        <span> Header Script:</span><br />
+                        <textarea>
+                        </textarea>
+                    </div>
+                    <div class="theme-option">
+                        <span> Google Analytics Kodu:</span><br />
+                        <textarea>
+                        </textarea>
+                    </div>
+                    <div class="theme-option">
+                        <span> Footer Script:</span><br />
+                        <textarea>
+                        </textarea>
+                    </div>
+                    <div>
+                        <button class="submit">Kaydet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

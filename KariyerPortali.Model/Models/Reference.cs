@@ -24,5 +24,7 @@ namespace KariyerPortali.Model
         public string Message { get; set; }
         public string ReferenceFile { get; set; }
 
+        public ReferenceType ReferenceType { get; set; }
+
     }
 }
