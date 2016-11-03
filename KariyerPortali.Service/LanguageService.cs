@@ -29,6 +29,23 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region ILanguageService Members
+        public IList<Language> Search(string search)
+        {
+            search = search.ToLower().Trim();
+            var searchWords = search.Split(' ');
+
+
+            var query = GetLanguages();
+            foreach (string sSearch in searchWords)
+            {
+                if (sSearch != null && sSearch != "")
+                {
+                    query = query.Where(l => l.LanguageId.ToString().Contains(sSearch) || l.LanguageName.Contains(sSearch));
+                }
+            }
+            return query.ToList();
+
+        }
         public IEnumerable<Language> GetLanguages()
         {
             var languages = languageRepository.GetAll();
