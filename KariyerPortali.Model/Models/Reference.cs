@@ -17,7 +17,7 @@ namespace KariyerPortali.Model
         public string Phone { get; set; }
         public string CompanyName { get; set; }
 
-        [ForeignKey("Sector")]
+       
         public int SectorId { get; set; }
         public Sector Sector { get; set; }
 

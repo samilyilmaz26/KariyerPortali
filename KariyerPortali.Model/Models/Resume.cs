@@ -67,6 +67,21 @@ namespace KariyerPortali.Model
 
         public ICollection<LanguageInfo> LanguageInfos { get; set; }
 
+        public string ComputerSkill { get; set; }
+        public string Certificate { get; set; }
+
+        public ICollection<ExamInfo> ExamInfos { get; set; }
+        ICollection<SkillInfo> SkillInfos { get; set; }
+        ICollection<Course> Courses { get; set; }
+        public string ScholarshipAndProject { get; set; }
+        public string Hobby { get; set; }
+        public string MemberOwnedCommunity { get; set; }
+
+        public BloodType BloodType { get; set; }
+        public CigaretteStatus CigaretteStatus { get; set; }
+        public SalaryWaited SalaryWaited { get; set; }
+        ICollection<Reference> References { get; set; }
+
 
 
 

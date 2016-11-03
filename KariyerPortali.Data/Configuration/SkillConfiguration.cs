@@ -16,6 +16,7 @@ namespace KariyerPortali.Data.Configuration
             ToTable("Skills");
             HasKey<int>(c=>c.SkillId);
             Property(c => c.SkillName).IsRequired().HasMaxLength(200);
+
         }
     }
 }

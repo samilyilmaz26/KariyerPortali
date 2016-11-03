@@ -12,13 +12,13 @@ namespace KariyerPortali.Service
     public interface ISkillInfoService
     {
         IEnumerable<SkillInfo> GetSkillInfos();
-        Skill GetSkillInfo(int id);
+        SkillInfo GetSkillInfo(int id);
         void CreateSkillInfo(SkillInfo skillInfo);
         void UpdateSkillInfo(SkillInfo skillInfo);
         void DeleteSkillInfo(SkillInfo skillInfo);
         void SaveSkillInfo();
     }
-    public class SkillInfoService : ISkillInfoService
+    public class SkillInfoService: ISkillInfoService
     {
         private readonly ISkillInfoRepository skillInfoRepository;
         private readonly IUnitOfWork unitOfWork;
