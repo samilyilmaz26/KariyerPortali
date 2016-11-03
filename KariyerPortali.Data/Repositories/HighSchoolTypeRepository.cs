@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Repositories
 {
-   
-    public class HighSchoolTypeRepository : RepositoryBase<HighSchoolType>, IHighSchoolDepartmentRepository
+
+    public class HighSchoolTypeRepository : RepositoryBase<HighSchoolType>, IHighSchoolTypeRepository
     {
         public HighSchoolTypeRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
