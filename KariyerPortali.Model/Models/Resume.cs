@@ -25,7 +25,7 @@ namespace KariyerPortali.Model
 
         public MaritalStatus MaritalStatus { get; set; }
 
-        [ForeignKey("Country")]
+        [ForeignKey("Nationality")]
         public int CountryId { get; set; }
         public Country Nationality { get; set; }
 
