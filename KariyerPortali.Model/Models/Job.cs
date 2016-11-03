@@ -15,13 +15,13 @@ namespace KariyerPortali.Model
         public int EmployerId { get; set; }
         public Employer Employer { get; set; }
 
-        public string JobType { get; set; }
+        public JobType JobType { get; set; }
 
         [ForeignKey("Experience")]
         public int ExperienceId { get; set; }
         public Experience Experience { get; set; }
 
-
+        public ICollection<JobApplication> JobApplications { get; set; }
         public ICollection<SocialRight> SocialRights { get; set; }
 
         
