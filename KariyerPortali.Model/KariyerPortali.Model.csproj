@@ -54,6 +54,7 @@
     <Compile Include="Models\ExamInfo.cs" />
     <Compile Include="Models\Expertise.cs" />
     <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\HighSchoolCertificate.cs" />
     <Compile Include="Models\HighSchoolDepartment.cs" />
     <Compile Include="Models\HighSchoolType.cs" />
     <Compile Include="Models\JobType.cs" />
