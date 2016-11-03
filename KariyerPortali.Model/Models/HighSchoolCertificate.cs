@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public class HighSchoolType
+    public enum HighSchoolCertificate
     {
-        public int TypeId { get; set; }
-        public string TypeName { get; set; }
     }
 }

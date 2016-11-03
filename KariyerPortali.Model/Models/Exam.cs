@@ -11,6 +11,6 @@ namespace KariyerPortali.Model
         public int ExamId { get; set; }
         public string ExamName { get; set; }
         public float Point { get; set; }
-
+        public ICollection<ExamInfo> ExamInfos { get; set; }
     }
 }

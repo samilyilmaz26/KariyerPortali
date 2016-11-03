@@ -19,6 +19,7 @@ namespace KariyerPortali.Data
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Exam> Exams { get; set; }
+        public DbSet<ExamInfo> ExamInfos { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Expertise> Expertises { get; set; }
         public DbSet<File> Files { get; set; }
@@ -44,7 +45,6 @@ namespace KariyerPortali.Data
             modelBuilder.Configurations.Add(new CityConfiguration());
             modelBuilder.Configurations.Add(new CountryConfiguration());
             modelBuilder.Configurations.Add(new DepartmentConfiguration());
-            modelBuilder.Configurations.Add(new CourseConfiguration());
             modelBuilder.Configurations.Add(new EmployerConfiguration());
             modelBuilder.Configurations.Add(new ExamConfiguration());
             modelBuilder.Configurations.Add(new ExperienceConfiguration());
