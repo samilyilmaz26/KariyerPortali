@@ -24,6 +24,8 @@ namespace KariyerPortali.Data.Configuration
             Property(c => c.CreateDate).IsRequired();
             Property(c => c.UpdatedBy).IsRequired().HasMaxLength(100);
             Property(c => c.UpdateDate).IsRequired();
+            HasOptional<Sector>(c => c.Sector).WithMany(c => c.Employers).HasForeignKey(c => c.SectorId).WillCascadeOnDelete(false);
+            HasOptional<City>(c => c.City).WithMany(c => c.Employers).HasForeignKey(c => c.CityId).WillCascadeOnDelete(false);
         }
     }
 }
