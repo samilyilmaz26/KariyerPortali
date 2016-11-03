@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public class Department
+    public class HighSchoolDepartment
     {
-        public int DepartmentId { get; set; }
+        public int HighSchoolDepartmentId { get; set; }
         public string DepartmentName { get; set; }
-        ICollection<EducationInfo> EducationInfos { get; set; }
     }
 }
