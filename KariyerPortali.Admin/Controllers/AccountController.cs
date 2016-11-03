@@ -27,6 +27,23 @@ namespace KariyerPortali.Admin.Controllers
             return View(db.Users.ToList());
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(ApplicationUser model)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser u = UserManager.FindById(model.Id);
+                u.UserName = model.Email;
+                u.Email = model.Email;
+                u.FirstName = model.FirstName; // Extra Property
+                u.LastName = model.LastName; // Extra Property
+                UserManager.Update(u);
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+
         [AllowAnonymous]
         public ActionResult MyProfile()
         {
