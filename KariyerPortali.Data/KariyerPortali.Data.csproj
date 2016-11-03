@@ -51,6 +51,7 @@
     <Compile Include="Configuration\CountryConfiguration.cs" />
     <Compile Include="Configuration\CourseConfiguration.cs" />
     <Compile Include="Configuration\DepartmentConfiguration.cs" />
+    <Compile Include="Configuration\EducationInfoConfiguration.cs" />
     <Compile Include="Configuration\EmployerConfiguration.cs" />
     <Compile Include="Configuration\ExamConfiguration.cs" />
     <Compile Include="Configuration\ExamInfoConfiguration.cs" />
