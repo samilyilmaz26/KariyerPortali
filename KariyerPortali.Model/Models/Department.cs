@@ -10,5 +10,6 @@ namespace KariyerPortali.Model
     {
         public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
+        ICollection<EducationInfo> EducationInfos { get; set; }
     }
 }
