@@ -41,14 +41,5 @@ namespace KariyerPortali.Admin.Models
         {
             return new ApplicationDbContext();
         }
-        // Rol tanımlama
-       
-
-
-        
-        // Rol tanımlama
-        
-        
-           
     }
 }
