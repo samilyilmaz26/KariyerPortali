@@ -11,6 +11,7 @@ namespace KariyerPortali.Model
         [ForeignKey("Country")]
         public int CountryId { get; set; }
         public Country Country { get;set;}
+        public ICollection<Employer> Employers { get; set; }
 
     }
 }
