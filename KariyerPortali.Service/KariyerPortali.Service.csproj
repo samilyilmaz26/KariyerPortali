@@ -53,6 +53,7 @@
     <Compile Include="JobApplicationService.cs" />
     <Compile Include="JobService.cs" />
     <Compile Include="LanguageInfoService.cs" />
+    <Compile Include="LanguageService.cs" />
     <Compile Include="ResumeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
