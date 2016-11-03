@@ -60,6 +60,7 @@
     <Compile Include="Configuration\JobConfiguration.cs" />
     <Compile Include="Configuration\LanguageConfiguration.cs" />
     <Compile Include="Configuration\PostConfiguration.cs" />
+    <Compile Include="Configuration\ReferenceConfiguration.cs" />
     <Compile Include="Configuration\ResumeConfiguration.cs" />
     <Compile Include="Configuration\SectorConfiguration.cs" />
     <Compile Include="Configuration\SkillConfiguration.cs" />
