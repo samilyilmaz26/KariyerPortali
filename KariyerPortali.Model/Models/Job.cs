@@ -21,7 +21,7 @@ namespace KariyerPortali.Model
         public int ExperienceId { get; set; }
         public Experience Experience { get; set; }
 
-
+        public ICollection<JobApplication> JobApplications { get; set; }
         public ICollection<SocialRight> SocialRights { get; set; }
 
         
