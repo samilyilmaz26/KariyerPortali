@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public class HighSchoolType
+    public enum JobType
     {
-        public int TypeId { get; set; }
-        public string TypeName { get; set; }
+        FullTime=1,
+        PartTime=2
     }
 }
