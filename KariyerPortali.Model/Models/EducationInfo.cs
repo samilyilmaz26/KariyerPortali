@@ -2,6 +2,7 @@
 {
     public class EducationInfo
     {
+        
         public int EducationInfoId { get; set; }
         public EducationStatus EducationStatus { get; set; }
 
