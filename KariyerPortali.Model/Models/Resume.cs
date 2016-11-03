@@ -62,7 +62,8 @@ namespace KariyerPortali.Model
 
         public DateTime HighSchoolStart { get; set; }
         public DateTime HighSchoolEnd { get; set; }
-
+        public HighSchoolCertificate HighSchoolCertifacate { get; set; }
+        public float CertifacateDegree { get; set; }
 
 
 

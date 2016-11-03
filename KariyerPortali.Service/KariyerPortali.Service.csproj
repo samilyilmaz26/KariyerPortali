@@ -60,6 +60,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SectorService.cs" />
     <Compile Include="SkillInfoService.cs" />
+    <Compile Include="SkillService.cs" />
+    <Compile Include="SocialRightService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KariyerPortali.Data\KariyerPortali.Data.csproj">

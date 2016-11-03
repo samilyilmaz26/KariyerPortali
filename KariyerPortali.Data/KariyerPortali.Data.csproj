@@ -51,6 +51,7 @@
     <Compile Include="Configuration\CountryConfiguration.cs" />
     <Compile Include="Configuration\CourseConfiguration.cs" />
     <Compile Include="Configuration\DepartmentConfiguration.cs" />
+    <Compile Include="Configuration\EducationInfoConfiguration.cs" />
     <Compile Include="Configuration\EmployerConfiguration.cs" />
     <Compile Include="Configuration\ExamConfiguration.cs" />
     <Compile Include="Configuration\ExamInfoConfiguration.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Repositories\ReferenceRepository.cs" />
     <Compile Include="Repositories\ResumeRepository.cs" />
     <Compile Include="Repositories\SectorRepository.cs" />
+    <Compile Include="Repositories\SettingRepository.cs" />
     <Compile Include="Repositories\SkillInfoRepository.cs" />
     <Compile Include="Repositories\SkillRepository.cs" />
     <Compile Include="Repositories\SocialRightRepository.cs" />

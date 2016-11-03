@@ -10,7 +10,7 @@ namespace KariyerPortali.Model
     public class ExamInfo
     {
         public int ExamInfoId { get; set; }
-        [ForeignKey("Exam")]
+      
         public int ExamId { get; set; }
         public Exam Exam { get; set; }
         public float Point { get; set; }
