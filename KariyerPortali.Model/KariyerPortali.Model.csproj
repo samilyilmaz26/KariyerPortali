@@ -48,6 +48,7 @@
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DrivingLicenceClass.cs" />
+    <Compile Include="Models\EducationInfo.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\ExamInfo.cs" />
     <Compile Include="Models\Expertise.cs" />
