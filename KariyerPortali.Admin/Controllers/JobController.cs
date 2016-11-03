@@ -1,4 +1,7 @@
-﻿using KariyerPortali.Service;
+﻿using AutoMapper;
+using KariyerPortali.Admin.ViewModels;
+using KariyerPortali.Model;
+using KariyerPortali.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +21,14 @@ namespace KariyerPortali.Admin.Controllers
         // GET: Job
         public ActionResult Index()
         {
-            return View();
+            IEnumerable<JobViewModel> viewModelJob;
+            IEnumerable<Job> jb;
+
+            jb = jobService.GetJobs().ToList();
+
+            viewModelJob = Mapper.Map<IEnumerable<Job>, IEnumerable<JobViewModel>>(jb);
+
+            return View(viewModelJob);
         }
         public ActionResult Create()
         {
