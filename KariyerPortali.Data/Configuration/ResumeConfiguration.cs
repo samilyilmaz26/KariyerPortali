@@ -15,7 +15,7 @@ namespace KariyerPortali.Data.Configuration
             /* Fluent-API */
             ToTable("Resumes");
             HasKey<int>(c => c.ResumeId);
-            Property(c => c.CvName).IsRequired().HasMaxLength(200);
+            Property(c => c.ResumeName).IsRequired().HasMaxLength(200);
         }
     }
 }

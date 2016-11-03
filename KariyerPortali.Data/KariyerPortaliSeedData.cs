@@ -22,10 +22,10 @@ namespace KariyerPortali.Data
             return new List<Resume>
             {
                 new Resume {
-                    CvName = "Murat Demirci"
+                    ResumeName = "Murat Demirci"
                 },
                 new Resume {
-                    CvName = "Şamil Yılmaz"
+                    ResumeName = "Şamil Yılmaz"
                 }
             };
         }

@@ -49,14 +49,14 @@ namespace KariyerPortali.Model
         public MilitaryService MilitaryService { get; set; }
         public DateTime MilitaryPostponeDate { get; set; }
 
-        public bool DrivingLicenceExists { get; set; }
+        public bool DrivingLicenseExists { get; set; }
 
-        public DrivingLicenceClass DrivingLicence1Class { get; set; }
-        public DateTime DrivingLicence1Date { get; set; }
+        public DrivingLicenseClass DrivingLicense1Class { get; set; }
+        public DateTime DrivingLicense1Date { get; set; }
 
        
-        public DrivingLicenceClass DrivingLicence2Class { get; set; }
-        public DateTime DrivingLicence2Date { get; set; }
+        public DrivingLicenseClass DrivingLicense2Class { get; set; }
+        public DateTime DrivingLicense2Date { get; set; }
 
         public string CoverLetter { get; set; }
 
