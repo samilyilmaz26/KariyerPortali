@@ -18,6 +18,19 @@ namespace KariyerPortali.Admin.Models
         }
     }
 
+    public class ApplicationRole:IdentityRole
+    {
+        public string Description { get; set; }
+        public ApplicationRole()
+        {
+
+        }
+        public ApplicationRole(string roleName,string description):base(roleName)
+        {
+            this.Description = description;
+        }
+    }
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -25,9 +38,28 @@ namespace KariyerPortali.Admin.Models
         {
         }
 
+        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+    //    // Rol tanımlama
+    //    KariyerPortaliEntities db = new KariyerPortaliEntities();
+    //    RoleStore<ApplicationRole> roleStore = new RoleStore<ApplicationRole>(db);
+    //    RoleManager<ApplicationRole> roleManager = new RoleManager<ApplicationRole>(roleStore);
+
+    //        if(!roleManager.RoleExists("Admin"))
+    //        {
+    //            ApplicationRole adminRole = new ApplicationRole("Admin", "Sistem Yöneticisi");
+    //    roleManager.Create(adminRole);
+    //        }
+    //        if(!roleManager.RoleExists("User"))
+    //        {
+    //            ApplicationRole userRole = new ApplicationRole("User", "Sistem kullanıcısı");
+    //roleManager.Create(userRole);
+    //        }
+    //        // Rol tanımlama
     }
 }
