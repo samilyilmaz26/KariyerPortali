@@ -77,6 +77,10 @@ namespace KariyerPortali.Model
         public string Hobby { get; set; }
         public string MemberOwnedCommunity { get; set; }
 
+        public BloodType BloodType { get; set; }
+        public CigaretteStatus CigaretteStatus { get; set; }
+        public SalaryWaited SalaryWaited { get; set; }
+        ICollection<Reference> References { get; set; }
 
 
 
