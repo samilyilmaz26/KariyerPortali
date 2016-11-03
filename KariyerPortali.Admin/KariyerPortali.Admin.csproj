@@ -206,6 +206,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CandidateViewModel.cs" />
     <Compile Include="ViewModels\CityViewModel.cs" />
+    <Compile Include="ViewModels\CountryViewModel.cs" />
     <Compile Include="ViewModels\ResumeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
