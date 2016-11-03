@@ -16,6 +16,10 @@ namespace KariyerPortali.Admin.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string FirstName { get; set; }
+        public int LastName { get; set; }
+
     }
 
     public class ApplicationRole:IdentityRole
