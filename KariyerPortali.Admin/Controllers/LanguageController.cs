@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using KariyerPortali.Admin.Models;
 using KariyerPortali.Admin.ViewModels;
 using KariyerPortali.Model;
 using KariyerPortali.Service;
@@ -36,5 +37,63 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+        //public ActionResult AjaxHandler(jQueryDataTableParamModel param)
+        //{
+
+        //    string sSearch = "";
+        //    if (param.sSearch != null) sSearch = param.sSearch;
+        //    var allLanguages = new LanguageService().GetAllForAdmin(sSearch);
+        //    IEnumerable<Language> filteredLanguages = allLanguages;
+
+        //    var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
+
+
+        //    var sortDirection = Request["sSortDir_0"]; // asc or desc
+        //    if (sortDirection == "asc")
+        //    {
+        //        switch (sortColumnIndex)
+        //        {
+        //            case 0:
+        //                filteredLanguages = filteredLanguages.OrderBy(l => l.LanguageId);
+        //                break;
+        //            case 1:
+        //                filteredLanguages = filteredLanguages.OrderBy(l => l.LanguageName);
+        //                break;
+
+        //            default:
+        //                filteredLanguages = filteredLanguages.OrderBy(l => l.LanguageId);
+        //                break;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        switch (sortColumnIndex)
+        //        {
+
+        //            case 0:
+        //                filteredLanguages = filteredLanguages.OrderByDescending(l => l.LanguageId);
+        //                break;
+        //            case 1:
+        //                filteredLanguages = filteredLanguages.OrderByDescending(l => l.LanguageName);
+        //                break;
+
+        //            default:
+        //                filteredLanguages = filteredLanguages.OrderByDescending(l => l.LanguageId);
+        //                break;
+        //        }
+        //    }
+
+        //    var displayedLanguages = filteredLanguages.Skip(param.iDisplayStart).Take(param.iDisplayLength);
+        //    var result = from l in displayedLanguages
+        //                 select new[] { l.LanguageId ?? l.LanguageName.ToString() };
+        //    return Json(new
+        //    {
+        //        sEcho = param.sEcho,
+        //        iTotalRecords = allLanguages.Count(),
+        //        iTotalDisplayRecords = filteredLanguages.Count(),
+        //        aaData = result
+        //    },
+        //        JsonRequestBehavior.AllowGet);
+        //}
     }
 }
