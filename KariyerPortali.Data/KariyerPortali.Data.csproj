@@ -89,6 +89,8 @@
     <Compile Include="Repositories\ExperienceRepository.cs" />
     <Compile Include="Repositories\ExpertiseRepository.cs" />
     <Compile Include="Repositories\FileRepository.cs" />
+    <Compile Include="Repositories\HighSchoolDepartmentRepository.cs" />
+    <Compile Include="Repositories\HighSchoolTypeRepository.cs" />
     <Compile Include="Repositories\JobApplicationRepository.cs" />
     <Compile Include="Repositories\JobRepository.cs" />
     <Compile Include="Repositories\LanguageInfoRepository.cs" />
