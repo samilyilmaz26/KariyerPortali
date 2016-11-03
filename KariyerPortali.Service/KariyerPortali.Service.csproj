@@ -44,6 +44,7 @@
     <Compile Include="CountryService.cs" />
     <Compile Include="CourseService.cs" />
     <Compile Include="DepartmentService.cs" />
+    <Compile Include="EducationInfoService.cs" />
     <Compile Include="EmployerService.cs" />
     <Compile Include="ExamInfoService.cs" />
     <Compile Include="ExamService.cs" />
