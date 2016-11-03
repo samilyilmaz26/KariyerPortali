@@ -9,11 +9,28 @@ namespace KariyerPortali.Model
 {
     public class Resume
     {
+        
         public int ResumeId { get; set; }
-        public string CvName { get; set; }
+        public string ResumeName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string CitizenshipId { get; set; }
+
+        public string CreatedBy { get; set; }
+        public DateTime CreateDate { get; set; }
+        public string UpdatedBy { get; set; }
+        public DateTime UpdateDate { get; set; }
+
+        [ForeignKey("Candidate")]
+        public int CandidateId { get; set; }
+        public Candidate Candidate { get; set; }
+
+        [ForeignKey("Language")]
+        public int LanguageId { get; set; }
+        public Language Language { get; set; }
+
+        public int ViewCount { get; set; }
+
 
         public Gender Gender { get; set; }
 
