@@ -19,13 +19,13 @@ namespace KariyerPortali.Model
 
         public DateTime BirthDate { get; set; }
   
-        [ForeignKey("City")]
+        [ForeignKey("BirthCity")]
         public int BirthCityId { get; set; }
         public City BirthCity { get; set; }
 
         public MaritalStatus MaritalStatus { get; set; }
 
-        [ForeignKey("Country")]
+        [ForeignKey("Nationality")]
         public int CountryId { get; set; }
         public Country Nationality { get; set; }
 
@@ -62,7 +62,10 @@ namespace KariyerPortali.Model
 
         public DateTime HighSchoolStart { get; set; }
         public DateTime HighSchoolEnd { get; set; }
+        public HighSchoolCertificate HighSchoolCertifacate { get; set; }
+        public float CertifacateDegree { get; set; }
 
+        public ICollection<LanguageInfo> LanguageInfos { get; set; }
 
 
 

@@ -42,24 +42,10 @@ namespace KariyerPortali.Admin.Models
             return new ApplicationDbContext();
         }
         // Rol tanımlama
-        public void Seed(Data.KariyerPortaliEntities context)
-        {
-            Data.KariyerPortaliEntities db = new Data.KariyerPortaliEntities();
-            RoleStore<ApplicationRole> roleStore = new RoleStore<ApplicationRole>(db);
-            RoleManager<ApplicationRole> roleManager = new RoleManager<ApplicationRole>(roleStore);
+       
 
-            if (!roleManager.RoleExists("Admin"))
-            {
-                ApplicationRole adminRole = new ApplicationRole("Admin", "Sistem Yöneticisi");
-                roleManager.Create(adminRole);
-            }
-            if (!roleManager.RoleExists("User"))
-            {
-                ApplicationRole userRole = new ApplicationRole("User", "Sistem kullanıcısı");
-                roleManager.Create(userRole);
-            }
 
-        }
+        
         // Rol tanımlama
         
         

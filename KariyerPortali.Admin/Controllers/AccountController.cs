@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using KariyerPortali.Admin.Models;
-
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace KariyerPortali.Admin.Controllers
 {
@@ -160,7 +160,7 @@ namespace KariyerPortali.Admin.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(RegisterViewModel model, ApplicationDbContext context)
         {
             if (ModelState.IsValid)
             {
@@ -168,7 +168,15 @@ namespace KariyerPortali.Admin.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    UserManager.AddToRole(user.Id, "Admin");                    
+
+                    var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+
+                    if (!roleManager.RoleExists("Admin"))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole("Admin"));
+
+                    }
+                                       
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
