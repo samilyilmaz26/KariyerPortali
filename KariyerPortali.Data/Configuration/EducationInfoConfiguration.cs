@@ -14,7 +14,8 @@ namespace KariyerPortali.Data.Configuration
         {
             ToTable("EducationInfos");
             HasKey<int>(c => c.EducationInfoId);
-
+            HasOptional<Department>(c => c.Department).WithMany(c => c.EducationInfos).HasForeignKey(c => c.DepartmentId).WillCascadeOnDelete(false);
+            HasOptional<University>(c => c.University).WithMany(c => c.EducationInfos).HasForeignKey(c => c.DepartmentId).WillCascadeOnDelete(false);
         }
     }
 }
