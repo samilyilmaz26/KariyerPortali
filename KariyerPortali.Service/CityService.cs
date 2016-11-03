@@ -1,5 +1,4 @@
-﻿
-using KariyerPortali.Data.Infrastructure;
+﻿using KariyerPortali.Data.Infrastructure;
 using KariyerPortali.Data.Repositories;
 using KariyerPortali.Model;
 using System;

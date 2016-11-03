@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using KariyerPortali.Admin.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Net;
 
 namespace KariyerPortali.Admin.Controllers
 {
@@ -27,8 +28,25 @@ namespace KariyerPortali.Admin.Controllers
             return View(db.Users.ToList());
         }
 
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+             ApplicationUser appUser = db.Users.Find(id);
+            if (appUser == null)
+            {
+                return HttpNotFound();
+            }
+            return View(appUser);
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult Edit(ApplicationUser model)
         {
             if (ModelState.IsValid)
