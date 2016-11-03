@@ -16,6 +16,7 @@ namespace KariyerPortali.Data.Configuration
             ToTable("SocialRights");
             HasKey<int>(c=>c.SocialRightId);
             Property(c => c.SocialRightName).IsRequired().HasMaxLength(200);
+           
             //socialright sınıfında job bağlı değil
            // HasOptional<Job>(c => c.Job).WithMany().WillCascadeOnDelete(false);
         }
