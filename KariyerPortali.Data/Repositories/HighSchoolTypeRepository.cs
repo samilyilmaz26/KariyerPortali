@@ -8,14 +8,17 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Data.Repositories
 {
-   
-    public class HighSchoolTypeRepository : RepositoryBase<HighSchoolType>, IHighSchoolDepartmentRepository
+
+    public class HighSchoolTypeRepository : RepositoryBase<HighSchoolType>, IHighSchoolTypeRepository
     {
         public HighSchoolTypeRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
     }
     public interface IHighSchoolTypeRepository : IRepository<HighSchoolType>
-    {
-
+        {
+            ToTable("EducationInfos");
+            HasKey<int>(c => c.EducationInfoId);
+            HasOptional<Department>(c => c.Department).WithMany(c => c.EducationInfos).HasForeignKey(c => c.DepartmentId).WillCascadeOnDelete(false);
+        }
     }
 }

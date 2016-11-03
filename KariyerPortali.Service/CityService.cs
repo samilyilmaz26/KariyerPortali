@@ -1,4 +1,5 @@
-﻿using KariyerPortali.Data.Infrastructure;
+﻿
+using KariyerPortali.Data.Infrastructure;
 using KariyerPortali.Data.Repositories;
 using KariyerPortali.Model;
 using System;
@@ -28,6 +29,23 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region ICityService Members
+        public IList<City> Search(string search)
+        {
+            search = search.ToLower().Trim();
+            var searchWords = search.Split(' ');
+
+
+            var query = GetCities();
+                foreach (string sSearch in searchWords)
+                {
+                    if (sSearch != null && sSearch != "")
+                    {
+                        query = query.Where(c => c.CityId.ToString().Contains(sSearch) || c.CityName.Contains(sSearch) || c.Country.CountryName.Contains(sSearch) );
+                    }
+                }
+                return query.ToList();
+            
+        }
         public IEnumerable<City> GetCities()
         {
             var cities = cityRepository.GetAll();
