@@ -11,5 +11,6 @@ namespace KariyerPortali.Model
     {
         public int LanguageId { get; set; }
         public string LanguageName { get; set; }
+        public ICollection<LanguageInfo> LanguageInfos { get; set; }
     }
 }
