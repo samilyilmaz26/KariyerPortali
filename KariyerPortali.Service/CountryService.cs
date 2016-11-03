@@ -11,6 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface ICountryService
     {
+        IList<Country> Search(string search);
         IEnumerable<Country> GetCountries();
         Country GetCountry(int id);
         void CreateCountry(Country country);
@@ -28,23 +29,23 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region ICountryService Members
-        //public IList<Country> Search(string search)
-        //{
-        //    search = search.ToLower().Trim();
-        //    var searchWords = search.Split(' ');
+        public IList<Country> Search(string search)
+        {
+            search = search.ToLower().Trim();
+            var searchWords = search.Split(' ');
 
 
-        //    var query = GetCountries();
-        //    foreach (string sSearch in searchWords)
-        //    {
-        //        if (sSearch != null && sSearch != "")
-        //        {
-        //            query = query.Where(c => c.CountryId.ToString().Contains(sSearch) || c.Country.CountryName.Contains(sSearch));
-        //        }
-        //    }
-        //    return query.ToList();
+            var query = GetCountries();
+            foreach (string sSearch in searchWords)
+            {
+                if (sSearch != null && sSearch != "")
+                {
+                    query = query.Where(c => c.CountryId.ToString().Contains(sSearch) || c.CountryName.Contains(sSearch));
+                }
+            }
+            return query.ToList();
 
-        //}
+        }
         public IEnumerable<Country> GetCountries()
         {
             var countries = countryRepository.GetAll();
