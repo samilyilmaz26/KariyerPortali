@@ -21,6 +21,7 @@ namespace KariyerPortali.Admin.Mappings
             Mapper.CreateMap<Resume, ResumeViewModel>();
             Mapper.CreateMap<Country, CountryViewModel>();
             Mapper.CreateMap<City, CityViewModel>();
+            Mapper.CreateMap<Candidate, CandidateViewModel>();
 #pragma warning restore CS0618 // Type or member is obsolete
         }
     
