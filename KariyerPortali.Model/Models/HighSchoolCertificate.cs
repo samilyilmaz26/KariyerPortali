@@ -8,5 +8,9 @@ namespace KariyerPortali.Model
 {
     public enum HighSchoolCertificate
     {
+        N4=1,
+        N5=2,
+        N10=3,
+        N100=4
     }
 }
