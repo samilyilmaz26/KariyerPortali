@@ -54,6 +54,23 @@ namespace KariyerPortali.Service
         {
             unitOfWork.Commit();
         }
+        public IList<Candidate> Search(string search)
+        {
+            search = search.ToLower().Trim();
+            var searchWords = search.Split(' ');
+
+
+            var query = GetCandidates();
+            foreach (string sSearch in searchWords)
+            {
+                if (sSearch != null && sSearch != "")
+                {
+                    query = query.Where(c => c.UserName.Contains(sSearch) || c.FirstName.Contains(sSearch) || c.LastName.Contains(sSearch) || c.Photo.Contains(sSearch));
+                }
+            }
+            return query.ToList();
+
+        }
         #endregion
     }
 }
