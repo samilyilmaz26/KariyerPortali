@@ -53,6 +53,15 @@ namespace KariyerPortali.Model
         ICollection<Experience> Experiences { get; set; }
         public ICollection<EducationInfo> EducationInfos { get; set; }
 
+        public string HighSchoolName { get; set; }
+        public int TypeId { get; set; }
+        public HighSchoolType HighSchoolType { get; set; }
+
+        public int HighSchoolDepartmentId { get; set; }
+        public HighSchoolDepartment HighSchoolDepartment { get; set; }
+
+        public DateTime HighSchoolStart { get; set; }
+        public DateTime HighSchoolEnd { get; set; }
 
 
 
