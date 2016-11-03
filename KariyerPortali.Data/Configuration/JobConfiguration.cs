@@ -16,11 +16,10 @@ namespace KariyerPortali.Data.Configuration
             ToTable("Jobs");
             HasKey<int>(c=>c.JobId);
             
+            Property(c => c.JobType).HasMaxLength(500);
             Property(c => c.Responsibilities).IsRequired();
             Property(c => c.Qualifications).IsRequired();
-            HasOptional<Employer>(c => c.Employer).WithMany(c => c.Jobs).HasForeignKey(c => c.EmployerId).WillCascadeOnDelete(false);
-            HasOptional<Experience>(c => c.Experience).WithMany(c => c.Jobs).HasForeignKey(c => c.ExperienceId).WillCascadeOnDelete(false);
-
+            HasOptional<Employer>(c => c.Employer).WithMany().WillCascadeOnDelete(false);
            //foreign key olanları notnull yapayımmı
            
         }

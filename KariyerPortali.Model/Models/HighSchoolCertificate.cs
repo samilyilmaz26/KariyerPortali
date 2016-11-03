@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace KariyerPortali.Model
 {
-    public class Experience
+    public enum HighSchoolCertificate
     {
-        public int ExperienceId { get; set; }
-        public string ExperienceName { get; set; }        
-
     }
 }
