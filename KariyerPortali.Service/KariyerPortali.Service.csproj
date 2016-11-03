@@ -52,6 +52,7 @@
     <Compile Include="ExpertiseService.cs" />
     <Compile Include="FileService.cs" />
     <Compile Include="HighSchoolDepartmentService.cs" />
+    <Compile Include="HighSchoolTypeService.cs" />
     <Compile Include="JobApplicationService.cs" />
     <Compile Include="JobService.cs" />
     <Compile Include="LanguageInfoService.cs" />
