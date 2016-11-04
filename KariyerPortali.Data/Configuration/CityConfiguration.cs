@@ -17,7 +17,9 @@ namespace KariyerPortali.Data.Configuration
             Property(c => c.CityName).IsRequired().HasMaxLength(25);
             HasOptional<Country>(c => c.Country)
                 .WithMany(c => c.Cities)
-                .HasForeignKey(c=>c.CountryId)
+                .HasForeignKey(c=>c.CountryId);
+            HasOptional<Country>(c => c.Country)
+                .WithMany()
                 .WillCascadeOnDelete(false);
         }
 
