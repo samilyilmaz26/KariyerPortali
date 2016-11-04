@@ -11,7 +11,9 @@ namespace KariyerPortali.Data
 {
     public class KariyerPortaliEntities : DbContext
     {
-        public KariyerPortaliEntities() : base("KariyerPortaliEntities") { }
+        public KariyerPortaliEntities() : base("KariyerPortaliEntities") {
+            this.Configuration.LazyLoadingEnabled = true;
+        }
 
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<City> Cities { get; set; }
