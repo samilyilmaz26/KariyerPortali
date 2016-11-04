@@ -11,6 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface IJobService
     {
+        IEnumerable<Job> Search(string search);
         IEnumerable<Job> GetJobs();
         Job GetJob(int id);
         void CreateJob(Job job);
@@ -28,6 +29,23 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region IJobService Members
+        public IEnumerable<Job> Search(string search)
+        {
+            search = search.ToLower().Trim();
+            var searchWords = search.Split(' ');
+
+
+            var query = GetJobs();
+            foreach (string sSearch in searchWords)
+            {
+                if (sSearch != null && sSearch != "")
+                {
+                    query = query.Where(c => c.JobId.ToString().Contains(sSearch) || c.Description.Contains(sSearch) || c.Employer.EmployerName.Contains(sSearch));
+                }
+            }
+            return query;
+
+        }
         public IEnumerable<Job> GetJobs()
         {
             var jobs = jobRepository.GetAll();
