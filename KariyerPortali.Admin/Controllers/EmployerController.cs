@@ -34,7 +34,7 @@ namespace KariyerPortali.Admin.Controllers
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allEmployers = employerService.Search(sSearch).ToList();
+            var allEmployers = employerService.Search(sSearch);
             IEnumerable<Employer> filteredEmployers = allEmployers;
 
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
@@ -88,14 +88,14 @@ namespace KariyerPortali.Admin.Controllers
 
             var displayedEmployers = filteredEmployers.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedEmployers
-                         select new[] { c.Logo, c.EmployerName, c.City.CityName, c.Email.ToString() };
+                         select new[] { c.Logo, c.EmployerName, (c.City != null ? c.City.CityName.ToString() : string.Empty), c.Email.ToString() };
             return Json(new
             {
                 sEcho = param.sEcho,
                 iTotalRecords = allEmployers.Count(),
                 iTotalDisplayRecords = filteredEmployers.Count(),
-                aaData = result
-            },
+                aaData = result.ToList()
+        },
                 JsonRequestBehavior.AllowGet);
         }
     }

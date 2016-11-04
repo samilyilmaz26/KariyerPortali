@@ -19,10 +19,10 @@ namespace KariyerPortali.Data.Infrastructure
         // Get an entity by int id
         T GetById(int id);
         // Get an entity using delegate
-        T Get(Expression<Func<T, bool>> where);
+        T Get(Expression<Func<T, bool>> where, params string[] Navigations);
         // Gets all entities of type T
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(params string[] Navigations);
         // Gets entities using delegate
-        IEnumerable<T> GetMany(Expression<Func<T, bool>> where);
+        IEnumerable<T> GetMany(Expression<Func<T, bool>> where, params string[] Navigations);
     }
 }

@@ -49,7 +49,7 @@ namespace KariyerPortali.Service
         }
         public IEnumerable<Employer> GetEmployers()
         {
-            var employers = employerRepository.GetAll();
+            var employers = employerRepository.GetAll("City");
             return employers;
         }
         public Employer GetEmployer(int id)
