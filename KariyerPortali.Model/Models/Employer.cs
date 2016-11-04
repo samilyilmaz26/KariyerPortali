@@ -21,13 +21,13 @@ namespace KariyerPortali.Model
 
     
         public int? SectorId { get; set; }
-        public Sector Sector { get; set; }
+        public virtual Sector Sector { get; set; }
 
         public string Address { get; set; }
 
      
         public int? CityId { get; set; }
-        public City City { get; set; }
+        public virtual City City { get; set; }
 
         public string Phone { get; set; }
         public string Email { get; set; }
@@ -38,9 +38,9 @@ namespace KariyerPortali.Model
         public DateTime UpdateDate { get; set; }
 
 
-        public ICollection<JobApplication> JobApplications { get; set; }
+        public virtual ICollection<JobApplication> JobApplications { get; set; }
 
-        public ICollection<Job> Jobs { get; set; }
+        public virtual ICollection<Job> Jobs { get; set; }
 
 
 

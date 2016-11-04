@@ -13,6 +13,6 @@ namespace KariyerPortali.Model
 
         public int ResumeId { get; set; }
         public Resume Resume { get; set; }
-        public ICollection<Job> Jobs { get; set; }
+        public virtual ICollection<Job> Jobs { get; set; }
     }
 }
