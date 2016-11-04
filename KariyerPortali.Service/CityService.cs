@@ -11,7 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface ICityService
     {
-        IList<City> Search(string search);
+        IEnumerable<City> Search(string search);
         IEnumerable<City> GetCities();
         City GetCity(int id);
         void CreateCity(City city);
