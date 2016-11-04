@@ -54,8 +54,8 @@ namespace KariyerPortali.Admin.Controllers
                 ApplicationUser u = UserManager.FindById(model.Id);
                 u.UserName = model.Email;
                 u.Email = model.Email;
-                u.FirstName = model.FirstName; // Extra Property
-                u.LastName = model.LastName; // Extra Property
+                //u.FirstName = model.FirstName; // Extra Property
+                //u.LastName = model.LastName; // Extra Property
                 UserManager.Update(u);
                 return RedirectToAction("Index");
             }
