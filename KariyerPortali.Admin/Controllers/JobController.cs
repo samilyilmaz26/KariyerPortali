@@ -99,7 +99,7 @@ namespace KariyerPortali.Admin.Controllers
 
             var displayedJobs = filteredJobs.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedJobs
-                         select new[] { c.JobId.ToString() ?? c.Description.ToString() ?? c.Employer.EmployerName.ToString() };
+                         select new[] { c.Employer.EmployerName.ToString(), c.Description.ToString(), c.Employer.City.CityName.ToString(), c.JobType.ToString(), c.Createdate.ToShortDateString() };
             return Json(new
             {
                 sEcho = param.sEcho,
