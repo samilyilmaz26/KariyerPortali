@@ -18,10 +18,10 @@
             "search": "Ara :",
             "zeroRecords": "Sonuç Bulunamadı",
             "paginate": {
-                "previous": "Prev",
-                "next": "Next",
-                "last": "Last",
-                "first": "First"
+                "previous": "Önceki",
+                "next": "Sonraki",
+                "last": "Son",
+                "first": "İlk"
             }
         },
 
@@ -34,7 +34,9 @@
         // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js). 
         // So when dropdowns used the scrollable div should be removed. 
         //"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
-
+        "bServerSide":true,
+        "bProcessing": true,
+        "sAjaxSource":"/University/AjaxHandler",
         "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
 
         "lengthMenu": [
