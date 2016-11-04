@@ -25,5 +25,5 @@ namespace KariyerPortali.Model
         public ICollection<Resume> Resumes { get; set; }
 
 
-}
+    }
 }
