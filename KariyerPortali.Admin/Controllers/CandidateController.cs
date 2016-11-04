@@ -23,14 +23,7 @@ namespace KariyerPortali.Admin.Controllers
         // GET: Candidate
         public ActionResult Index()
         {
-        //    IEnumerable<CandidateViewModel> viewModelCandidate;
-
-        //    IEnumerable<Candidate> candidate;
-
-        //    candidate = candidateService.GetCandidates().ToList();
-
-        //    viewModelCandidate = Mapper.Map<IEnumerable<Candidate>, IEnumerable<CandidateViewModel>>(candidate);
-
+        
             return View();
 
         }
