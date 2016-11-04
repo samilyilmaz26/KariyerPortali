@@ -40,7 +40,7 @@ namespace KariyerPortali.Admin.Controllers
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allCandidates = candidateService.Search(sSearch);
+            var allCandidates = candidateService.Search(sSearch).ToList();
             IEnumerable<Candidate> filteredCandidates = allCandidates;
 
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
