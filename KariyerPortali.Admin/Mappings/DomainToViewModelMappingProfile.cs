@@ -25,7 +25,7 @@ namespace KariyerPortali.Admin.Mappings
             Mapper.CreateMap<Job, JobViewModel>();
             Mapper.CreateMap<Language, LanguageViewModel>();
             Mapper.CreateMap<Department, DepartmentViewModel>();
-
+            Mapper.CreateMap<JobApplication, JobApplicationViewModel>();
             Mapper.CreateMap<University, UniversityViewModel>();
             Mapper.CreateMap<Employer, EmployerViewModel>();
 #pragma warning restore CS0618 // Type or member is obsolete
