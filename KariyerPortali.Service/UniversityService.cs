@@ -11,6 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface IUniversityService
     {
+        IEnumerable<University> Search(string search);
         IEnumerable<University> GetUniversities();
         University GetUniversity(int id);
         void CreateUniversity(University university);
@@ -28,6 +29,20 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region IUniversityService Members
+        public IEnumerable<University> Search(string search)
+        {
+            search = search.ToLower().Trim();
+            var searchWords = search.Split(' ');
+            var query = GetUniversities();
+            foreach (string sSearch in searchWords)
+            {
+                if (sSearch != null && sSearch != "")
+                {
+                    query = query.Where(u => u.UniversityId.ToString().Contains(sSearch) || u.UniversityName.Contains(sSearch) );
+                }
+            }
+            return query;
+        }
         public IEnumerable<University> GetUniversities()
         {
             var universities = universityRepository.GetAll();

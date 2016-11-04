@@ -33,7 +33,7 @@ namespace KariyerPortali.Model
         public int LanguageId { get; set; }
         public Language Language { get; set; }
 
-       
+
 
 
         public Gender Gender { get; set; }
@@ -71,7 +71,7 @@ namespace KariyerPortali.Model
         public string Website { get; set; }
         public string Address { get; set; }
 
-        ICollection<Experience> Experiences { get; set; }
+        public ICollection<Experience> Experiences { get; set; }
         public ICollection<EducationInfo> EducationInfos { get; set; }
 
         public string HighSchoolName { get; set; }
@@ -92,8 +92,8 @@ namespace KariyerPortali.Model
         public string Certificate { get; set; }
 
         public ICollection<ExamInfo> ExamInfos { get; set; }
-        ICollection<SkillInfo> SkillInfos { get; set; }
-        ICollection<Course> Courses { get; set; }
+        public ICollection<SkillInfo> SkillInfos { get; set; }
+        public ICollection<Course> Courses { get; set; }
         public string ScholarshipAndProject { get; set; }
         public string Hobby { get; set; }
         public string MemberOwnedCommunity { get; set; }
@@ -101,7 +101,7 @@ namespace KariyerPortali.Model
         public BloodType BloodType { get; set; }
         public CigaretteStatus CigaretteStatus { get; set; }
         public SalaryWaited SalaryWaited { get; set; }
-        ICollection<Reference> References { get; set; }
+        public ICollection<Reference> References { get; set; }
 
 
 
