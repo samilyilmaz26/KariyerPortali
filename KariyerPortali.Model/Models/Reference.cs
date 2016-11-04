@@ -21,6 +21,9 @@ namespace KariyerPortali.Model
         public int SectorId { get; set; }
         public Sector Sector { get; set; }
 
+        public int ResumeId { get; set; }
+        public Resume Resume { get; set; }
+
         public string Message { get; set; }
         public string ReferenceFile { get; set; }
 

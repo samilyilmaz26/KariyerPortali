@@ -15,5 +15,8 @@ namespace KariyerPortali.Model
         public Exam Exam { get; set; }
         public float Point { get; set; }
 
+        public int ResumeId { get; set; }
+        public Resume Resume { get; set; }
+
     }
 }
