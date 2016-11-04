@@ -29,7 +29,7 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region ICityService Members
-        public IList<City> Search(string search)
+        public IEnumerable<City> Search(string search)
         {
             search = search.ToLower().Trim();
             var searchWords = search.Split(' ');
@@ -43,7 +43,7 @@ namespace KariyerPortali.Service
                         query = query.Where(c => c.CityId.ToString().Contains(sSearch) || c.CityName.Contains(sSearch) || c.Country.CountryName.Contains(sSearch) );
                     }
                 }
-                return query.ToList();
+                return query;
             
         }
         public IEnumerable<City> GetCities()
