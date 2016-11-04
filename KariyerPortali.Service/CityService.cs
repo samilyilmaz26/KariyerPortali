@@ -31,7 +31,7 @@ namespace KariyerPortali.Service
         #region ICityService Members
         public IEnumerable<City> Search(string search)
         {
-            search = search.ToLower().Trim();
+            search = search.Trim();
             var searchWords = search.Split(' ');
 
 
