@@ -101,7 +101,7 @@ namespace KariyerPortali.Admin.Controllers
 
             var displayedCities = filteredCities.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedCities
-                         select new[] { c.CityId.ToString() ?? c.CityName.ToString() ?? c.Country.CountryName.ToString()};
+                         select new[] { c.CityId.ToString() , c.CityName.ToString() , (c.Country != null? c.Country.CountryName.ToString(): string.Empty)};
             return Json(new
             {
                 sEcho = param.sEcho,
