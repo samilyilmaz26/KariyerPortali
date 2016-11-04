@@ -6,7 +6,7 @@ namespace KariyerPortali.Model
     {
         public int CountryId { get; set; }
         public string CountryName{ get; set; }
-        public ICollection<City> Cities { get; set; }
-        public ICollection<Resume> Resumes { get; set; }
+        public virtual ICollection<City> Cities { get; set; }
+        public virtual ICollection<Resume> Resumes { get; set; }
     }
 }

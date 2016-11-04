@@ -12,7 +12,7 @@ namespace KariyerPortali.Service
 {
     public interface ILanguageService
     {
-        IList<Language> Search(string search);
+        IEnumerable<Language> Search(string search);
         IEnumerable<Language> GetLanguages();
         Language GetLanguage(int id);
         void CreateLanguage(Language language);
@@ -30,9 +30,9 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region ILanguageService Members
-        public IList<Language> Search(string search)
+        public IEnumerable<Language> Search(string search)
         {
-            search = search.ToLower().Trim();
+            search = search.Trim();
             var searchWords = search.Split(' ');
 
 
@@ -44,7 +44,7 @@ namespace KariyerPortali.Service
                     query = query.Where(l => l.LanguageId.ToString().Contains(sSearch) || l.LanguageName.Contains(sSearch));
                 }
             }
-            return query.ToList();
+            return query;
 
         }
         public IEnumerable<Language> GetLanguages()
