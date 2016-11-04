@@ -10,7 +10,7 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "No data available in table",
+            "emptyTable": "Tabloda veri bulunmamaktadır.",
             "info": "_TOTAL_ Kaydın _START_ ile _END_ Arası Gösteriliyor",
             "infoEmpty": "Herhangi bir kayıt bulunamadı.",
             "infoFiltered": "(filtered1 from _MAX_ total records)",
