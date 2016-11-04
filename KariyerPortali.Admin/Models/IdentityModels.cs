@@ -21,7 +21,9 @@ namespace KariyerPortali.Admin.Models
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        
+        public string Title { get; set; }
+        public string ImagePath { get; set; }
+
     }
 
     public class ApplicationRole:IdentityRole

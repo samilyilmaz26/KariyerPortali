@@ -7,13 +7,13 @@ namespace KariyerPortali.Admin.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addmigrationIlkMigration : IMigrationMetadata
+    public sealed partial class AlanlarMig : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addmigrationIlkMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AlanlarMig));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611041303365_add-migration IlkMigration"; }
+            get { return "201611041319489_AlanlarMig"; }
         }
         
         string IMigrationMetadata.Source
