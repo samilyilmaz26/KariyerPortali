@@ -23,15 +23,8 @@ namespace KariyerPortali.Admin.Controllers
         // GET: Language
         public ActionResult Index()
         {
-            IEnumerable<LanguageViewModel> viewModelLanguage;
-
-            IEnumerable<Language> language;
-
-            language = languageService.GetLanguages().ToList();
-
-            viewModelLanguage = Mapper.Map<IEnumerable<Language>, IEnumerable<LanguageViewModel>>(language);
-
-            return View(viewModelLanguage);
+ 
+            return View();
         }
         public ActionResult Create()
         {
@@ -42,7 +35,7 @@ namespace KariyerPortali.Admin.Controllers
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allLanguages = languageService.Search(sSearch);
+            var allLanguages = languageService.Search(sSearch).ToList();
             IEnumerable<Language> filteredLanguages = allLanguages;
 
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
