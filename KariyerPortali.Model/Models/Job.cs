@@ -8,21 +8,21 @@ namespace KariyerPortali.Model
     public class Job
     {
         public int JobId { get; set; }
-
+        public string Title { get; set; }
         public string Description { get; set; }
 
    
         public int? EmployerId { get; set; }
-        public Employer Employer { get; set; }
+        public virtual Employer Employer { get; set; }
 
-        public JobType JobType { get; set; }
+        public virtual JobType JobType { get; set; }
 
        
         public int? ExperienceId { get; set; }
-        public Experience Experience { get; set; }
+        public virtual Experience Experience { get; set; }
 
-        public ICollection<JobApplication> JobApplications { get; set; }
-        public ICollection<SocialRight> SocialRights { get; set; }
+        public virtual ICollection<JobApplication> JobApplications { get; set; }
+        public virtual ICollection<SocialRight> SocialRights { get; set; }
 
         
         public string Responsibilities { get; set; }

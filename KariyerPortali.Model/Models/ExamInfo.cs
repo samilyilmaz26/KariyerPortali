@@ -12,11 +12,11 @@ namespace KariyerPortali.Model
         public int ExamInfoId { get; set; }
       
         public int? ExamId { get; set; }
-        public Exam Exam { get; set; }
+        public virtual Exam Exam { get; set; }
         public float Point { get; set; }
 
         public int? ResumeId { get; set; }
-        public Resume Resume { get; set; }
+        public virtual Resume Resume { get; set; }
 
     }
 }
