@@ -22,15 +22,8 @@ namespace KariyerPortali.Admin.Controllers
         // GET: Country
         public ActionResult Index()
         {
-            IEnumerable<CountryViewModel> viewModelCountry;
-
-            IEnumerable<Country> country;
-
-            country = countryService.GetCountries().ToList();
-
-            viewModelCountry = Mapper.Map<IEnumerable<Country>, IEnumerable<CountryViewModel>>(country);
-
-            return View(viewModelCountry);
+            
+            return View();
            
         }
         public ActionResult Create()
@@ -42,7 +35,7 @@ namespace KariyerPortali.Admin.Controllers
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allCountries = countryService.Search(sSearch);
+            var allCountries = countryService.Search(sSearch).ToList();
             IEnumerable<Country> filteredCountries = allCountries;
 
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);

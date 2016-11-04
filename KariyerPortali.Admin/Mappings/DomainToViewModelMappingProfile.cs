@@ -23,6 +23,8 @@ namespace KariyerPortali.Admin.Mappings
             Mapper.CreateMap<City, CityViewModel>();
             Mapper.CreateMap<Candidate, CandidateViewModel>();
             Mapper.CreateMap<Job, JobViewModel>();
+            Mapper.CreateMap<Language, LanguageViewModel>();
+
             Mapper.CreateMap<University, UniversityViewModel>();
             Mapper.CreateMap<Employer, EmployerViewModel>();
 #pragma warning restore CS0618 // Type or member is obsolete

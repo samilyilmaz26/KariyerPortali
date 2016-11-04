@@ -40,7 +40,12 @@ namespace KariyerPortali.Data.Configuration
             Property(c => c.Hobby).IsOptional();
             Property(c => c.MemberOwnedCommunity).IsOptional().HasMaxLength(200);
             Property(c => c.MilitaryPostponeDate).IsRequired();
-            
+            HasOptional<Candidate>(c => c.Candidate).WithMany(c => c.Resumes).HasForeignKey(c => c.CandidateId).WillCascadeOnDelete(false);
+            HasOptional<Language>(c => c.Language).WithMany(c => c.Resumes).HasForeignKey(c => c.CandidateId).WillCascadeOnDelete(false);
+            HasOptional<City>(c => c.BirthCity).WithMany(c => c.Resumes).HasForeignKey(c => c.BirthCityId).WillCascadeOnDelete(false);
+            HasOptional<Country>(c => c.Nationality).WithMany(c => c.Resumes).HasForeignKey(c => c.CountryId).WillCascadeOnDelete(false);
+
+
 
 
 
