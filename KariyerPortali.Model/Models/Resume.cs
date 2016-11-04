@@ -42,24 +42,24 @@ namespace KariyerPortali.Model
   
         [ForeignKey("BirthCity")]
         public int? BirthCityId { get; set; }
-        public City BirthCity { get; set; }
+        public virtual City BirthCity { get; set; }
 
         public MaritalStatus MaritalStatus { get; set; }
 
         [ForeignKey("Nationality")]
         public int? CountryId { get; set; }
-        public Country Nationality { get; set; }
+        public virtual Country Nationality { get; set; }
 
-        public MilitaryService MilitaryService { get; set; }
+        public virtual MilitaryService MilitaryService { get; set; }
         public DateTime MilitaryPostponeDate { get; set; }
 
         public bool DrivingLicenseExists { get; set; }
 
-        public DrivingLicenseClass DrivingLicense1Class { get; set; }
+        public virtual DrivingLicenseClass DrivingLicense1Class { get; set; }
         public DateTime DrivingLicense1Date { get; set; }
 
-       
-        public DrivingLicenseClass DrivingLicense2Class { get; set; }
+
+        public virtual DrivingLicenseClass DrivingLicense2Class { get; set; }
         public DateTime DrivingLicense2Date { get; set; }
 
         public string CoverLetter { get; set; }
@@ -71,37 +71,38 @@ namespace KariyerPortali.Model
         public string Website { get; set; }
         public string Address { get; set; }
 
-        public ICollection<Experience> Experiences { get; set; }
-        public ICollection<EducationInfo> EducationInfos { get; set; }
+        public virtual ICollection<Experience> Experiences { get; set; }
+        public virtual ICollection<EducationInfo> EducationInfos { get; set; }
 
         public string HighSchoolName { get; set; }
-        public int TypeId { get; set; }
-        public HighSchoolType HighSchoolType { get; set; }
+
+        public int HighSchoolTypeId { get; set; }
+        public virtual HighSchoolType HighSchoolType { get; set; }
 
         public int HighSchoolDepartmentId { get; set; }
-        public HighSchoolDepartment HighSchoolDepartment { get; set; }
+        public virtual HighSchoolDepartment HighSchoolDepartment { get; set; }
 
         public DateTime HighSchoolStart { get; set; }
         public DateTime HighSchoolEnd { get; set; }
-        public HighSchoolCertificate HighSchoolCertificate { get; set; }
+        public virtual HighSchoolCertificate HighSchoolCertificate { get; set; }
         public float CertificateDegree { get; set; }
 
-        public ICollection<LanguageInfo> LanguageInfos { get; set; }
+        public virtual ICollection<LanguageInfo> LanguageInfos { get; set; }
 
         public string ComputerSkill { get; set; }
         public string Certificate { get; set; }
 
-        public ICollection<ExamInfo> ExamInfos { get; set; }
-        public ICollection<SkillInfo> SkillInfos { get; set; }
-        public ICollection<Course> Courses { get; set; }
+        public virtual ICollection<ExamInfo> ExamInfos { get; set; }
+        public virtual ICollection<SkillInfo> SkillInfos { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
         public string ScholarshipAndProject { get; set; }
         public string Hobby { get; set; }
         public string MemberOwnedCommunity { get; set; }
 
-        public BloodType BloodType { get; set; }
-        public CigaretteStatus CigaretteStatus { get; set; }
-        public SalaryWaited SalaryWaited { get; set; }
-        public ICollection<Reference> References { get; set; }
+        public virtual BloodType BloodType { get; set; }
+        public virtual CigaretteStatus CigaretteStatus { get; set; }
+        public virtual SalaryWaited SalaryWaited { get; set; }
+        public virtual ICollection<Reference> References { get; set; }
 
 
 
