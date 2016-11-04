@@ -64,8 +64,9 @@ namespace KariyerPortali.Admin.Controllers
                     case 4:
                         filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
                         break;
-
-
+                    case 5:
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
+                        break;
                     default:
                         filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
                         break;
@@ -91,6 +92,9 @@ namespace KariyerPortali.Admin.Controllers
                     case 4:
                         filteredJobs = filteredJobs.OrderByDescending(c => c.Createdate);
                         break;
+                    case 5:
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.Title);
+                        break;
                     default:
                         filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.EmployerName);
                         break;
@@ -99,7 +103,7 @@ namespace KariyerPortali.Admin.Controllers
 
             var displayedJobs = filteredJobs.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedJobs
-                         select new[] { c.Description.ToString(), c.Employer.EmployerName.ToString(), c.Employer.City.CityName.ToString(), c.JobType.ToString(), c.Experience.ExperienceName.ToString(), c.Responsibilities.ToString(), c.Qualifications.ToString(), c.Createdate.ToShortDateString(), c.CreatedBy.ToString(), c.UpdateDate.ToShortDateString(), c.UpdatedBy.ToString() };
+                         select new[] { c.Title.ToString(), c.Description.ToString(), c.Employer.EmployerName.ToString(), c.Employer.City.CityName.ToString(), c.JobType.ToString(), c.Experience.ExperienceName.ToString(), c.Responsibilities.ToString(), c.Qualifications.ToString(), c.Createdate.ToShortDateString(), c.CreatedBy.ToString(), c.UpdateDate.ToShortDateString(), c.UpdatedBy.ToString() };
             return Json(new
             {
                 sEcho = param.sEcho,
