@@ -10,6 +10,6 @@ namespace KariyerPortali.Model
     {
         public int SkillId { get; set; }
         public string SkillName { get; set; }
-        public ICollection<SkillInfo> SkillInfos { get; set; }
+        public virtual ICollection<SkillInfo> SkillInfos { get; set; }
     }
 }

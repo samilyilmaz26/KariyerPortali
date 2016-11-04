@@ -27,11 +27,11 @@ namespace KariyerPortali.Model
 
         [ForeignKey("Candidate")]
         public int CandidateId { get; set; }
-        public Candidate Candidate { get; set; }
+        public virtual Candidate Candidate { get; set; }
 
         [ForeignKey("Language")]
         public int LanguageId { get; set; }
-        public Language Language { get; set; }
+        public virtual Language Language { get; set; }
 
 
 

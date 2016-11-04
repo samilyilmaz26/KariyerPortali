@@ -19,15 +19,15 @@ namespace KariyerPortali.Model
 
        
         public int SectorId { get; set; }
-        public Sector Sector { get; set; }
+        public virtual Sector Sector { get; set; }
 
         public int ResumeId { get; set; }
-        public Resume Resume { get; set; }
+        public virtual Resume Resume { get; set; }
 
         public string Message { get; set; }
         public string ReferenceFile { get; set; }
 
-        public ReferenceType ReferenceType { get; set; }
+        public virtual ReferenceType ReferenceType { get; set; }
 
     }
 }
