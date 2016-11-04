@@ -11,7 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface IUniversityService
     {
-        IList<University> Search(string search);
+        IEnumerable<University> Search(string search);
         IEnumerable<University> GetUniversities();
         University GetUniversity(int id);
         void CreateUniversity(University university);
