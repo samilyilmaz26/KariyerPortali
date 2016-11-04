@@ -57,7 +57,7 @@ namespace KariyerPortali.Service
         }
         public IEnumerable<Candidate> Search(string search)
         {
-            search = search.ToLower().Trim();
+            search = search.Trim();
             var searchWords = search.Split(' ');
 
 
