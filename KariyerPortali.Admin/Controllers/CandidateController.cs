@@ -73,8 +73,8 @@ namespace KariyerPortali.Admin.Controllers
                 }
             }
 
-            var displayedCVs = filteredCandidates.Skip(param.iDisplayStart).Take(param.iDisplayLength);
-            var result = from c in displayedCVs
+            var displayedCandidates = filteredCandidates.Skip(param.iDisplayStart).Take(param.iDisplayLength);
+            var result = from c in displayedCandidates
                          select new[] { c.UserName , c.FirstName + " " + c.LastName, c.Phone.ToString(), c.Email.ToString(), c.State.ToString(), c.CreateDate.ToShortDateString() };
             return Json(new
             {
