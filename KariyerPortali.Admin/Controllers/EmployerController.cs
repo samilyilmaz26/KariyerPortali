@@ -69,8 +69,8 @@ namespace KariyerPortali.Admin.Controllers
                 }
             }
 
-            var displayedCVs = filteredEmployers.Skip(param.iDisplayStart).Take(param.iDisplayLength);
-            var result = from c in displayedCVs
+            var displayedEmployers = filteredEmployers.Skip(param.iDisplayStart).Take(param.iDisplayLength);
+            var result = from c in displayedEmployers
                          select new[] { c.Logo, c.EmployerName, c.City.CityName,c.Email.ToString() };
             return Json(new
             {
