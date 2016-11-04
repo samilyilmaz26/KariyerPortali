@@ -11,6 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface IDepartmentService
     {
+        IEnumerable<Department> Search(string search);
         IEnumerable<Department> GetDepartments();
         Department GetDepartment(int id);
         void CreateDepartment(Department department);
@@ -28,18 +29,33 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region IDepartment Members
+        public IEnumerable<Department> Search(string search)
+        {
+            search = search.Trim();
+            var searchWords = search.Split(' ');
+
+
+            var query = GetDepartments();
+            foreach (string sSearch in searchWords)
+            {
+                if (sSearch != null && sSearch != "")
+                {
+                    query = query.Where(c => c.DepartmentId.ToString().Contains(sSearch) || c.DepartmentName.Contains(sSearch));
+                }
+            }
+            return query;
+
+        }
         public IEnumerable<Department> GetDepartments()
         {
             var departments = departmentRepository.GetAll();
             return departments;
         }
-
         public Department GetDepartment(int id)
         {
             var department = departmentRepository.GetById(id);
             return department;
         }
-
         public void CreateDepartment(Department department)
         {
             departmentRepository.Add(department);
