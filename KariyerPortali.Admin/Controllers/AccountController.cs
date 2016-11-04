@@ -189,6 +189,15 @@ namespace KariyerPortali.Admin.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            using (var db = new ApplicationDbContext())
+            {
+                var roles = db.Roles.ToList();
+                if (roles != null)
+                {
+                    ViewBag.roles = roles;
+                }
+            }
+
             return View();
         }
 
