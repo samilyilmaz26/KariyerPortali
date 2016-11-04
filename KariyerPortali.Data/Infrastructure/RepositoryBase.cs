@@ -61,18 +61,25 @@ namespace KariyerPortali.Data.Infrastructure
             return dbSet.Find(id);
         }
 
-        public virtual IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll(params string[] Navigations)
         {
+            foreach (string nav in Navigations)
+                dbSet.Include(nav);
+
             return dbSet.ToList();
         }
 
-        public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> where)
+        public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> where, params string[] Navigations)
         {
+            foreach (string nav in Navigations)
+                dbSet.Include(nav);
             return dbSet.Where(where).ToList();
         }
 
-        public T Get(Expression<Func<T, bool>> where)
+        public T Get(Expression<Func<T, bool>> where, params string[] Navigations)
         {
+            foreach (string nav in Navigations)
+                dbSet.Include(nav);
             return dbSet.Where(where).FirstOrDefault<T>();
         }
 
