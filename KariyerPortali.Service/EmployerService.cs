@@ -28,6 +28,24 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region IEmployerService Members
+        public IEnumerable<Employer> Search(string search)
+        {
+            search = search.ToLower().Trim();
+            var searchWords = search.Split(' ');
+
+
+            var query = GetEmployers();
+            foreach (string sSearch in searchWords)
+            {
+                if (sSearch != null && sSearch != "")
+                {
+                    query = query.Where(c => c.EmployerName.Contains(sSearch)|| c.City.CityName.Contains(sSearch) || c.Email.Contains(sSearch));
+                }
+            }
+
+            return query;
+
+        }
         public IEnumerable<Employer> GetEmployers()
         {
             var employers = employerRepository.GetAll();
@@ -54,6 +72,7 @@ namespace KariyerPortali.Service
         {
             unitOfWork.Commit();
         }
+    
         #endregion
     }
 }
