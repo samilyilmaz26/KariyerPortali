@@ -75,7 +75,7 @@ namespace KariyerPortali.Admin.Controllers
 
             var displayedCVs = filteredCandidates.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedCVs
-                         select new[] { c.UserName ?? string.Empty, c.FirstName + " " + c.LastName, c.Phone.ToString(), c.State.ToString(), c.Email.ToString(), c.CreateDate.ToShortDateString() };
+                         select new[] { c.UserName , c.FirstName + " " + c.LastName, c.Phone.ToString(), c.Email.ToString(), c.State.ToString(), c.CreateDate.ToShortDateString() };
             return Json(new
             {
                 sEcho = param.sEcho,
