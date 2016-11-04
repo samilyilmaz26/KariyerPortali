@@ -44,15 +44,30 @@ namespace KariyerPortali.Admin.Controllers
             {
                 switch (sortColumnIndex)
                 {
+                   
                     case 0:
-                        filteredCandidates = filteredCandidates.OrderBy(c => c.CandidateId);
-                        break;
-                    case 1:
                         filteredCandidates = filteredCandidates.OrderBy(c => c.UserName);
                         break;
-
+                        case 1:
+                        filteredCandidates = filteredCandidates.OrderBy(c => c.FirstName);
+                        break;
+                    case 2:
+                        filteredCandidates = filteredCandidates.OrderBy(c => c.LastName);
+                        break;
+                    case 3:
+                        filteredCandidates = filteredCandidates.OrderBy(c => c.Phone);
+                        break;
+                    case 4:
+                        filteredCandidates = filteredCandidates.OrderBy(c => c.Email);
+                        break;
+                    case 5:
+                        filteredCandidates = filteredCandidates.OrderBy(c => c.State);
+                        break;
+                    case 6:
+                        filteredCandidates = filteredCandidates.OrderBy(c => c.CreateDate);
+                        break;
                     default:
-                        filteredCandidates = filteredCandidates.OrderBy(c => c.CandidateId);
+                        filteredCandidates = filteredCandidates.OrderBy(c => c.UserName);
                         break;
                 }
             }
@@ -61,14 +76,28 @@ namespace KariyerPortali.Admin.Controllers
                 switch (sortColumnIndex)
                 {
                     case 0:
-                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.CandidateId);
+                        filteredCandidates = filteredCandidates.OrderByDescending (c => c.UserName);
                         break;
                     case 1:
-                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.UserName);
+                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.FirstName);
                         break;
-
+                    case 2:
+                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.LastName);
+                        break;
+                    case 3:
+                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.Phone);
+                        break;
+                    case 4:
+                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.Email);
+                        break;
+                    case 5:
+                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.State);
+                        break;
+                    case 6:
+                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.CreateDate);
+                        break;
                     default:
-                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.CandidateId);
+                        filteredCandidates = filteredCandidates.OrderByDescending(c => c.UserName);
                         break;
                 }
             }
