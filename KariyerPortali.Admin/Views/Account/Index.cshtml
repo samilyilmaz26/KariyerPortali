@@ -87,10 +87,10 @@
                         </th>
 
                         <th> @Html.DisplayNameFor(model=>model.UserName) </th>
-                        <th> @Html.DisplayNameFor(model=>model.Ad)</th>
-                        <th> Telefon </th>
-                        <th> Eposta </th>
-                        <th> Durum </th>
+                        <th> @Html.DisplayNameFor(model=>model.FirstName) </th>
+                        <th> @Html.DisplayNameFor(model => model.LastName) </th>
+                        <th> @Html.DisplayNameFor(model => model.Title) </th>
+                        <th> @Html.DisplayNameFor(model => model.ImagePath) </th>
                         <th> Kayıt Tarihi </th>
                         <th> Eylemler </th>
                     </tr>
@@ -105,8 +105,8 @@
                             </label>
                         </td>
                         <td> @Html.DisplayFor(modelItem=>item.Email) </td>
-                        <td> Katy Perry</td>
-                        <td></td>
+                        <td> @Html.DisplayFor(modelItem => item.FirstName) </td>
+                        <td> @Html.DisplayFor(modelItem => item.FirstName) </td>
                         <td>
                             <a href="mailto:shuxer@gmail.com"> shuxer@gmail.com </a>
                         </td>
