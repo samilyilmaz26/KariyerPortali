@@ -24,6 +24,7 @@ namespace KariyerPortali.Admin.Mappings
             Mapper.CreateMap<Candidate, CandidateViewModel>();
             Mapper.CreateMap<Job, JobViewModel>();
             Mapper.CreateMap<Language, LanguageViewModel>();
+            Mapper.CreateMap<Department, DepartmentViewModel>();
 
             Mapper.CreateMap<University, UniversityViewModel>();
             Mapper.CreateMap<Employer, EmployerViewModel>();
