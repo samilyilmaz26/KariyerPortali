@@ -26,11 +26,11 @@ namespace KariyerPortali.Model
         public DateTime UpdateDate { get; set; }
 
         [ForeignKey("Candidate")]
-        public int CandidateId { get; set; }
+        public int? CandidateId { get; set; }
         public virtual Candidate Candidate { get; set; }
 
         [ForeignKey("Language")]
-        public int LanguageId { get; set; }
+        public int? LanguageId { get; set; }
         public virtual Language Language { get; set; }
 
 
@@ -41,13 +41,13 @@ namespace KariyerPortali.Model
         public DateTime BirthDate { get; set; }
   
         [ForeignKey("BirthCity")]
-        public int BirthCityId { get; set; }
+        public int? BirthCityId { get; set; }
         public City BirthCity { get; set; }
 
         public MaritalStatus MaritalStatus { get; set; }
 
         [ForeignKey("Nationality")]
-        public int CountryId { get; set; }
+        public int? CountryId { get; set; }
         public Country Nationality { get; set; }
 
         public MilitaryService MilitaryService { get; set; }

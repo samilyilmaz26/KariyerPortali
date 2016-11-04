@@ -12,7 +12,7 @@ namespace KariyerPortali.Data
     {
         protected override void Seed(KariyerPortaliEntities context)
         {
-            GetResumes().ForEach(c => context.Resumes.Add(c));
+            //GetResumes().ForEach(c => context.Resumes.Add(c));
 
             context.Commit();
         }

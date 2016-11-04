@@ -11,7 +11,7 @@ namespace KariyerPortali.Model
     {
         public int LanguageInfoId { get; set; }
        
-        public int LanguageId { get; set; }
+        public int? LanguageId { get; set; }
         public virtual Language Language { get; set; }
 
         public int ResumeId { get; set; }
