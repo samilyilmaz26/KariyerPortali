@@ -11,6 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface IEmployerService
     {
+        IEnumerable<Employer> Search(string search);
         IEnumerable<Employer> GetEmployers();
         Employer GetEmployer(int id);
         void CreateEmployer(Employer employer);
