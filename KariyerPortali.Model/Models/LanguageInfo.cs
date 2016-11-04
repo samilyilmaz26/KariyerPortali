@@ -13,6 +13,9 @@ namespace KariyerPortali.Model
        
         public int LanguageId { get; set; }
         public Language Language { get; set; }
+
+        public int ResumeId { get; set; }
+        public Resume Resume { get; set; }
         public LanguageLevel WritingLanguageLevel { get; set; }
         public LanguageLevel ReadingLanguageLevel { get; set; }
         public LanguageLevel SpeakingLanguageLevel { get; set; }

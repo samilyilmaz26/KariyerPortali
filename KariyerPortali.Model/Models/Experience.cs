@@ -10,6 +10,9 @@ namespace KariyerPortali.Model
     {
         public int ExperienceId { get; set; }
         public string ExperienceName { get; set; }
+
+        public int ResumeId { get; set; }
+        public Resume Resume { get; set; }
         public ICollection<Job> Jobs { get; set; }
     }
 }

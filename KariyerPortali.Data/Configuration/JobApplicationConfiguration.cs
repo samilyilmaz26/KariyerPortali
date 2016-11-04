@@ -19,7 +19,7 @@ namespace KariyerPortali.Data.Configuration
            //aşağıda jobapplication sınıfında bulunan foreignkey bağlama
            //ve bire çok bağlamada null geçilebilir ilişkisi bulunuyor.
             HasOptional<Employer>(c => c.Employer).WithMany(c => c.JobApplications).HasForeignKey(c => c.EmployerId).WillCascadeOnDelete(false);
-            HasOptional<Candidate>(c => c.Candidate).WithMany(c => c.JobApplications).HasForeignKey(c => c.CandidateId).WillCascadeOnDelete(false);
+            HasOptional<Candidate>(c => c.Candidate).WithMany(c => c.Resumes).HasForeignKey(c => c.CandidateId).WillCascadeOnDelete(false);
             HasOptional<Job>(c => c.Job).WithMany(c => c.JobApplications).HasForeignKey(c => c.JobId).WillCascadeOnDelete(false);
         }
     }
