@@ -79,9 +79,11 @@ namespace KariyerPortali.Admin.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-        
-        public string FirstName { get; set; }
-        public int LastName { get; set; }
+
+        public int FirstName { get; set; }
+        public string LastName { get; set; }
+
+       
 
     }
 

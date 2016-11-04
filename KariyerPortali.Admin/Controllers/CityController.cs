@@ -52,7 +52,7 @@ namespace KariyerPortali.Admin.Controllers
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allCities = cityService.Search(sSearch);
+            var allCities = cityService.Search(sSearch).ToList();
             IEnumerable<City> filteredCities = allCities;
 
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
