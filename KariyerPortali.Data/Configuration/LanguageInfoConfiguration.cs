@@ -15,8 +15,13 @@ namespace KariyerPortali.Data.Configuration
             ToTable("LanguageInfos");
             HasKey<int>(c => c.LanguageInfoId);
             
-            //   HasRequired<Country>(c => c.Country).WithMany();
-            HasOptional<Language>(c => c.Language).WithMany(c => c.LanguageInfos).HasForeignKey(c => c.LanguageId).WillCascadeOnDelete(false);
+           
+            HasOptional<Language>(c => c.Language)
+                .WithMany(c => c.LanguageInfos)
+                .HasForeignKey(c => c.LanguageId);
+            HasOptional<Language>(c => c.Language)
+                .WithMany()
+                .WillCascadeOnDelete(false);
         }
     }
 }

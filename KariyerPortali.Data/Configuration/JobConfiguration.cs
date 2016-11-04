@@ -19,9 +19,22 @@ namespace KariyerPortali.Data.Configuration
             //Property(c => c.JobType).HasMaxLength(500);
             Property(c => c.Responsibilities).IsRequired();
             Property(c => c.Qualifications).IsRequired();
-            HasOptional<Employer>(c => c.Employer).WithMany(c => c.Jobs).HasForeignKey(c => c.EmployerId).WillCascadeOnDelete(false);
-            HasOptional<Experience>(c => c.Experience).WithMany(c => c.Jobs).HasForeignKey(c => c.ExperienceId).WillCascadeOnDelete(false);
-           //foreign key olanları notnull yapayımmı
+
+
+            HasOptional<Employer>(c => c.Employer)
+                .WithMany(c => c.Jobs)
+                .HasForeignKey(c => c.EmployerId);
+            HasOptional<Employer>(c => c.Employer)
+              .WithMany()
+              .WillCascadeOnDelete(false);
+
+            HasOptional<Experience>(c => c.Experience)
+                .WithMany(c => c.Jobs)
+                .HasForeignKey(c => c.ExperienceId);
+            HasOptional<Experience>(c => c.Experience)
+             .WithMany()
+             .WillCascadeOnDelete(false);
+         
            
         }
     }

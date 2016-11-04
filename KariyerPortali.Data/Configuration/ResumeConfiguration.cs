@@ -40,10 +40,34 @@ namespace KariyerPortali.Data.Configuration
             Property(c => c.Hobby).IsOptional();
             Property(c => c.MemberOwnedCommunity).IsOptional().HasMaxLength(200);
             Property(c => c.MilitaryPostponeDate).IsRequired();
-            HasOptional<Candidate>(c => c.Candidate).WithMany(c => c.Resumes).HasForeignKey(c => c.CandidateId).WillCascadeOnDelete(false);
-            HasOptional<Language>(c => c.Language).WithMany(c => c.Resumes).HasForeignKey(c => c.CandidateId).WillCascadeOnDelete(false);
-            HasOptional<City>(c => c.BirthCity).WithMany(c => c.Resumes).HasForeignKey(c => c.BirthCityId).WillCascadeOnDelete(false);
-            HasOptional<Country>(c => c.Nationality).WithMany(c => c.Resumes).HasForeignKey(c => c.CountryId).WillCascadeOnDelete(false);
+
+            HasOptional<Candidate>(s => s.Candidate)
+                     .WithMany(s => s.Resumes)
+                     .HasForeignKey(s => s.CandidateId);
+            HasOptional<Candidate>(s => s.Candidate)
+             .WithMany()
+             .WillCascadeOnDelete(false);
+
+            HasOptional<Language>(s => s.Language)
+                     .WithMany(s => s.Resumes)
+                     .HasForeignKey(s => s.LanguageId);
+            HasOptional<Language>(s => s.Language)
+             .WithMany()
+             .WillCascadeOnDelete(false);
+
+            HasOptional<City>(s => s.BirthCity)
+                     .WithMany(s => s.Resumes)
+                     .HasForeignKey(s => s.BirthCityId);
+            HasOptional<City>(s => s.BirthCity)
+             .WithMany()
+             .WillCascadeOnDelete(false);
+
+            HasOptional<Country>(s => s.Nationality)
+                     .WithMany(s => s.Resumes)
+                     .HasForeignKey(s => s.CountryId);
+            HasOptional<Country>(s => s.Nationality)
+             .WithMany()
+             .WillCascadeOnDelete(false);
 
 
 
