@@ -24,6 +24,11 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+     
+        public ActionResult Create()
+        {
+            return View();
+        }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
 
@@ -34,21 +39,27 @@ namespace KariyerPortali.Admin.Controllers
 
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
 
-
+            
             var sortDirection = Request["sSortDir_0"]; // asc or desc
             if (sortDirection == "asc")
             {
                 switch (sortColumnIndex)
                 {
                     case 0:
-                        filteredEmployers = filteredEmployers.OrderBy(c => c.EmployerId);
+                        filteredEmployers = filteredEmployers.OrderBy(c => c.Logo);
                         break;
                     case 1:
                         filteredEmployers = filteredEmployers.OrderBy(c => c.EmployerName);
                         break;
-
+                    case 2:
+                        filteredEmployers = filteredEmployers.OrderBy(c =>c.City.CityName );
+                        break;
+                    case 3:
+                        filteredEmployers = filteredEmployers.OrderBy(c => c.Email);
+                        break;
+          
                     default:
-                        filteredEmployers = filteredEmployers.OrderBy(c => c.EmployerId);
+                        filteredEmployers = filteredEmployers.OrderBy(c => c.EmployerName);
                         break;
                 }
             }
@@ -57,21 +68,27 @@ namespace KariyerPortali.Admin.Controllers
                 switch (sortColumnIndex)
                 {
                     case 0:
-                        filteredEmployers = filteredEmployers.OrderByDescending(c => c.EmployerId);
+                        filteredEmployers = filteredEmployers.OrderByDescending(c => c.Logo);
                         break;
                     case 1:
                         filteredEmployers = filteredEmployers.OrderByDescending(c => c.EmployerName);
                         break;
+                    case 2:
+                        filteredEmployers = filteredEmployers.OrderByDescending(c => c.City.CityName);
+                        break;
+                    case 3:
+                        filteredEmployers = filteredEmployers.OrderByDescending(c => c.Email);
+                        break;
 
                     default:
-                        filteredEmployers = filteredEmployers.OrderByDescending(c => c.EmployerId);
+                        filteredEmployers = filteredEmployers.OrderByDescending(c => c.EmployerName);
                         break;
                 }
             }
 
             var displayedEmployers = filteredEmployers.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedEmployers
-                         select new[] { c.Logo, c.EmployerName, c.City.CityName,c.Email.ToString() };
+                         select new[] { c.Logo, c.EmployerName, c.City.CityName, c.Email.ToString() };
             return Json(new
             {
                 sEcho = param.sEcho,
@@ -80,10 +97,6 @@ namespace KariyerPortali.Admin.Controllers
                 aaData = result
             },
                 JsonRequestBehavior.AllowGet);
-        }
-        public ActionResult Create()
-        {
-            return View();
         }
     }
 }
