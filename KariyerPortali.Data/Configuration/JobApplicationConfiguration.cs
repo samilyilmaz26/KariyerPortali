@@ -16,7 +16,7 @@ namespace KariyerPortali.Data.Configuration
             ToTable("JobApplications");
             HasKey<int>(c=>c.JobApplicationId);
             Property(c => c.CoverLetter).HasMaxLength(500);
-            Property(c => c.Title).IsRequired().HasMaxLength(200);
+            
             //aşağıda jobapplication sınıfında bulunan foreignkey bağlama
             //ve bire çok bağlamada null geçilebilir ilişkisi bulunuyor.
             HasOptional<Employer>(c => c.Employer).WithMany(c => c.JobApplications).HasForeignKey(c => c.EmployerId).WillCascadeOnDelete(false);
