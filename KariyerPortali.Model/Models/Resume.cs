@@ -9,13 +9,17 @@ namespace KariyerPortali.Model
 {
     public class Resume
     {
+        public Resume()
+        {
+            ViewCount = 0;
+        }
         
+        public int ViewCount { get; set; }
         public int ResumeId { get; set; }
         public string ResumeName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string CitizenshipId { get; set; }
-
         public string CreatedBy { get; set; }
         public DateTime CreateDate { get; set; }
         public string UpdatedBy { get; set; }
@@ -29,7 +33,7 @@ namespace KariyerPortali.Model
         public int LanguageId { get; set; }
         public Language Language { get; set; }
 
-        public int ViewCount { get; set; }
+       
 
 
         public Gender Gender { get; set; }
@@ -79,8 +83,8 @@ namespace KariyerPortali.Model
 
         public DateTime HighSchoolStart { get; set; }
         public DateTime HighSchoolEnd { get; set; }
-        public HighSchoolCertificate HighSchoolCertifacate { get; set; }
-        public float CertifacateDegree { get; set; }
+        public HighSchoolCertificate HighSchoolCertificate { get; set; }
+        public float CertificateDegree { get; set; }
 
         public ICollection<LanguageInfo> LanguageInfos { get; set; }
 
