@@ -200,9 +200,9 @@
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Mappings\DomainToViewModelMappingProfile.cs" />
     <Compile Include="Mappings\ViewModelToDomainMappingProfile.cs" />
-    <Compile Include="Migrations\201611031252280_InitialCreate.cs" />
-    <Compile Include="Migrations\201611031252280_InitialCreate.Designer.cs">
-      <DependentUpon>201611031252280_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201611041303365_add-migration IlkMigration.cs" />
+    <Compile Include="Migrations\201611041303365_add-migration IlkMigration.Designer.cs">
+      <DependentUpon>201611041303365_add-migration IlkMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -6391,8 +6391,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611031252280_InitialCreate.resx">
-      <DependentUpon>201611031252280_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611041303365_add-migration IlkMigration.resx">
+      <DependentUpon>201611041303365_add-migration IlkMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
