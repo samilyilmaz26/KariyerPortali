@@ -8,7 +8,7 @@ namespace KariyerPortali.Model
 {
     public class HighSchoolType
     {
-        public int TypeId { get; set; }
+        public int HighSchoolTypeId { get; set; }
         public string TypeName { get; set; }
     }
 }

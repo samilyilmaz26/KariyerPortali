@@ -17,7 +17,7 @@ namespace KariyerPortali.Model
         public string Statement { get; set; }
 
         public int ResumeId { get; set; }
-        public Resume Resume { get; set; }
+        public virtual Resume Resume { get; set; }
 
     }
 }

@@ -12,12 +12,12 @@ namespace KariyerPortali.Model
         public int LanguageInfoId { get; set; }
        
         public int LanguageId { get; set; }
-        public Language Language { get; set; }
+        public virtual Language Language { get; set; }
 
         public int ResumeId { get; set; }
-        public Resume Resume { get; set; }
-        public LanguageLevel WritingLanguageLevel { get; set; }
-        public LanguageLevel ReadingLanguageLevel { get; set; }
-        public LanguageLevel SpeakingLanguageLevel { get; set; }
+        public virtual Resume Resume { get; set; }
+        public virtual LanguageLevel WritingLanguageLevel { get; set; }
+        public virtual LanguageLevel ReadingLanguageLevel { get; set; }
+        public virtual LanguageLevel SpeakingLanguageLevel { get; set; }
     }
 }

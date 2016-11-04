@@ -11,7 +11,7 @@ namespace KariyerPortali.Model
     {
         public int LanguageId { get; set; }
         public string LanguageName { get; set; }
-        public ICollection<LanguageInfo> LanguageInfos { get; set; }
-        public ICollection<Resume> Resumes { get; set; }
+        public virtual ICollection<LanguageInfo> LanguageInfos { get; set; }
+        public virtual ICollection<Resume> Resumes { get; set; }
     }
 }

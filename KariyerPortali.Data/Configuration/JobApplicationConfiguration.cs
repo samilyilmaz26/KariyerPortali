@@ -14,7 +14,7 @@ namespace KariyerPortali.Data.Configuration
         {
             /* Fluent-API */
             ToTable("JobApplications");
-            HasKey<int>(c=>c.ApplicationId);
+            HasKey<int>(c=>c.JobApplicationId);
             Property(c => c.CoverLetter).HasMaxLength(500);
            //aşağıda jobapplication sınıfında bulunan foreignkey bağlama
            //ve bire çok bağlamada null geçilebilir ilişkisi bulunuyor.
