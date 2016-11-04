@@ -201,12 +201,8 @@ namespace KariyerPortali.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,FirstName="Katy",LastName="PERRY"};
                
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,FirstName=model.FirstName,LastName=model.LastName};
-               
-
-
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -216,8 +212,8 @@ namespace KariyerPortali.Admin.Controllers
                     if (!roleManager.RoleExists("Admin"))
                     {
                         await roleManager.CreateAsync(new IdentityRole("Admin"));
-
                     }
+                    
                     
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

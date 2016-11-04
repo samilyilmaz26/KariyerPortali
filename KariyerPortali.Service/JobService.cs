@@ -40,7 +40,14 @@ namespace KariyerPortali.Service
             {
                 if (sSearch != null && sSearch != "")
                 {
-                    query = query.Where(c => c.JobId.ToString().Contains(sSearch) || c.Description.Contains(sSearch) || c.Employer.EmployerName.Contains(sSearch));
+                    DateTime dDate;
+                    bool dateParsed = false;
+                    if (DateTime.TryParse(sSearch, out dDate))
+                    {
+                        dDate = DateTime.Parse(sSearch);
+                        dateParsed = true;
+                    }
+                    query = query.Where(c=>c.Employer.EmployerName.Contains(sSearch) || c.Description.Contains(sSearch) || c.Employer.City.CityName.Contains(sSearch)|| c.JobType.ToString().Contains(sSearch) || (dateParsed == true ? c.Createdate == dDate : false));
                 }
             }
             return query;
