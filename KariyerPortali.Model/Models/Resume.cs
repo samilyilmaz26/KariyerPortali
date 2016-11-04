@@ -43,24 +43,24 @@ namespace KariyerPortali.Model
         public DateTime CreateDate { get; set; }
         public DateTime MilitaryPostponeDate { get; set; }
 
-        [ForeignKey("Candidate")]
-        public int? CandidateId { get; set; }
+       
+        public int CandidateId { get; set; }
         public virtual Candidate Candidate { get; set; }
 
-        [ForeignKey("Language")]
-        public int? LanguageId { get; set; }
+       
+        public int LanguageId { get; set; }
         public virtual Language Language { get; set; }
 
         public virtual Gender Gender { get; set; }
 
-        [ForeignKey("BirthCity")]
-        public int? BirthCityId { get; set; }
+        
+        public int BirthCityId { get; set; }
         public virtual City BirthCity { get; set; }
 
         public virtual MaritalStatus MaritalStatus { get; set; }
 
-        [ForeignKey("Nationality")]
-        public int? CountryId { get; set; }
+        
+        public int CountryId { get; set; }
         public virtual Country Nationality { get; set; }
 
         public virtual MilitaryService MilitaryService { get; set; }

@@ -14,8 +14,20 @@ namespace KariyerPortali.Data.Configuration
         {
             ToTable("SkillInfos");
             HasKey<int>(c => c.SkillInfoId);
-            HasOptional<Skill>(c => c.Skill).WithMany(c => c.SkillInfos).HasForeignKey(c => c.SkillId).WillCascadeOnDelete(false);
-            HasOptional<Resume>(c => c.Resume).WithMany(c => c.SkillInfos).HasForeignKey(c => c.ResumeId).WillCascadeOnDelete(false);
+
+            HasOptional<Skill>(s => s.Skill)
+                     .WithMany(s => s.SkillInfos)
+                     .HasForeignKey(s => s.SkillId);
+            HasOptional<Skill>(s => s.Skill)
+             .WithMany()
+             .WillCascadeOnDelete(false);
+
+            HasOptional<Resume>(s => s.Resume)
+                     .WithMany(s => s.SkillInfos)
+                     .HasForeignKey(s => s.ResumeId);
+            HasOptional<Resume>(s => s.Resume)
+             .WithMany()
+             .WillCascadeOnDelete(false);
 
         }
     }

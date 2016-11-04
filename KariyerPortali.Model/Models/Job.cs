@@ -12,13 +12,13 @@ namespace KariyerPortali.Model
         public string Description { get; set; }
 
    
-        public int? EmployerId { get; set; }
+        public int EmployerId { get; set; }
         public virtual Employer Employer { get; set; }
 
         public virtual JobType JobType { get; set; }
 
        
-        public int? ExperienceId { get; set; }
+        public int ExperienceId { get; set; }
         public virtual Experience Experience { get; set; }
 
         public virtual ICollection<JobApplication> JobApplications { get; set; }
