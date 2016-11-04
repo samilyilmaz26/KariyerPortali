@@ -30,7 +30,7 @@ namespace KariyerPortali.Service
         #region IEmployerService Members
         public IEnumerable<Employer> Search(string search)
         {
-            search = search.ToLower().Trim();
+            search = search.Trim();
             var searchWords = search.Split(' ');
 
 
