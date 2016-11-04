@@ -10,17 +10,17 @@ namespace KariyerPortali.Model
    public class JobApplication
     {
         public int JobApplicationId { get; set; }
-        public string Title { get; set; }
+        
       
-        public int? CandidateId { get; set; }
+        public int CandidateId { get; set; }
         public virtual Candidate Candidate { get; set; }
 
       
-        public int? EmployerId { get; set; }
+        public int EmployerId { get; set; }
         public virtual Employer Employer { get; set; }
 
        
-        public int? JobId { get; set; }
+        public int JobId { get; set; }
         public virtual Job Job { get; set; }
 
         public string CoverLetter { get; set; }

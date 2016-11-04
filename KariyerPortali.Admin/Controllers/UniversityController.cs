@@ -1,4 +1,6 @@
-﻿using KariyerPortali.Admin.Models;
+﻿using AutoMapper;
+using KariyerPortali.Admin.Models;
+using KariyerPortali.Admin.ViewModels;
 using KariyerPortali.Model;
 using KariyerPortali.Service;
 using System;

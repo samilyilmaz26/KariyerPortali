@@ -15,7 +15,12 @@ namespace KariyerPortali.Data.Configuration
             ToTable("Cities");
             HasKey<int>(c => c.CityId);
             Property(c => c.CityName).IsRequired().HasMaxLength(25);
-            HasOptional<Country>(c => c.Country).WithMany(c => c.Cities).HasForeignKey(c=>c.CountryId).WillCascadeOnDelete(false);
+            HasOptional<Country>(c => c.Country)
+                .WithMany(c => c.Cities)
+                .HasForeignKey(c=>c.CountryId);
+            HasOptional<Country>(c => c.Country)
+                .WithMany()
+                .WillCascadeOnDelete(false);
         }
 
     }
