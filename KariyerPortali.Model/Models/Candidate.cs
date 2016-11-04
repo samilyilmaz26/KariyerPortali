@@ -22,7 +22,8 @@ namespace KariyerPortali.Model
         public DateTime UpdatedDate { get; set; }
 
         public ICollection<JobApplication> JobApplications { get; set; }
+        public ICollection<Resume> Resumes { get; set; }
 
 
-}
+    }
 }
