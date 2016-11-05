@@ -28,11 +28,15 @@ namespace KariyerPortali.Admin.Models
 
     public class ApplicationRole:IdentityRole
     {
-        public string Description { get; set; }
+        
         public ApplicationRole()
         {
 
         }
+
+        public ApplicationRole(string name) : base(name) { }
+        public string Description { get; set; }
+
         public ApplicationRole(string roleName,string description):base(roleName)
         {
             this.Description = description;
