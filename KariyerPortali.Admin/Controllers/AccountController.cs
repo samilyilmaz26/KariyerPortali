@@ -192,31 +192,14 @@ namespace KariyerPortali.Admin.Controllers
         {
             using (var db = new ApplicationDbContext())
             {
-                var roles = db.Roles.ToList();
-
-                if (roles != null)
-                {
-                    ViewBag.roles = roles;
-                }
-            }
-
-            //var users = UserManager.Users;
-            //var roles = new List<string>();
-            //foreach (var user in users)
-            //{
-            //    string str = "";
-            //    foreach (var role in UserManager.GetRoles(user.Id))
-            //    {
-            //        str = (str == "") ? role.ToString() : str + " - " + role.ToString();
-            //    }
-            //    roles.Add(str);
-            //}
-            //var model = new RegisterViewModel()
-            //{
-            //    users = users.ToList(),
-            //    roles = roles.ToList()
-            //};
-
+                List<SelectListItem> RoleList = (from k in db.Roles
+                                                   select new SelectListItem
+                                                   {
+                                                       Text = k.Name,
+                                                       Value = k.Id
+                                                   }).ToList();
+                ViewBag.List = RoleList;
+            }          
 
             return View();
         }
