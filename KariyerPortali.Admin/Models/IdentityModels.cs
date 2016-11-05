@@ -33,6 +33,7 @@ namespace KariyerPortali.Admin.Models
         {
 
         }
+        
 
         public ApplicationRole(string name) : base(name) { }
         public string Description { get; set; }
@@ -51,6 +52,7 @@ namespace KariyerPortali.Admin.Models
         }
         public static ApplicationDbContext Create()
         {
+            
             return new ApplicationDbContext();
         }
     }

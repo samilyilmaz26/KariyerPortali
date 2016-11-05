@@ -1,5 +1,7 @@
 namespace KariyerPortali.Admin.Migrations
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -9,7 +11,7 @@ namespace KariyerPortali.Admin.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "KariyerPortali.Admin.Models.ApplicationDbContext";
         }
 
@@ -27,6 +29,27 @@ namespace KariyerPortali.Admin.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            if (!context.Roles.Any(r => r.Name == "Admin"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var role = new IdentityRole { Name = "Admin" };
+                manager.Create(role);
+            }
+            if (!context.Roles.Any(r => r.Name == "SubAdmin"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var role = new IdentityRole { Name = "SubAdmin" };
+                manager.Create(role);
+            }
+            if (!context.Roles.Any(r => r.Name == "User"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var role = new IdentityRole { Name = "User" };
+                manager.Create(role);
+            }
         }
     }
 }
