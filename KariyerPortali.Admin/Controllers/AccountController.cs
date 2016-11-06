@@ -212,19 +212,17 @@ namespace KariyerPortali.Admin.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-
+                
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
 
-                    var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-
-                    if (!roleManager.RoleExists("Admin"))
-                    {
-                        await roleManager.CreateAsync(new IdentityRole("Admin"));
-                    }
-
-
+                    //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+                    UserManager.AddToRole(user.Id,"SubAdmin");
+                    //if (!roleManager.RoleExists("Admin"))
+                    //{
+                    //    await roleManager.CreateAsync(new IdentityRole("Admin"));
+                    //}
 
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
