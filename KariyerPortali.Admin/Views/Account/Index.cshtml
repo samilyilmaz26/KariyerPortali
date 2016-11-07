@@ -110,7 +110,7 @@
                         <td> @Html.DisplayFor(modelItem => item.LastName)</td>
                         <td> @Html.DisplayFor(modelItem => item.Title)</td>
                         <td> @Html.DisplayFor(modelItem => item.Roles)</td>
-                        <td> @Html.DisplayFor(modelItem => item.CreatedDate) </td>
+                        <td> @item.CreatedDate.ToShortDateString()</td>
                         <td>
                             
                         </td>
