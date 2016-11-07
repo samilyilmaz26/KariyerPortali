@@ -50,7 +50,7 @@ namespace KariyerPortali.Data.Repositories
                         break;
                   
                     default:
-                        filteredCities = filteredCities.OrderBy(c => c.CityName);
+                        filteredCities = filteredCities.OrderBy(c => c.CityId);
                         break;
                 }
             }
@@ -69,7 +69,7 @@ namespace KariyerPortali.Data.Repositories
                         break;
                     
                     default:
-                        filteredCities = filteredCities.OrderByDescending(c => c.CityName);
+                        filteredCities = filteredCities.OrderByDescending(c => c.CityId);
                         break;
                 }
             }
