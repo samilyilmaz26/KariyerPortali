@@ -31,6 +31,7 @@ namespace KariyerPortali.Admin.Controllers
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
 
+
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
