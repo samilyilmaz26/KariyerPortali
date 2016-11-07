@@ -54,7 +54,18 @@
                  'render': function (data, type, row) {
                      return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
                  },
-             },
+             }, 
+             {
+                 'orderable': false,
+                 'searchable': false,
+                 'targets': [7],
+                 'render': function (data, type, row) {
+                     return '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Eylemler<i class="fa fa-angle-down"></i></button>'
+                         + '<ul class="dropdown-menu" role="menu"><li><a href="/Job/Edit/' + row[0] + '"><i class="icon-note"></i> Düzenle</a></li><li><a href="/Job/Details/' + row[0] + '"><i class="icon-list"></i> Detaylar</a></li><li>'
+                         + '<a href="/Job/Delete/' + row[0] + '"><i class="icon-ban"></i> Sil</a></li></ul></div>';
+                 }
+
+             }
 
         ],
 
