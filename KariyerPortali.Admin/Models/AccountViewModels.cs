@@ -81,8 +81,6 @@ namespace KariyerPortali.Admin.Models
         public string ConfirmPassword { get; set; }
         
 
-       
-
     }
 
     public class ResetPasswordViewModel
