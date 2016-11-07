@@ -13,9 +13,61 @@ namespace KariyerPortali.Data.Repositories
     {
         public DepartmentRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
+        public IEnumerable<Department> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords)
+        {
+            search = search.Trim();
+            var searchWords = search.Split(' ');
+
+
+            var query = this.DbContext.Departments.Include("University").AsQueryable();
+            foreach (string sSearch in searchWords)
+            {
+                if (sSearch != null && sSearch != "")
+                {
+                    query = query.Where(c => c.DepartmentName.Contains(sSearch) );
+                }
+            }
+
+            var allDepartments = query;
+
+            IEnumerable<Department> filteredDepartments = allDepartments;
+
+            if (sortDirection == "asc")
+            {
+                switch (sortColumnIndex)
+                {
+                    case 0:
+                        filteredDepartments = filteredDepartments.OrderBy(c => c.DepartmentName);
+                        break;
+                    
+
+                    default:
+                        filteredDepartments = filteredDepartments.OrderBy(c => c.DepartmentName);
+                        break;
+                }
+            }
+            else
+            {
+                switch (sortColumnIndex)
+                {
+                    case 0:
+                        filteredDepartments = filteredDepartments.OrderByDescending(c => c.DepartmentName);
+                        break;
+                    default:
+                        filteredDepartments = filteredDepartments.OrderByDescending(c => c.DepartmentName);
+                        break;
+                }
+            }
+
+            var displayedDepartments = filteredDepartments.Skip(displayStart).Take(displayLength);
+
+            totalRecords = allDepartments.Count();
+            totalDisplayRecords = filteredDepartments.Count();
+            return displayedDepartments.ToList();
+        }
     }
     public interface IDepartmentRepository : IRepository<Department>
     {
-
+        IEnumerable<Department> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords);
     }
 }
