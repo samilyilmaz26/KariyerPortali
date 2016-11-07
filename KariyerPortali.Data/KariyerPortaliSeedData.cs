@@ -10,6 +10,7 @@ namespace KariyerPortali.Data
 {
     public class KariyerPortaliSeedData : DropCreateDatabaseIfModelChanges<KariyerPortaliEntities>
     {
+        
         protected override void Seed(KariyerPortaliEntities context)
         {
             //GetResumes().ForEach(c => context.Resumes.Add(c));
