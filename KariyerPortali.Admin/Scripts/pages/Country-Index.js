@@ -22,7 +22,8 @@
                 "next": "Sonraki",
                 "last": "Son",
                 "first": "İlk"
-            }
+            },
+            "sProcessing": "Yükleniyor..."
         },
 
         // Or you can use remote translation file

@@ -88,7 +88,7 @@ namespace KariyerPortali.Admin.Controllers
 
             var displayedEmployers = filteredEmployers.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedEmployers
-                         select new[] { c.Logo, c.EmployerName, (c.City != null ? c.City.CityName.ToString() : string.Empty), c.Email.ToString() };
+                         select new[] { string.Empty, c.Logo, c.EmployerName, (c.City != null ? c.City.CityName.ToString() : string.Empty), c.Email.ToString(), string.Empty };
             return Json(new
             {
                 sEcho = param.sEcho,

@@ -50,25 +50,25 @@ namespace KariyerPortali.Admin.Controllers
                 switch (sortColumnIndex)
                 {
                     case 0:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
                         break;
                     case 1:
                         filteredJobs = filteredJobs.OrderBy(c => c.Description);
                         break;
                     case 2:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
                         break;
                     case 3:
-                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
                         break;
                     case 4:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
+                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
                         break;
                     case 5:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
                         break;
                     default:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
                         break;
                 }
             }
@@ -78,25 +78,25 @@ namespace KariyerPortali.Admin.Controllers
                 {
 
                     case 0:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
                         break;
                     case 1:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Description);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Description);
                         break;
                     case 2:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.City.CityName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
                         break;
                     case 3:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.JobType);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
                         break;
                     case 4:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Createdate);
+                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
                         break;
                     case 5:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Title);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
                         break;
                     default:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
                         break;
                 }
             }
