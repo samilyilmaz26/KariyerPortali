@@ -38,78 +38,19 @@ namespace KariyerPortali.Admin.Controllers
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allJobs = jobService.Search(sSearch);
-            IEnumerable<Job> filteredJobs = allJobs;
-
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
-
-
             var sortDirection = Request["sSortDir_0"]; // asc or desc
-            if (sortDirection == "asc")
-            {
-                switch (sortColumnIndex)
-                {
-                    case 0:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
-                        break;
-                    case 1:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Description);
-                        break;
-                    case 2:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
-                        break;
-                    case 3:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
-                        break;
-                    case 4:
-                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
-                        break;
-                    case 5:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
-                        break;
-                    default:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
-                        break;
-                }
-            }
-            else
-            {
-                switch (sortColumnIndex)
-                {
-
-                    case 0:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
-                        break;
-                    case 1:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Description);
-                        break;
-                    case 2:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
-                        break;
-                    case 3:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
-                        break;
-                    case 4:
-                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
-                        break;
-                    case 5:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
-                        break;
-                    default:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
-                        break;
-                }
-            }
-
-            var displayedJobs = filteredJobs.Skip(param.iDisplayStart).Take(param.iDisplayLength);
+            int iTotalRecords;
+            int iTotalDisplayRecords;
+            var displayedJobs = jobService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
             var result = from c in displayedJobs
-                         select new[] {string.Empty, c.Title.ToString(), c.Description.ToString(), c.Employer.EmployerName.ToString(), c.Employer.City.CityName.ToString(), c.JobType.ToString(), c.Experience.ExperienceName.ToString(), c.Responsibilities.ToString(), c.Qualifications.ToString(), c.Createdate.ToShortDateString(), c.CreatedBy.ToString(), c.UpdateDate.ToShortDateString(), c.UpdatedBy.ToString() };
+                         select new[] {string.Empty, c.Title.ToString(), c.Description.ToString(), (c.Employer != null ? c.Employer.EmployerName.ToString() : string.Empty), (c.Employer != null ? c.Employer.City.CityName.ToString() : string.Empty), c.JobType.ToString(), c.Createdate.ToShortDateString(),string.Empty};
             return Json(new
             {
                 sEcho = param.sEcho,
-                iTotalRecords = filteredJobs.Count(),
-                iTotalDisplayRecords = filteredJobs.Count(),
-                aaData = result
+                iTotalRecords = iTotalRecords,
+                iTotalDisplayRecords = iTotalDisplayRecords,
+                aaData = result.ToList()
             },
                 JsonRequestBehavior.AllowGet);
         }

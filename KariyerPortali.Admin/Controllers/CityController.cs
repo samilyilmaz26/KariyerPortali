@@ -52,62 +52,20 @@ namespace KariyerPortali.Admin.Controllers
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allCities = cityService.Search(sSearch).ToList();
-            IEnumerable<City> filteredCities = allCities;
-
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
-
-
             var sortDirection = Request["sSortDir_0"]; // asc or desc
-            if (sortDirection == "asc")
-            {
-                switch (sortColumnIndex)
-                {
-                    case 0:
-                        filteredCities = filteredCities.OrderBy(c => c.CityId);
-                        break;
-                    case 1:
-                        filteredCities = filteredCities.OrderBy(c => c.CityName);
-                        break;
-                    case 2:
-                        filteredCities = filteredCities.OrderBy(c => c.Country.CountryName);
-                        break;
+            int iTotalRecords;
+            int iTotalDisplayRecords;
+            var displayedEmployers = cityService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
 
-
-                    default:
-                        filteredCities = filteredCities.OrderBy(c => c.CityId);
-                        break;
-                }
-            }
-            else
-            {
-                switch (sortColumnIndex)
-                {
-
-                    case 0:
-                        filteredCities = filteredCities.OrderByDescending(c => c.CityId);
-                        break;
-                    case 1:
-                        filteredCities = filteredCities.OrderByDescending(c => c.CityName);
-                        break;
-                    case 2:
-                        filteredCities = filteredCities.OrderByDescending(c => c.Country.CountryName);
-                        break;
-                    default:
-                        filteredCities = filteredCities.OrderByDescending(c => c.CityId);
-                        break;
-                }
-            }
-
-            var displayedCities = filteredCities.Skip(param.iDisplayStart).Take(param.iDisplayLength);
-            var result = from c in displayedCities
-                         select new[] { string.Empty, c.CityId.ToString(), c.CityName.ToString(), (c.Country != null ? c.Country.CountryName.ToString() : string.Empty), string.Empty };
+            var result = from c in displayedEmployers
+                         select new[] { string.Empty, c.CityId.ToString(), c.CityName.ToString(), c.CountryId.ToString(), string.Empty };
             return Json(new
             {
                 sEcho = param.sEcho,
-                iTotalRecords = filteredCities.Count(),
-                iTotalDisplayRecords = filteredCities.Count(),
-                aaData = result
+                iTotalRecords = iTotalRecords,
+                iTotalDisplayRecords = iTotalDisplayRecords,
+                aaData = result.ToList()
             },
                 JsonRequestBehavior.AllowGet);
         }
