@@ -23,7 +23,7 @@ namespace KariyerPortali.Service
     {
        private readonly ICityRepository cityRepository;
         private readonly IUnitOfWork unitOfWork;
-        public CityService(IEmployerRepository employerRepository, IUnitOfWork unitOfWork)
+        public CityService(ICityRepository cityRepository, IUnitOfWork unitOfWork)
         {
             this.cityRepository = cityRepository;
             this.unitOfWork = unitOfWork;

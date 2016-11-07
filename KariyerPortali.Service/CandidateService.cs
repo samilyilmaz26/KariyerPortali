@@ -11,7 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface ICandidateService
     {
-        IEnumerable<Candidate> Search(string search);
+        IEnumerable<Candidate> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords);
         IEnumerable<Candidate> GetCandidates();
         Candidate GetCandidate(int id);
         void CreateCandidate(Candidate candidate);
@@ -29,6 +29,12 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region ICandidateService Members
+        public IEnumerable<Candidate> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords)
+        {
+            var candidates = candidateRepository.Search(search, sortColumnIndex, sortDirection, displayStart, displayLength, out totalRecords, out totalDisplayRecords);
+
+            return candidates;
+        }
         public IEnumerable<Candidate> GetCandidates()
         {
             var candidates = candidateRepository.GetAll();
@@ -55,24 +61,7 @@ namespace KariyerPortali.Service
         {
             unitOfWork.Commit();
         }
-        public IEnumerable<Candidate> Search(string search)
-        {
-            search = search.Trim();
-            var searchWords = search.Split(' ');
-
-
-            var query = GetCandidates();
-            foreach (string sSearch in searchWords)
-            {
-                if (sSearch != null && sSearch != "")
-                {
-                    query = query.Where(c => c.UserName.Contains(sSearch) || c.FirstName.Contains(sSearch) || c.LastName.Contains(sSearch) || c.Photo.Contains(sSearch));
-                }
-            }
-           
-            return query;
         
-        }
         #endregion
     }
 }
