@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#sample_1');
+    var table = $('#allJobTable');
     // begin first table
     table.dataTable({
 
@@ -74,7 +74,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#sample_1_wrapper');
+    var tableWrapper = jQuery('#allJobTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
