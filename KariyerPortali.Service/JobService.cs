@@ -11,7 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface IJobService
     {
-        IEnumerable<Job> Search(string search);
+        IEnumerable<Job> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords);
         IEnumerable<Job> GetJobs();
         Job GetJob(int id);
         void CreateJob(Job job);
@@ -29,33 +29,15 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region IJobService Members
-        public IEnumerable<Job> Search(string search)
+        public IEnumerable<Job> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords)
         {
-            search = search.ToLower().Trim();
-            var searchWords = search.Split(' ');
+            var jobs = jobRepository.Search(search, sortColumnIndex, sortDirection, displayStart, displayLength, out totalRecords, out totalDisplayRecords);
 
-
-            var query = GetJobs();
-            foreach (string sSearch in searchWords)
-            {
-                if (sSearch != null && sSearch != "")
-                {
-                    DateTime dDate;
-                    bool dateParsed = false;
-                    if (DateTime.TryParse(sSearch, out dDate))
-                    {
-                        dDate = DateTime.Parse(sSearch);
-                        dateParsed = true;
-                    }
-                    query = query.Where(c=>c.Title.Contains(sSearch) || c.Description.Contains(sSearch) || c.Employer.EmployerName.Contains(sSearch)  || c.Employer.City.CityName.Contains(sSearch)|| c.JobType.ToString().Contains(sSearch) || (dateParsed == true ? c.Createdate == dDate : false));
-                }
-            }
-            return query;
-
+            return jobs;
         }
         public IEnumerable<Job> GetJobs()
         {
-            var jobs = jobRepository.GetAll();
+            var jobs = jobRepository.GetAll("Employer");
             return jobs;
         }
         public Job GetJob(int id)

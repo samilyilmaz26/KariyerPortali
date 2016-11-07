@@ -1,10 +1,12 @@
-﻿@model IEnumerable<KariyerPortali.Admin.Controllers.LanguageController>
+﻿@model KariyerPortali.Model.Language
 @{
     ViewBag.Title = "Create";
 }
 <!DOCTYPE html>
 
-
+@using (Html.BeginForm("Create", "Language", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
     <br />
     <div class="page-bar">
         <ul class="page-breadcrumb">
@@ -16,7 +18,7 @@
                 <span>Yeni Kayıt</span>
             </li>
         </ul>
-   
+
     </div>
     <br />
     <div class="row">
@@ -33,27 +35,34 @@
                 <div class="portlet-body form">
                     <form role="form">
                         <div class="form-body">
-
-
-
                             <div class="form-group">
-                                <label>Dil Adı</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Dil Adı Giriniz">
+                                    <div class="form-horizontal">
+                                        <hr />
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        @Html.HiddenFor(model => model.LanguageId)
 
+                                        <label>Dil Adı</label>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.LanguageName, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.LanguageName, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" value="Create" class="btn blue">Gönder</button>
+                                            <button type="button" class="btn default">İptal</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn blue">Gönder</button>
-                            <button type="button" class="btn default">İptal</button>
-                        </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END SAMPLE FORM PORTLET-->
-    <!-- BEGIN SAMPLE FORM PORTLET-->
-
-
+}
+<!-- END SAMPLE FORM PORTLET-->
+<!-- BEGIN SAMPLE FORM PORTLET-->

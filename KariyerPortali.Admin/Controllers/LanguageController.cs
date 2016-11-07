@@ -78,7 +78,7 @@ namespace KariyerPortali.Admin.Controllers
 
             var displayedLanguages = filteredLanguages.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from l in displayedLanguages
-                         select new[] { l.LanguageId.ToString() ?? l.LanguageName.ToString() };
+                         select new[] { string.Empty, l.LanguageId.ToString(), l.LanguageName.ToString(), string.Empty };
             return Json(new
             {
                 sEcho = param.sEcho,
