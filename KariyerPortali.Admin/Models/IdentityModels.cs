@@ -54,7 +54,7 @@ namespace KariyerPortali.Admin.Models
         }
         public static ApplicationDbContext Create()
         {
-            
+           
             return new ApplicationDbContext();
         }
     }
