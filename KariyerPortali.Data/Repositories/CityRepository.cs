@@ -39,10 +39,10 @@ namespace KariyerPortali.Data.Repositories
             {
                 switch (sortColumnIndex)
                 {
-                    case 0:
+                    case 1:
                         filteredCities = filteredCities.OrderBy(c => c.CityId);
                         break;
-                    case 1:
+                    case 2:
                         filteredCities = filteredCities.OrderBy(c => c.CityName);
                         break;
                   
@@ -55,10 +55,10 @@ namespace KariyerPortali.Data.Repositories
             {
                 switch (sortColumnIndex)
                 {
-                    case 0:
+                    case 1:
                         filteredCities = filteredCities.OrderByDescending(c => c.CityId);
                         break;
-                    case 1:
+                    case 2:
                         filteredCities = filteredCities.OrderByDescending(c => c.CityName);
                         break;
           
