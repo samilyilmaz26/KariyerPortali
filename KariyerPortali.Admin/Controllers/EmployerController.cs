@@ -41,7 +41,7 @@ namespace KariyerPortali.Admin.Controllers
             var displayedEmployers = employerService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
             
             var result = from c in displayedEmployers
-                         select new[] { string.Empty, c.Logo, c.EmployerName, (c.City != null ? c.City.CityName.ToString() : string.Empty), c.Email.ToString(), string.Empty };
+                         select new[] { c.EmployerId.ToString(), c.Logo, c.EmployerName, (c.City != null ? c.City.CityName.ToString() : string.Empty), c.Email.ToString(), string.Empty };
             return Json(new
             {
                 sEcho = param.sEcho,
