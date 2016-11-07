@@ -38,7 +38,7 @@
         //"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
         "bServerSide": true,
         "bProcessing": true,
-        "sAjaxSource": "/City/AjaxHandler",
+        "sAjaxSource": "/Employer/AjaxHandler",
         "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
 
         "lengthMenu": [
@@ -51,17 +51,15 @@
         "columnDefs": [
             {  // set default column settings
                 'orderable': false,
-                'targets': [0]
+                'searchable': false,
+                'targets': [0],
+                'render': function (data, type, row) {
+                    return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
+                },
             },
-            {
-                "searchable": false,
-                "targets": [0]
-            },
-            {
-                "className": "dt-right",
-                //"targets": [2]
-            }
+
         ],
+
         "order": [
             [1, "asc"]
         ] // set first column as a default sort by asc

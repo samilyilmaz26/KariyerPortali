@@ -20,13 +20,13 @@ namespace KariyerPortali.Model
         public string EmployerName { get; set; }
 
     
-        public int SectorId { get; set; }
+        public int? SectorId { get; set; }
         public virtual Sector Sector { get; set; }
 
         public string Address { get; set; }
 
      
-        public int CityId { get; set; }
+        public int? CityId { get; set; }
         public virtual City City { get; set; }
 
         public string Phone { get; set; }

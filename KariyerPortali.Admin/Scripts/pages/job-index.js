@@ -47,26 +47,23 @@
         "pageLength": 5,
         "pagingType": "bootstrap_full_number",
         "columnDefs": [
-            {  // set default column settings
-                'orderable': false,
-                'searchable': false,
-                'className': 'select-checkbox checkboxes',
-                'targets': [0]
-            },
-            {
-                "targets": [0]
-            },
+             {  // set default column settings
+                 'orderable': false,
+                 'searchable': false,
+                 'targets': [0],
+                 'render': function (data, type, row) {
+                     return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
+                 },
+             },
+
         ],
-        select: {
-            style: 'os',
-            selector: 'td:first-child'
-        },
+
         "order": [
             [1, "asc"]
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('##allEmployersTable_wrapper');
+    var tableWrapper = jQuery('##allJobsTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
