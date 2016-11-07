@@ -44,7 +44,7 @@ namespace KariyerPortali.Admin.Controllers
             int iTotalDisplayRecords;
             var displayedJobs = jobService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
             var result = from c in displayedJobs
-                         select new[] {string.Empty, c.Title.ToString(), c.Description.ToString(), (c.Employer.EmployerName != null ? c.Employer.EmployerName.ToString() : string.Empty), (c.Employer.City.CityName != null ? c.Employer.City.CityName.ToString() : string.Empty), c.JobType.ToString(), (c.Experience.ExperienceName != null ? c.Experience.ExperienceName.ToString() : string.Empty), c.Responsibilities.ToString(), c.Qualifications.ToString(), c.Createdate.ToShortDateString(), c.CreatedBy.ToString(), c.UpdateDate.ToShortDateString(), c.UpdatedBy.ToString() };
+                         select new[] {string.Empty, c.Title.ToString(), c.Description.ToString(), (c.Employer != null ? c.Employer.EmployerName.ToString() : string.Empty), (c.Employer != null ? c.Employer.City.CityName.ToString() : string.Empty), c.JobType.ToString(), c.Createdate.ToShortDateString(),string.Empty};
             return Json(new
             {
                 sEcho = param.sEcho,
