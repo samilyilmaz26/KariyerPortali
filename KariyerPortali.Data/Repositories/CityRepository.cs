@@ -18,12 +18,12 @@ namespace KariyerPortali.Data.Repositories
             var searchWords = search.Split(' ');
 
 
-            var query = this.DbContext.Cities.Include("Country").AsQueryable();
+            var query = this.DbContext.Cities.AsQueryable();
             foreach (string sSearch in searchWords)
             {
                 if (sSearch != null && sSearch != "")
                 {
-                    query = query.Where(c => c.CityName.Contains(sSearch));
+                    query = query.Where(c => c.CityId.ToString().Contains(sSearch));
                 }
             }
 
@@ -45,12 +45,9 @@ namespace KariyerPortali.Data.Repositories
                     case 1:
                         filteredCities = filteredCities.OrderBy(c => c.CityName);
                         break;
-                    case 2:
-                        filteredCities = filteredCities.OrderBy(c => c.Country.CountryId);
-                        break;
                   
                     default:
-                        filteredCities = filteredCities.OrderBy(c => c.CityName);
+                        filteredCities = filteredCities.OrderBy(c => c.CityId);
                         break;
                 }
             }
@@ -64,12 +61,9 @@ namespace KariyerPortali.Data.Repositories
                     case 1:
                         filteredCities = filteredCities.OrderByDescending(c => c.CityName);
                         break;
-                    case 2:
-                        filteredCities = filteredCities.OrderByDescending(c => c.CountryId);
-                        break;
-                    
+          
                     default:
-                        filteredCities = filteredCities.OrderByDescending(c => c.CityName);
+                        filteredCities = filteredCities.OrderByDescending(c => c.CityId);
                         break;
                 }
             }

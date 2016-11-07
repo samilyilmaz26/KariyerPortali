@@ -30,63 +30,43 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+        public ActionResult Edit()
+        {
+
+            return View();
+        }
+        public ActionResult Delete()
+        {
+
+            return View();
+        }
+        public ActionResult Details()
+        {
+
+            return View();
+        }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
 
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
-            var allLanguages = languageService.Search(sSearch).ToList();
-            IEnumerable<Language> filteredLanguages = allLanguages;
-
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
-
-
             var sortDirection = Request["sSortDir_0"]; // asc or desc
-            if (sortDirection == "asc")
-            {
-                switch (sortColumnIndex)
-                {
-                    case 0:
-                        filteredLanguages = filteredLanguages.OrderBy(l => l.LanguageId);
-                        break;
-                    case 1:
-                        filteredLanguages = filteredLanguages.OrderBy(l => l.LanguageName);
-                        break;
-
-                    default:
-                        filteredLanguages = filteredLanguages.OrderBy(l => l.LanguageId);
-                        break;
-                }
-            }
-            else
-            {
-                switch (sortColumnIndex)
-                {
-
-                    case 0:
-                        filteredLanguages = filteredLanguages.OrderByDescending(l => l.LanguageId);
-                        break;
-                    case 1:
-                        filteredLanguages = filteredLanguages.OrderByDescending(l => l.LanguageName);
-                        break;
-
-                    default:
-                        filteredLanguages = filteredLanguages.OrderByDescending(l => l.LanguageId);
-                        break;
-                }
-            }
-
-            var displayedLanguages = filteredLanguages.Skip(param.iDisplayStart).Take(param.iDisplayLength);
+            int iTotalRecords;
+            int iTotalDisplayRecords;
+            var displayedLanguages = languageService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
             var result = from l in displayedLanguages
                          select new[] { string.Empty, l.LanguageId.ToString(), l.LanguageName.ToString(), string.Empty };
+            
             return Json(new
             {
                 sEcho = param.sEcho,
-                iTotalRecords = allLanguages.Count(),
-                iTotalDisplayRecords = filteredLanguages.Count(),
-                aaData = result
+                iTotalRecords = iTotalRecords,
+                iTotalDisplayRecords = iTotalDisplayRecords,
+                aaData = result.ToList()
             },
-                JsonRequestBehavior.AllowGet);
+               JsonRequestBehavior.AllowGet);
+
         }
     }
 }
