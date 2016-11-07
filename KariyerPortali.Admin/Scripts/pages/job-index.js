@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#sample_1');
+    var table = $('#allJobsTable');
     // begin first table
     table.dataTable({
 
@@ -49,23 +49,24 @@
         "columnDefs": [
             {  // set default column settings
                 'orderable': false,
+                'searchable': false,
+                'className': 'select-checkbox checkboxes',
                 'targets': [0]
             },
             {
-                "searchable": false,
                 "targets": [0]
             },
-            {
-                "className": "dt-right",
-                //"targets": [2]
-            }
         ],
+        select: {
+            style: 'os',
+            selector: 'td:first-child'
+        },
         "order": [
             [1, "asc"]
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#sample_1_wrapper');
+    var tableWrapper = jQuery('##allEmployersTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
