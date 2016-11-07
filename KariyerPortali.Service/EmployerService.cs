@@ -11,7 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface IEmployerService
     {
-        IEnumerable<Employer> Search(string search);
+        IEnumerable<Employer> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords);
         IEnumerable<Employer> GetEmployers();
         Employer GetEmployer(int id);
         void CreateEmployer(Employer employer);
@@ -29,23 +29,11 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region IEmployerService Members
-        public IEnumerable<Employer> Search(string search)
+        public IEnumerable<Employer> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength,  out int  totalRecords, out int totalDisplayRecords)
         {
-            search = search.Trim();
-            var searchWords = search.Split(' ');
-
-
-            var query = GetEmployers();
-            foreach (string sSearch in searchWords)
-            {
-                if (sSearch != null && sSearch != "")
-                {
-                    query = query.Where(c => c.EmployerName.Contains(sSearch)|| c.City.CityName.Contains(sSearch) || c.Email.Contains(sSearch));
-                }
-            }
-
-            return query;
-
+            var employers = employerRepository.Search(search, sortColumnIndex, sortDirection, displayStart, displayLength, out totalRecords, out totalDisplayRecords);
+            
+            return employers;
         }
         public IEnumerable<Employer> GetEmployers()
         {
