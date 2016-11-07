@@ -30,6 +30,7 @@ namespace KariyerPortali.Admin.Controllers
         }
 
 
+        
         public ActionResult Edit(int? id)
         {
             if (id == null)
