@@ -212,7 +212,7 @@ namespace KariyerPortali.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,CreatedDate=DateTime.Now};
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
