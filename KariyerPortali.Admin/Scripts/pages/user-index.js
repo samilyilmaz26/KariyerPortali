@@ -42,27 +42,44 @@
         "lengthMenu": [
             [5, 15, 20, -1],
             [5, 15, 20, "All"] // change per page values here
+
         ],
+
+
         // set the initial value
         "pageLength": 5,
         "pagingType": "bootstrap_full_number",
         "columnDefs": [
             {  // set default column settings
                 'orderable': false,
-                'targets': [0]
+                'searchable': false,
+                'targets': [0],
+                'render': function (data, type, row) {
+                    return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"/><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
+                }
             },
+
             {
-                "searchable": false,
-                "targets": [0]
-            },
-            {
-                "className": "dt-right",
-                //"targets": [2]
+                'orderable': false,
+                'searchable': false,
+                'targets': [7],
+                'render': function (data, type, row) {
+                    var result = '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Eylemler<i class="fa fa-angle-down"></i></button>'
+                        result += '<ul class="dropdown-menu" role="menu"><li><a href="/Account/Edit/' + row[1] + '"><i class="icon-note"></i> Düzenle</a></li><li><a href="/Account/Details/' + row[1] + '"><i class="icon-list"></i> Detaylar</a></li><li>'
+                        result += '<a href="/Account/Delete/' + row[1] + '"><i class="icon-ban"></i> Sil</a></li></ul></div>';
+                        return result;
+
+                }
+
             }
+
         ],
         "order": [
             [1, "asc"]
-        ] // set first column as a default sort by asc
+
+        ]
+
+        // set first column as a default sort by asc
     });
 
     var tableWrapper = jQuery('#allCandidateTable_wrapper');
