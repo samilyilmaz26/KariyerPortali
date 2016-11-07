@@ -50,25 +50,25 @@ namespace KariyerPortali.Admin.Controllers
                 switch (sortColumnIndex)
                 {
                     case 0:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
                         break;
                     case 1:
                         filteredJobs = filteredJobs.OrderBy(c => c.Description);
                         break;
                     case 2:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
                         break;
                     case 3:
-                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
                         break;
                     case 4:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
+                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
                         break;
                     case 5:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
                         break;
                     default:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
                         break;
                 }
             }
@@ -78,32 +78,32 @@ namespace KariyerPortali.Admin.Controllers
                 {
 
                     case 0:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
                         break;
                     case 1:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Description);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Description);
                         break;
                     case 2:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.City.CityName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
                         break;
                     case 3:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.JobType);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
                         break;
                     case 4:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Createdate);
+                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
                         break;
                     case 5:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Title);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
                         break;
                     default:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
                         break;
                 }
             }
 
             var displayedJobs = filteredJobs.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedJobs
-                         select new[] { c.Title.ToString(), c.Description.ToString(), c.Employer.EmployerName.ToString(), c.Employer.City.CityName.ToString(), c.JobType.ToString(), c.Experience.ExperienceName.ToString(), c.Responsibilities.ToString(), c.Qualifications.ToString(), c.Createdate.ToShortDateString(), c.CreatedBy.ToString(), c.UpdateDate.ToShortDateString(), c.UpdatedBy.ToString() };
+                         select new[] {string.Empty, c.Title.ToString(), c.Description.ToString(), c.Employer.EmployerName.ToString(), c.Employer.City.CityName.ToString(), c.JobType.ToString(), c.Experience.ExperienceName.ToString(), c.Responsibilities.ToString(), c.Qualifications.ToString(), c.Createdate.ToShortDateString(), c.CreatedBy.ToString(), c.UpdateDate.ToShortDateString(), c.UpdatedBy.ToString() };
             return Json(new
             {
                 sEcho = param.sEcho,

@@ -50,22 +50,20 @@
         "columnDefs": [
             {  // set default column settings
                 'orderable': false,
-                'targets': [0]
+                'searchable': false,
+                'targets': [0],
+                'render': function (data, type, row) {
+                    return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
+                },
             },
-            {
-                "searchable": false,
-                "targets": [0]
-            },
-            {
-                "className": "dt-right",
-                //"targets": [2]
-            }
+            
         ],
+        
         "order": [
             [1, "asc"]
         ] // set first column as a default sort by asc
     });
-
+  
     var tableWrapper = jQuery('#allEmployersTable_wrapper');
 
     table.find('.group-checkable').change(function () {

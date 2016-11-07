@@ -18,10 +18,10 @@ namespace KariyerPortali.Model
         public string CompanyName { get; set; }
 
        
-        public int SectorId { get; set; }
+        public int? SectorId { get; set; }
         public virtual Sector Sector { get; set; }
 
-        public int ResumeId { get; set; }
+        public int? ResumeId { get; set; }
         public virtual Resume Resume { get; set; }
 
         public string Message { get; set; }

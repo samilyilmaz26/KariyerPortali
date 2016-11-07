@@ -77,7 +77,7 @@ namespace KariyerPortali.Admin.Controllers
 
             var displayedCountries = filteredCountries.Skip(param.iDisplayStart).Take(param.iDisplayLength);
             var result = from c in displayedCountries
-                         select new[] { c.CountryId.ToString(), c.CountryName };
+                         select new[] { string.Empty, c.CountryId.ToString(), c.CountryName, string.Empty, };
             return Json(new
             {
                 sEcho = param.sEcho,

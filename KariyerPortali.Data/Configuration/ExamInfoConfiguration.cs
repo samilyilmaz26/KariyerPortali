@@ -14,18 +14,7 @@ namespace KariyerPortali.Data.Configuration
         {
             ToTable("ExamInfos");
             HasKey<int>(c => c.ExamInfoId);
-            HasOptional<Exam>(c => c.Exam)
-                .WithMany(c => c.ExamInfos)
-                .HasForeignKey(c => c.ExamId);
-            HasOptional<Exam>(c => c.Exam)
-                .WithMany()
-                .WillCascadeOnDelete(false);
-            HasOptional<Resume>(c => c.Resume)
-                .WithMany(c => c.ExamInfos)
-                .HasForeignKey(c => c.ResumeId);
-            HasOptional<Resume>(c => c.Resume)
-                .WithMany()
-                .WillCascadeOnDelete(false);
+         
         }
     }
 }

@@ -44,23 +44,23 @@ namespace KariyerPortali.Model
         public DateTime MilitaryPostponeDate { get; set; }
 
        
-        public int CandidateId { get; set; }
+        public int? CandidateId { get; set; }
         public virtual Candidate Candidate { get; set; }
 
        
-        public int LanguageId { get; set; }
+        public int? LanguageId { get; set; }
         public virtual Language Language { get; set; }
 
         public virtual Gender Gender { get; set; }
 
         
-        public int BirthCityId { get; set; }
+        public int? BirthCityId { get; set; }
         public virtual City BirthCity { get; set; }
 
         public virtual MaritalStatus MaritalStatus { get; set; }
 
         
-        public int CountryId { get; set; }
+        public int? CountryId { get; set; }
         public virtual Country Nationality { get; set; }
 
         public virtual MilitaryService MilitaryService { get; set; }
@@ -71,10 +71,10 @@ namespace KariyerPortali.Model
         public virtual DrivingLicenseClass DrivingLicense2Class { get; set; }
         public DateTime DrivingLicense2Date { get; set; }
 
-        public int HighSchoolTypeId { get; set; }
+        public int? HighSchoolTypeId { get; set; }
         public virtual HighSchoolType HighSchoolType { get; set; }
 
-        public int HighSchoolDepartmentId { get; set; }
+        public int? HighSchoolDepartmentId { get; set; }
         public virtual HighSchoolDepartment HighSchoolDepartment { get; set; }
 
         public virtual HighSchoolCertificate HighSchoolCertificate { get; set; }

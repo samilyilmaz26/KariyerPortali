@@ -18,12 +18,7 @@ namespace KariyerPortali.Data.Configuration
             Property(c => c.LastName).IsRequired();
             Property(c => c.Phone).IsRequired();
 
-            HasOptional<Sector>(s => s.Sector)
-                     .WithMany(s => s.References)
-                     .HasForeignKey(s => s.SectorId);
-            HasOptional<Sector>(s => s.Sector)
-             .WithMany()
-             .WillCascadeOnDelete(false);
+            
 
         }
     }

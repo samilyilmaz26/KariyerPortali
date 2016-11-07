@@ -47,7 +47,7 @@ namespace KariyerPortali.Service
                         dDate = DateTime.Parse(sSearch);
                         dateParsed = true;
                     }
-                    query = query.Where(c=>c.Title.Contains(sSearch) || c.Employer.EmployerName.Contains(sSearch) || c.Description.Contains(sSearch) || c.Employer.City.CityName.Contains(sSearch)|| c.JobType.ToString().Contains(sSearch) || (dateParsed == true ? c.Createdate == dDate : false));
+                    query = query.Where(c=>c.Title.Contains(sSearch) || c.Description.Contains(sSearch) || c.Employer.EmployerName.Contains(sSearch)  || c.Employer.City.CityName.Contains(sSearch)|| c.JobType.ToString().Contains(sSearch) || (dateParsed == true ? c.Createdate == dDate : false));
                 }
             }
             return query;

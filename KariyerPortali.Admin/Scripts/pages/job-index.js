@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#sample_1');
+    var table = $('#allJobsTable');
     // begin first table
     table.dataTable({
 
@@ -47,25 +47,23 @@
         "pageLength": 5,
         "pagingType": "bootstrap_full_number",
         "columnDefs": [
-            {  // set default column settings
-                'orderable': false,
-                'targets': [0]
-            },
-            {
-                "searchable": false,
-                "targets": [0]
-            },
-            {
-                "className": "dt-right",
-                //"targets": [2]
-            }
+             {  // set default column settings
+                 'orderable': false,
+                 'searchable': false,
+                 'targets': [0],
+                 'render': function (data, type, row) {
+                     return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
+                 },
+             },
+
         ],
+
         "order": [
             [1, "asc"]
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#sample_1_wrapper');
+    var tableWrapper = jQuery('##allJobsTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");

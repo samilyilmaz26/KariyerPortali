@@ -49,10 +49,12 @@ namespace KariyerPortali.Admin.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer<ApplicationDbContext>(new MigrateDatabaseToLatestVersion<ApplicationDbContext, KariyerPortali.Admin.Migrations.Configuration>
+                ("DefaultConnection"));
         }
         public static ApplicationDbContext Create()
         {
-            
+           
             return new ApplicationDbContext();
         }
     }

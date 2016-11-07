@@ -195,7 +195,7 @@ namespace KariyerPortali.Admin.Controllers
                 List<SelectListItem> RoleList = (from k in db.Roles select new SelectListItem
                 {
                     Text = k.Name,
-                    Value = k.Id
+                    Value = k.Name
                 }).ToList();
                 ViewBag.List = RoleList;
             }
@@ -207,7 +207,7 @@ namespace KariyerPortali.Admin.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model, ApplicationDbContext context)
+        public async Task<ActionResult> Register(RegisterViewModel model, ApplicationDbContext context,FormCollection form)
         {
             if (ModelState.IsValid)
             {
@@ -217,13 +217,8 @@ namespace KariyerPortali.Admin.Controllers
                 if (result.Succeeded)
                 {
 
-                    //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-                    UserManager.AddToRole(user.Id,"SubAdmin");
-                    //if (!roleManager.RoleExists("Admin"))
-                    //{
-                    //    await roleManager.CreateAsync(new IdentityRole("Admin"));
-                    //}
-
+                    UserManager.AddToRole(user.Id,form["List"].ToString());
+                   
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
