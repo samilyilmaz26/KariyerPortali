@@ -51,7 +51,7 @@
             {  // set default column settings
                 'orderable': false,
                 'searchable': false,
-                'className': 'select-checkbox',
+                'className': 'select-checkbox checkboxes',
                 'targets': [0]
             },
             {
