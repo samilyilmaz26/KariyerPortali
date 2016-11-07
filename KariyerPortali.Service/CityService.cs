@@ -11,7 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface ICityService
     {
-        IEnumerable<City> Search(string search);
+        IEnumerable<City> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords);
         IEnumerable<City> GetCities();
         City GetCity(int id);
         void CreateCity(City city);
@@ -21,7 +21,7 @@ namespace KariyerPortali.Service
     }
     public class CityService : ICityService
     {
-        private readonly ICityRepository cityRepository;
+       private readonly ICityRepository cityRepository;
         private readonly IUnitOfWork unitOfWork;
         public CityService(ICityRepository cityRepository, IUnitOfWork unitOfWork)
         {
@@ -29,22 +29,11 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region ICityService Members
-        public IEnumerable<City> Search(string search)
+        public IEnumerable<City> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords)
         {
-            search = search.Trim();
-            var searchWords = search.Split(' ');
+            var cities = cityRepository.Search(search, sortColumnIndex, sortDirection, displayStart, displayLength, out totalRecords, out totalDisplayRecords);
 
-
-            var query = GetCities();
-                foreach (string sSearch in searchWords)
-                {
-                    if (sSearch != null && sSearch != "")
-                    {
-                        query = query.Where(c => c.CityId.ToString().Contains(sSearch) || c.CityName.Contains(sSearch) || c.Country.CountryName.Contains(sSearch) );
-                    }
-                }
-                return query;
-            
+            return cities;
         }
         public IEnumerable<City> GetCities()
         {

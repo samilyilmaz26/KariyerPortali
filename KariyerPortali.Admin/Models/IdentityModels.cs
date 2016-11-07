@@ -4,6 +4,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.ComponentModel.DataAnnotations;
 
 namespace KariyerPortali.Admin.Models
 {
@@ -19,10 +20,16 @@ namespace KariyerPortali.Admin.Models
             return userIdentity;
         }
 
+        [Display(Name = "Ad")]
         public string FirstName { get; set; }
+        [Display(Name = "Soyad")]
         public string LastName { get; set; }
+        [Display(Name = "Görev")]
         public string Title { get; set; }
+        [Display(Name = "Görsel")]
         public string ImagePath { get; set; }
+        [Display(Name = "Oluşturulma Tarihi")]
+        public DateTime CreatedDate { get; set; }
 
     }
 

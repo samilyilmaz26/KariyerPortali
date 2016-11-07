@@ -30,6 +30,7 @@ namespace KariyerPortali.Admin.Controllers
         }
 
 
+        
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -211,7 +212,7 @@ namespace KariyerPortali.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,CreatedDate=DateTime.Now};
                 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
