@@ -18,7 +18,7 @@ namespace KariyerPortali.Data.Repositories
             var searchWords = search.Split(' ');
 
 
-            var query = this.DbContext.Countries.Include("City").AsQueryable();
+            var query = this.DbContext.Countries.AsQueryable();
             foreach (string sSearch in searchWords)
             {
                 if (sSearch != null && sSearch != "")
