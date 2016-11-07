@@ -14,7 +14,7 @@ namespace KariyerPortali.Data.Repositories
             : base(dbFactory) { }
         public IEnumerable<Job> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords)
         {
-            search = search.ToLower().Trim();
+            search = search.Trim();
             var searchWords = search.Split(' ');
 
 
@@ -74,25 +74,25 @@ namespace KariyerPortali.Data.Repositories
                 {
 
                     case 0:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.Title);
                         break;
                     case 1:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Description);
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.Description);
                         break;
                     case 2:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.EmployerName);
                         break;
                     case 3:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.City.CityName);
                         break;
                     case 4:
-                        filteredJobs = filteredJobs.OrderBy(c => c.JobType);
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.JobType);
                         break;
                     case 5:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Createdate);
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.Createdate);
                         break;
                     default:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Title);
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.Title);
                         break;
                 }
             }

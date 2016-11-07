@@ -37,7 +37,7 @@ namespace KariyerPortali.Service
         }
         public IEnumerable<Job> GetJobs()
         {
-            var jobs = jobRepository.GetAll("Employer","Experience");
+            var jobs = jobRepository.GetAll("Employer");
             return jobs;
         }
         public Job GetJob(int id)
