@@ -11,9 +11,9 @@ namespace KariyerPortali.Service
 {
     public interface IJobApplicationService
     {
+        IEnumerable<JobApplication> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords);
         IEnumerable<JobApplication> GetJobApplications();
         JobApplication GetJobApplication(int id);
-        IEnumerable<JobApplication> Search(string search);
         void CreateJobApplication(JobApplication jobApplication);
         void UpdateJobApplication(JobApplication jobApplication);
         void DeleteJobApplication(JobApplication jobApplication);
@@ -30,38 +30,14 @@ namespace KariyerPortali.Service
         }
         #region IJobApplicationService Members
 
-        public IEnumerable<JobApplication> Search(string search)
+        public IEnumerable<JobApplication> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords)
         {
-            search = search.Trim();
-            var searchWords = search.Split(' ');
+         
 
+            var jobapplications = jobApplicationRepository.Search(search, sortColumnIndex, sortDirection, displayStart, displayLength, out totalRecords, out totalDisplayRecords);
 
-            var query = GetJobApplications();
-            foreach (string sSearch in searchWords)
-            {
-                if (sSearch != null && sSearch != "")
-                {
-                    DateTime dDate;
-                    bool dateParsed = false;
-                    if (DateTime.TryParse(sSearch, out dDate))
-                    {
-                        dDate = DateTime.Parse(sSearch);
-                        dateParsed = true;
-                    }
-                    query = query.Where(j => j.Candidate.FirstName.Contains(sSearch) ||
-                   j.Candidate.LastName.Contains(sSearch) || j.Employer.EmployerName.Contains(sSearch) ||
-                   j.Job.Title.Contains(sSearch) || (dateParsed == true ? j.ApplicationDate == dDate : false) ||
-                   (dateParsed == true ? j.UpdateDate == dDate : false)
-                    );
-                }
-            }
-            return query;
+            return jobapplications;
 
-        }
-
-        private object GetJobApplication()
-        {
-            throw new NotImplementedException();
         }
 
         public IEnumerable<JobApplication> GetJobApplications()
