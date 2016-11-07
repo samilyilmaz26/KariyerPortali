@@ -50,16 +50,14 @@
         "columnDefs": [
             {  // set default column settings
                 'orderable': false,
-                'targets': [0]
-            },
-            {
-                "searchable": false,
-                "targets": [0]
-            },
-            {
-                "className": "dt-right",
-                //"targets": [2]
-            }
+                'searchable': false,
+                'targets': [0],
+                'render': function (data, type, row) {
+                    return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
+                },
+                },
+          
+           
         ],
         "order": [
             [1, "asc"]
