@@ -11,7 +11,7 @@ namespace KariyerPortali.Service
 {
     public interface IDepartmentService
     {
-        IEnumerable<Department> Search(string search);
+        IEnumerable<Department> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords);
         IEnumerable<Department> GetDepartments();
         Department GetDepartment(int id);
         void CreateDepartment(Department department);
@@ -28,27 +28,17 @@ namespace KariyerPortali.Service
             this.departmentRepository = departmentRepository;
             this.unitOfWork = unitOfWork;
         }
-        #region IDepartment Members
-        public IEnumerable<Department> Search(string search)
+       
+        #region IDepartmentService Members
+        public IEnumerable<Department> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords)
         {
-            search = search.Trim();
-            var searchWords = search.Split(' ');
+            var departments = departmentRepository.Search(search, sortColumnIndex, sortDirection, displayStart, displayLength, out totalRecords, out totalDisplayRecords);
 
-
-            var query = GetDepartments();
-            foreach (string sSearch in searchWords)
-            {
-                if (sSearch != null && sSearch != "")
-                {
-                    query = query.Where(c => c.DepartmentId.ToString().Contains(sSearch) || c.DepartmentName.Contains(sSearch));
-                }
-            }
-            return query;
-
+            return departments;
         }
         public IEnumerable<Department> GetDepartments()
         {
-            var departments = departmentRepository.GetAll();
+            var departments = departmentRepository.GetAll("DepartmentName");
             return departments;
         }
         public Department GetDepartment(int id)
