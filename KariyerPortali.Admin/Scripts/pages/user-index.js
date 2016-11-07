@@ -24,6 +24,8 @@
                 "first": "İlk Sayfa"
             }
         },
+        
+
 
         // Or you can use remote translation file
         //"language": {
@@ -35,7 +37,7 @@
         // So when dropdowns used the scrollable div should be removed. 
         //"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
 
-        "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
+        
 
         "lengthMenu": [
             [5, 15, 20, -1],
