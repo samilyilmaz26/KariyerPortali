@@ -59,7 +59,7 @@ namespace KariyerPortali.Admin.Controllers
             var displayedEmployers = cityService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
 
             var result = from c in displayedEmployers
-                         select new[] { c.CityId.ToString(), c.CityId.ToString(), c.CityName.ToString(), (c.Country != null ? c.Country.CountryId.ToString() : string.Empty), string.Empty };
+                         select new[] { c.CityId.ToString(), c.CityId.ToString(), c.CityName.ToString(),  string.Empty };
             return Json(new
             {
                 sEcho = param.sEcho,
