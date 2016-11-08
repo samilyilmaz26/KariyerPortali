@@ -69,7 +69,7 @@ namespace KariyerPortali.Admin.Controllers
             int iTotalRecords;
             int iTotalDisplayRecords;
             var displayedUniversities = universityService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
-            var result = from u in displayedUniversities select new[] { string.Empty, u.UniversityId.ToString(), u.UniversityName.ToString() };
+            var result = from u in displayedUniversities select new[] { u.UniversityId.ToString(), u.UniversityId.ToString(), u.UniversityName.ToString() };
             
             return Json(new
             {
