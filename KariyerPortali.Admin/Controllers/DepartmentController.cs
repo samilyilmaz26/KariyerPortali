@@ -1,4 +1,6 @@
-﻿using KariyerPortali.Admin.Models;
+﻿using AutoMapper;
+using KariyerPortali.Admin.Models;
+using KariyerPortali.Admin.ViewModels;
 using KariyerPortali.Data;
 using KariyerPortali.Model;
 using KariyerPortali.Service;
@@ -12,7 +14,7 @@ namespace KariyerPortali.Admin.Controllers
 {
     public class DepartmentController : Controller
     {
-        //private KariyerPortaliEntities db = new KariyerPortaliEntities();
+       
         // GET: Department
         private readonly IDepartmentService departmentService;
         public DepartmentController(IDepartmentService departmentService)
@@ -30,17 +32,18 @@ namespace KariyerPortali.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "DepartmentId,DepartmentName")] Department department)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Departments.Add(department);
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
+        public ActionResult Create(DepartmentFormViewModel department)
+        {
+            if (department != null )
+            {
+                var dep = Mapper.Map<DepartmentFormViewModel, Department>(department);
+                departmentService.CreateDepartment(dep);
+                departmentService.SaveDepartment();
+            }
 
-        //    return View(department);
-        //}
+            
+            return RedirectToAction("Index");
+        }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
             string sSearch = "";

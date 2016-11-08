@@ -7,7 +7,7 @@ using System.Web;
 
 namespace KariyerPortali.Admin.ViewModels
 {
-    public class DepartmentViewModel
+    public class DepartmentFormViewModel
     {
         public int DepartmentId { get; set; }
         [Required(ErrorMessage = "İşveren adı gereklidir.")]

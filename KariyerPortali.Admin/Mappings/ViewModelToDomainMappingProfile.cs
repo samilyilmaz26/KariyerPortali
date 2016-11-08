@@ -17,6 +17,11 @@ namespace KariyerPortali.Admin.Mappings
 
         protected override void Configure()
         {
+            Mapper.CreateMap<EmployerFormViewModel, Employer>();
+            Mapper.CreateMap<DepartmentFormViewModel, Department>();
+
+            Mapper.CreateMap<LanguageFormViewModel, Language>();
+            
             Mapper.CreateMap<CityFormViewModel, City>();
         }
     }

@@ -53,6 +53,17 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
-     
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "CandidateID,UserName")] Candidate candidate)
+        {
+            if (ModelState.IsValid)
+            {
+                candidateService.CreateCandidate(candidate);
+                candidateService.SaveCandidate();
+                return RedirectToAction("Index");
+            }
+            return View(candidate);
+        }
     }
 }

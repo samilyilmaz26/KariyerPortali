@@ -37,7 +37,7 @@ namespace KariyerPortali.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser appUser = db.Users.Find(username);
+            ApplicationUser appUser = db.Users.First(u => u.UserName == username);
             if (appUser == null)
             {
                 //return HttpNotFound();
@@ -70,8 +70,8 @@ namespace KariyerPortali.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser appUser = UserManager.FindById(username);
-            if (username == null)
+            ApplicationUser appUser = db.Users.First(u => u.UserName == username);
+            if (appUser == null)
             {
                 return HttpNotFound();
             }
@@ -83,9 +83,10 @@ namespace KariyerPortali.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string username)
         {
-            ApplicationUser appUser = db.Users.Find(username);
-            db.Users.Remove(appUser);
-            db.SaveChanges();
+            var Db = new ApplicationDbContext();
+            var user = Db.Users.First(u => u.UserName == username);
+            Db.Users.Remove(user);
+            Db.SaveChanges();
             return RedirectToAction("Index");
         }
         
