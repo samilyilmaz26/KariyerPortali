@@ -50,7 +50,7 @@ namespace KariyerPortali.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [AllowAnonymous]
-        public ActionResult Edit(ApplicationUser model,HttpPostedFileBase file)
+        public ActionResult Edit(ApplicationUser model,System.Web.HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
@@ -63,10 +63,11 @@ namespace KariyerPortali.Admin.Controllers
                 u.PhoneNumber = model.PhoneNumber;
                 if (file != null && file.ContentLength > 0)  
                 {
-                    var path = Path.Combine(Server.MapPath("/Uploads/"), file.FileName);
-                    file.SaveAs(path);
-                    TempData["result"] = "Güncelleme Başarılı.";
-                    u.ImagePath = path;
+                    string dosyaYolu = Path.GetFileName(file.FileName);
+                    var yuklemeYeri = Path.Combine(Server.MapPath("~/Uploads/Account"), dosyaYolu);
+                    file.SaveAs(yuklemeYeri);
+                    u.ImagePath = file.FileName;
+                    
                 }
                 UserManager.Update(u);
                 return RedirectToAction("Index");
