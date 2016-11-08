@@ -12,7 +12,7 @@ namespace KariyerPortali.Admin.Controllers
 {
     public class DepartmentController : Controller
     {
-        //private KariyerPortaliEntities db = new KariyerPortaliEntities();
+        private KariyerPortaliEntities db = new KariyerPortaliEntities();
         // GET: Department
         private readonly IDepartmentService departmentService;
         public DepartmentController(IDepartmentService departmentService)
@@ -30,17 +30,17 @@ namespace KariyerPortali.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "DepartmentId,DepartmentName")] Department department)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Departments.Add(department);
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
+        public ActionResult Create([Bind(Include = "DepartmentId,DepartmentName")] Department department)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Departments.Add(department);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
-        //    return View(department);
-        //}
+            return View(department);
+        }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
             string sSearch = "";
