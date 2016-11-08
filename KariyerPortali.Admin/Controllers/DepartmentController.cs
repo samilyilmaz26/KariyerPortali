@@ -12,7 +12,7 @@ namespace KariyerPortali.Admin.Controllers
 {
     public class DepartmentController : Controller
     {
-        private KariyerPortaliEntities db = new KariyerPortaliEntities();
+        
         // GET: Department
         private readonly IDepartmentService departmentService;
         public DepartmentController(IDepartmentService departmentService)
