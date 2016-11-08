@@ -27,6 +27,19 @@ namespace KariyerPortali.Admin.Controllers
         public ActionResult Create()
         {
             return View();
+            
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "UniversityId,UniversityName")] University university)
+        {
+            if (ModelState.IsValid)
+            {
+                universityService.CreateUniversity(university);
+                universityService.SaveUniversity();
+                return RedirectToAction("Index");
+            }
+            return View(university);
         }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {

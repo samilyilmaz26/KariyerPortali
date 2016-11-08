@@ -16,6 +16,9 @@ namespace KariyerPortali.Model
         public int? EmployerId { get; set; }
         public virtual Employer Employer { get; set; }
 
+        public int? CityId { get; set; }
+        public virtual City City { get; set; }
+
         public virtual JobType JobType { get; set; }
 
        

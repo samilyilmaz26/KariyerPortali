@@ -13,11 +13,13 @@ namespace KariyerPortali.Admin.ViewModels
 
         public int EmployerId { get; set; }
         public string Logo { get; set; }
+        [DisplayName("Kullanıcı Adı")]
         public string UserName { get; set; }
-        [Required]
+        [Required(ErrorMessage="İşveren adı gereklidir.")]
         [DisplayName("İşveren Adı")]
         public string EmployerName { get; set; }
         
+        [DisplayName("Sektör")]
         public int SectorId { get; set;  }
 
         public string Address { get; set; }

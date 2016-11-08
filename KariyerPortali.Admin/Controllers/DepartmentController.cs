@@ -1,4 +1,5 @@
 ﻿using KariyerPortali.Admin.Models;
+using KariyerPortali.Data;
 using KariyerPortali.Model;
 using KariyerPortali.Service;
 using System;
@@ -11,6 +12,7 @@ namespace KariyerPortali.Admin.Controllers
 {
     public class DepartmentController : Controller
     {
+        private KariyerPortaliEntities db = new KariyerPortaliEntities();
         // GET: Department
         private readonly IDepartmentService departmentService;
         public DepartmentController(IDepartmentService departmentService)
@@ -24,6 +26,20 @@ namespace KariyerPortali.Admin.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "DepartmentId,DepartmentName")] Department department)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Departments.Add(department);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(department);
         }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
