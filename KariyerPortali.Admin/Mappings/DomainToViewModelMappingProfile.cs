@@ -21,14 +21,14 @@ namespace KariyerPortali.Admin.Mappings
             Mapper.CreateMap<Resume, ResumeViewModel>();
             Mapper.CreateMap<Country, CountryFormViewModel>();
             Mapper.CreateMap<City, CityViewModel>();
-            Mapper.CreateMap<Candidate, CandidateViewModel>();
+            Mapper.CreateMap<Candidate, CandidateFormViewModel>();
             Mapper.CreateMap<Job, JobFormViewModel>();
             Mapper.CreateMap<Language, LanguageViewModel>();
             Mapper.CreateMap<Department, DepartmentViewModel>();
             Mapper.CreateMap<JobApplication, JobApplicationViewModel>();
             Mapper.CreateMap<University, UniversityViewModel>();
             Mapper.CreateMap<Employer, EmployerFormViewModel>();
-            Mapper.CreateMap<Employer, FileFormViewModel>();
+            Mapper.CreateMap<File, FileFormViewModel>();
 #pragma warning restore CS0618 // Type or member is obsolete
         }
     

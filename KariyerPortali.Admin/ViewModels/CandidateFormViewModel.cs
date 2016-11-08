@@ -5,7 +5,7 @@ using System.Web;
 
 namespace KariyerPortali.Admin.ViewModels
 {
-    public class CandidateViewModel
+    public class CandidateFormViewModel
     {
         public int CandidateId { get; set; }
         public string UserName { get; set; }

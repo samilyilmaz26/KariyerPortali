@@ -15,11 +15,15 @@ namespace KariyerPortali.Admin.Controllers
     {
         private readonly IJobService jobService;
         private readonly IEmployerService employerService;
+        private readonly ICityService cityService;
+        private readonly IExperienceService experienceService;
 
-        public JobController(IJobService jobService, IEmployerService employerService)
+        public JobController(IJobService jobService, IEmployerService employerService, ICityService cityService, IExperienceService experienceService)
         {
             this.jobService = jobService;
             this.employerService = employerService;
+            this.cityService = cityService;
+            this.experienceService = experienceService;
         }
         // GET: Job
         public ActionResult Index()
@@ -29,7 +33,8 @@ namespace KariyerPortali.Admin.Controllers
         public ActionResult Create()
         {
             ViewBag.EmployerId = new SelectList(employerService.GetEmployers(), "EmployerId", "EmployerName");
-            ViewBag.CityId = new SelectList(employerService.GetEmployers(), "EmployerId", "EmployerName");
+            ViewBag.CityId = new SelectList(cityService.GetCities(), "CityId", "CityName");
+            ViewBag.ExperienceId = new SelectList(experienceService.GetExperiences(), "ExperienceId", "ExperienceName");
             return View();
         }
         public ActionResult Liste()
