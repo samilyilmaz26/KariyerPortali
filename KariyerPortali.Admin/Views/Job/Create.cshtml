@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="row">
-@using (Html.BeginForm())
+@using (Html.BeginForm("Create", "Job", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
                     <div class="col-md-6 ">
@@ -72,7 +72,7 @@
                                         @Html.Label("Sosyal Haklar")<br />
                                         @for (int i = 0; i < ViewBag.SocialRightNames.Length; i++)
                                         {
-                                            @Html.CheckBox("a", new { id = "employmentType_" + i })
+                                            @Html.CheckBox("a", new {@tabindex=9+i, id = "employmentType_" + i })
                                             @Html.Label((string)ViewBag.SocialRightNames[i])<br />
 
                                         }
@@ -114,8 +114,8 @@
                                     </div>
 
                                     <div class="form-actions">
-                                        <button type="submit" class="btn blue">Gönder</button>
-                                        <button type="button" class="btn default">Çıkış</button>
+                                        <button type="submit" tabindex=@(9+ViewBag.SocialRightNames.Length) class="btn blue">Gönder</button>
+                                        <button type="button" tabindex=@(9+ViewBag.SocialRightNames.Length+1) class="btn default" onclick="window.location='@Url.Action("Index","Job")';">Çıkış</button>
                                     </div>
                                 </div>
                             </div>
@@ -128,4 +128,7 @@
         </div>
     </div>
 </form>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
 
