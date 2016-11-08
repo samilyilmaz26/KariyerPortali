@@ -210,7 +210,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CandidateViewModel.cs" />
     <Compile Include="ViewModels\CityViewModel.cs" />
-    <Compile Include="ViewModels\CountryViewModel.cs" />
+    <Compile Include="ViewModels\CountryFormViewModel.cs" />
     <Compile Include="ViewModels\DepartmentViewModel.cs" />
     <Compile Include="ViewModels\EmployerFormViewModel.cs" />
     <Compile Include="ViewModels\FileViewModel.cs" />
