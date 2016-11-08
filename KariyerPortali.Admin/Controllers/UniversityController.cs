@@ -6,6 +6,7 @@ using KariyerPortali.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -37,6 +38,23 @@ namespace KariyerPortali.Admin.Controllers
             {
                 var university = Mapper.Map<UniversityFormViewModel, University>(universityForm);
                 universityService.CreateUniversity(university);
+                universityService.SaveUniversity();
+                return RedirectToAction("Index");
+            }
+            return View(universityForm);
+        }
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(UniversityFormViewModel universityForm)
+        {
+            if (ModelState.IsValid)
+            {
+                var university = Mapper.Map<UniversityFormViewModel, University>(universityForm);
+                universityService.UpdateUniversity(university);
                 universityService.SaveUniversity();
                 return RedirectToAction("Index");
             }
