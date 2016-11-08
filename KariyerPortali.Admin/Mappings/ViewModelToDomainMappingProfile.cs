@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using KariyerPortali.Admin.ViewModels;
+using KariyerPortali.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,7 @@ namespace KariyerPortali.Admin.Mappings
 
         protected override void Configure()
         {
-
+            Mapper.CreateMap<CityFormViewModel, City>();
         }
     }
 }
