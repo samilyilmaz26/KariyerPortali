@@ -30,6 +30,18 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+        public ActionResult Details()
+        {
+            return View();
+        }
+         public ActionResult Edit()
+        {
+            return View();
+        }
+        public ActionResult Delete()
+         {
+             return View();
+         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(CountryFormViewModel countryForm)
