@@ -22,12 +22,20 @@ namespace KariyerPortali.Admin.ViewModels
         [DisplayName("Sektör")]
         public int SectorId { get; set;  }
 
+
+        [DisplayName("Adres")]
         public string Address { get; set; }
 
+        [DisplayName("Şehir")]
         public int CityId { get; set; }
 
+        [DisplayName("Telefon")]
         public string Phone { get; set; }
+
+        [DisplayName("E-Mail")]
         public string Email { get; set; }
+
+        [DisplayName("Web Site")]
         public string WebSite { get; set; }
         public string CreatedBy { get; set; }
         public DateTime CreateDate { get; set; }
