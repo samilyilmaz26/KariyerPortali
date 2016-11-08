@@ -6,7 +6,6 @@ using KariyerPortali.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -39,6 +38,7 @@ namespace KariyerPortali.Admin.Controllers
         }
         public ActionResult Edit()
         {
+           
             return View();
         }
         public ActionResult Delete()
