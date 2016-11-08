@@ -21,30 +21,36 @@
         <div class="col-md-12 ">
             <!-- BEGIN SAMPLE FORM PORTLET-->
             <div class="portlet light bordered">
-                <div class="portlet-title">
-                    <h1 class="page-title">
-                        Yeni Dosya Ekle
-                    </h1>
-
+                <div class="portlet-title" style="border-bottom-width: 1px;margin-bottom: 10px;">
+                    <div class="caption font-dark">
+                        <i class="icon-settings font-dark"></i>
+                        <span class="caption-subject bold uppercase ">YENİ DOSYA</span>
+                    </div>
                 </div>
-                
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    </div>
+                </div>
                 <div class="portlet-body form">
                     <form role="form">
                         <div class="form-body">
                             
                            
                             <div class="form-group">
-                                <label>Dosya Adı</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="FileName">
-                                    
-                                </div>
+                                @Html.LabelFor(model => model.FileName)
+                                @Html.EditorFor(model => model.FileName, new { htmlAttributes = new { @tabindex = "2", @class = "form-control spinner" } })
+                                @Html.ValidationMessageFor(model => model.FileName, "", new { @class = "text-danger" })
                             </div>
                             
                             <div class="form-group">
-                                <label>Açıklama</label>
-                                <textarea class="form-control" rows="3"></textarea>
-                            </div>
+                               
+                                    @Html.LabelFor(model => model.Description)
+                                    @Html.TextAreaFor(model => model.Description,new { @class = "form-control  "}  )
+                                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                              
+                             </div>
+                           
                             
                             <div class="form-group">
                                 <label for="exampleInputFile1">Dosya Girişi</label>
