@@ -31,15 +31,16 @@ namespace KariyerPortali.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UniversityId,UniversityName")] University university)
+        public ActionResult Create(UniversityFormViewModel universityForm)
         {
             if (ModelState.IsValid)
             {
+                var university = Mapper.Map<UniversityFormViewModel, University>(universityForm);
                 universityService.CreateUniversity(university);
                 universityService.SaveUniversity();
                 return RedirectToAction("Index");
             }
-            return View(university);
+            return View(universityForm);
         }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {

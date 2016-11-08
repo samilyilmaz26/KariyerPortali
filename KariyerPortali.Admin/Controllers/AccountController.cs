@@ -37,7 +37,7 @@ namespace KariyerPortali.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser appUser = db.Users.Find(username);
+            ApplicationUser appUser = db.Users.First(u => u.UserName == username);
             if (appUser == null)
             {
                 //return HttpNotFound();
@@ -54,10 +54,10 @@ namespace KariyerPortali.Admin.Controllers
             if (ModelState.IsValid)
             {
                 ApplicationUser u = UserManager.FindByEmail(model.UserName);
-                u.UserName = model.UserName;
+                u.UserName = model.Email;
                 u.Email = model.Email;
-                //u.FirstName = model.FirstName; // Extra Property
-                //u.LastName = model.LastName; // Extra Property
+                u.FirstName = model.FirstName; // Extra Property
+                u.LastName = model.LastName; // Extra Property
                 UserManager.Update(u);
                 return RedirectToAction("Index");
             }
@@ -70,8 +70,8 @@ namespace KariyerPortali.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser appUser = UserManager.FindById(username);
-            if (username == null)
+            ApplicationUser appUser = db.Users.First(u => u.UserName == username);
+            if (appUser == null)
             {
                 return HttpNotFound();
             }
@@ -83,9 +83,10 @@ namespace KariyerPortali.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string username)
         {
-            ApplicationUser appUser = db.Users.Find(username);
-            db.Users.Remove(appUser);
-            db.SaveChanges();
+            var Db = new ApplicationDbContext();
+            var user = Db.Users.First(u => u.UserName == username);
+            Db.Users.Remove(user);
+            Db.SaveChanges();
             return RedirectToAction("Index");
         }
         

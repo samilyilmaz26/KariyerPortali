@@ -52,6 +52,8 @@ namespace KariyerPortali.Admin.Controllers
                 employerService.SaveEmployer();
                 return RedirectToAction("Index");
             }
+            ViewBag.SectorId = new SelectList(sectorService.GetSectors(), "SectorId", "SectorName");
+            ViewBag.CityId = new SelectList(cityService.GetCities(), "CityId", "CityName");
             return View(employerForm);
         }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
