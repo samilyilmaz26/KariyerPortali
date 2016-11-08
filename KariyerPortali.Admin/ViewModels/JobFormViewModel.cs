@@ -1,6 +1,7 @@
 ﻿using KariyerPortali.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -9,12 +10,17 @@ namespace KariyerPortali.Admin.ViewModels
     public class JobFormViewModel
     {
         public int JobId { get; set; }
+        [DisplayName("İş Adı")]
         public string Title { get; set; }
         public string Description { get; set; }
 
-
+        [DisplayName("Firma Adı")]
         public int EmployerId { get; set; }
         public Employer Employer { get; set; }
+
+        [DisplayName("Lokasyon")]
+        public int CityId { get; set; }
+        public City City { get; set; }
 
         public JobType JobType { get; set; }
 

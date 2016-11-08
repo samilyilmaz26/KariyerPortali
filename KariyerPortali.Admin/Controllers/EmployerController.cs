@@ -18,6 +18,7 @@ namespace KariyerPortali.Admin.Controllers
 
         public EmployerController(IEmployerService employerService, ISectorService sectorService)
         {
+            this.employerService = employerService;
             this.sectorService = sectorService;
         }
         // GET: Employer
