@@ -64,6 +64,31 @@ namespace KariyerPortali.Admin.Controllers
             return View(model);
         }
 
+        public ActionResult Delete(string username)
+        {
+            if (username == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ApplicationUser appUser = UserManager.FindById(username);
+            if (username == null)
+            {
+                return HttpNotFound();
+            }
+            return View(appUser);
+        }
+
+        // POST: Department/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(string username)
+        {
+            ApplicationUser appUser = db.Users.Find(username);
+            db.Users.Remove(appUser);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         [AllowAnonymous]
         public ActionResult MyProfile()
         {
