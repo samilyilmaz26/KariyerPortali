@@ -58,6 +58,9 @@ namespace KariyerPortali.Admin.Controllers
                 u.Email = model.Email;
                 u.FirstName = model.FirstName; // Extra Property
                 u.LastName = model.LastName; // Extra Property
+                u.ImagePath = model.ImagePath;
+                u.PhoneNumber = model.PhoneNumber;
+                
                 UserManager.Update(u);
                 return RedirectToAction("Index");
             }
