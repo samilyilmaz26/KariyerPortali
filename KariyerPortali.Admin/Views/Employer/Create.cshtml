@@ -60,18 +60,15 @@
                                                 @Html.ValidationMessageFor(model => model.EmployerName, "", new { @class="text-danger"})
                                             </div>
                                             <div class="form-group">
-                                                <label>Cep Telefonu Numaranız</label>
-                                                <input class="form-control spinner" tabindex="3" type="text" placeholder="Cep Telefonu Numaranız">
+                                                @Html.LabelFor(model => model.UserName)
+                                                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @tabindex = "2", @class = "form-control spinner" } })
+                                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
                                             </div>
                                             <div class="form-group">
-                                                <label>Sektör Seçiniz</label>
-                                                <select class="form-control" tabindex="5">
-                                                    <option>Option 1</option>
-                                                    <option>Option 2</option>
-                                                    <option>Option 3</option>
-                                                    <option>Option 4</option>
-                                                    <option>Option 5</option>
-                                                </select>
+                                                @Html.LabelFor(model => model.SectorId)
+                                                @Html.DropDownList("SectorId", null, new { @tabindex = "3", @class = "form-control" } )
+                                                @Html.ValidationMessageFor(model => model.SectorId, "", new { @class = "text-danger" })
+                                                
                                             </div>
                                             <div class="form-group">
                                                 <label>İlçe Seçiniz</label>
