@@ -12,7 +12,7 @@ namespace KariyerPortali.Admin.Controllers
 {
     public class DepartmentController : Controller
     {
-        private KariyerPortaliEntities db = new KariyerPortaliEntities();
+       
         // GET: Department
         private readonly IDepartmentService departmentService;
         public DepartmentController(IDepartmentService departmentService)
@@ -34,8 +34,8 @@ namespace KariyerPortali.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Departments.Add(department);
-                db.SaveChanges();
+                departmentService.CreateDepartment(department);
+                departmentService.SaveDepartment();
                 return RedirectToAction("Index");
             }
 
