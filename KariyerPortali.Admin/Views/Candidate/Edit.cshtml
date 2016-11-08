@@ -64,51 +64,57 @@
                                             </div>
                                             <div class="form-group">
                                                 @Html.LabelFor(model => model.FirstName)
-                                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @tabindex = "2", @class = "form-control spinner" } })
+                                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @tabindex = "3", @class = "form-control spinner" } })
                                                 @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
                                             </div>
                                             <div class="form-group">
                                                 @Html.LabelFor(model => model.LastName)
-                                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @tabindex = "3", @class = "form-control spinner" } })
+                                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @tabindex = "7", @class = "form-control spinner" } })
                                                 @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
                                             </div>
                                             <div class="form-group">
                                                 @Html.LabelFor(model => model.Email)
-                                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @tabindex = "4", @class = "form-control spinner" } })
+                                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @tabindex = "5", @class = "form-control spinner" } })
                                                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 @Html.LabelFor(model => model.Phone)
-                                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @tabindex = "5", @class = "form-control spinner" } })
+                                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @tabindex = "2", @class = "form-control spinner" } })
                                                 @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                                             </div>
                                             <div class="form-group">
                                                 @Html.LabelFor(model => model.BirthDate)
-                                                @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @tabindex = "6", @class = "form-control spinner" } })
+                                                @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @tabindex = "4", @class = "form-control spinner" } })
                                                 @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
                                             </div>
                                             <div class="form-group">
                                                 @Html.LabelFor(model => model.Photo)
-                                                @Html.EditorFor(model => model.Photo, new { htmlAttributes = new { @tabindex = "7", @class = "form-control spinner" } })
-                                                @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
-                                            </div>
+                                               @* @Html.EditorFor(model => model.Photo, new { htmlAttributes = new { @tabindex = "6", @class = "form-control spinner" } })
+                                                @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "button  " })*@
+                                               @* @Html.LabelFor(model => model.Photo)*@
+                                                @*<div class="col-md-10">
+                                                    <a href="~/CVler/@Model.Photo">@Model.Photo</a>
+                                                    <input type="file" id="Photo" name="upload" /><input type="hidden" name="Photo" value="@Model.Photo" />
+                                                    @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
+                                                    </div>*@
+                                                </div>
                                             @*<p class="help-block"> some help text here. </p>*@
-                                        </div>
-                                        <div class="form-group">
+                                        
+                                        <div class="form-group ">
                                             <img src="..." width="200" height="200" alt="Kişi Resmi" title="Kişi Resmi" />
                                         </div>
 
-                                        <div class="form-group">
-                                            @Html.LabelFor(model => model.State)
-                                            @Html.EditorFor(model => model.State, new { htmlAttributes = new { @tabindex = "8", @class = "form-control spinner" } })
-                                            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
-                                            <label class="mt-checkbox mt-checkbox-outline">
-                                                <input type="checkbox" value="1" name="test" />
-                                                <span></span>
-                                            </label>
-                                        </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.State)                    
+                                                    <div class="checkbox">
+                                                        @Html.EditorFor(model => model.State, new { htmlAttributes = new { @tabindex = "8", @class = "form-control spinner" } })
+                                                        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                                                    </div>
+                                                   
+                                                </div>
+                                          </div>
                                     </div>
                                 </div>
                                 <div class="form-actions right">

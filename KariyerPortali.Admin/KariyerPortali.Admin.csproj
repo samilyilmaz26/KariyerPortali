@@ -6381,6 +6381,7 @@
     <Folder Include="assets\apps\img\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
     <Folder Include="Uploads\Account\" />
+    <Folder Include="Uploads\Candidate\" />
     <Folder Include="Uploads\Employer\" />
   </ItemGroup>
   <ItemGroup>
