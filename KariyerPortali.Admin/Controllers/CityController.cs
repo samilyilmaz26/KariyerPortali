@@ -29,12 +29,34 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+
+      
         public ActionResult Create()
         {
             ViewBag.CountryId = new SelectList(countryService.GetCountries(), "CountryId", "CountryName");
+          
 
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(CityFormViewModel formCity)
+        {
+            if (ModelState.IsValid)
+            {
+                var city = Mapper.Map<CityFormViewModel, City>(formCity);
+                cityService.CreateCity(city);             
+
+                cityService.SaveCity();
+                return RedirectToAction("Index");
+               
+            }
+            ViewBag.CountryId = new SelectList(countryService.GetCountries(), "CountryId", "CountryName");
+            return View (formCity);
+        }
+     
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
