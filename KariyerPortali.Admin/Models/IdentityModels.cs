@@ -28,6 +28,8 @@ namespace KariyerPortali.Admin.Models
         public string Title { get; set; }
         [Display(Name = "Görsel")]
         public string ImagePath { get; set; }
+        [Display(Name = "Oluşturulma Tarihi")]
+        public DateTime CreatedDate { get; set; }
 
     }
 

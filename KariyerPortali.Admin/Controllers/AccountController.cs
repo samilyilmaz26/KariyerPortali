@@ -31,13 +31,13 @@ namespace KariyerPortali.Admin.Controllers
 
 
         
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string username)
         {
-            if (id == null)
+            if (username == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser appUser = db.Users.Find(id);
+            ApplicationUser appUser = db.Users.Find(username);
             if (appUser == null)
             {
                 return HttpNotFound();
@@ -53,7 +53,7 @@ namespace KariyerPortali.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser u = UserManager.FindById(model.Id);
+                ApplicationUser u = UserManager.FindById(model.UserName);
                 u.UserName = model.Email;
                 u.Email = model.Email;
                 //u.FirstName = model.FirstName; // Extra Property
@@ -212,7 +212,7 @@ namespace KariyerPortali.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,CreatedDate=DateTime.Now };
                 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

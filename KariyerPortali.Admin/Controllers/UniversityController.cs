@@ -33,7 +33,7 @@ namespace KariyerPortali.Admin.Controllers
             string sSearch = "";
             if (param.sSearch != null) sSearch = param.sSearch;
             var sortColumnIndex = Convert.ToInt32(Request["iSortCol_0"]);
-            var sortDirection = Request["iSortCol_0"];
+            var sortDirection = Request["sSortDir_0"];
             int iTotalRecords;
             int iTotalDisplayRecords;
             var displayedUniversities = universityService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);

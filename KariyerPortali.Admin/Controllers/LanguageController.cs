@@ -30,6 +30,21 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+        public ActionResult Edit()
+        {
+
+            return View();
+        }
+        public ActionResult Delete()
+        {
+
+            return View();
+        }
+        public ActionResult Details()
+        {
+
+            return View();
+        }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
 

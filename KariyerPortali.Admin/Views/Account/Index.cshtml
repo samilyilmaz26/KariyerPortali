@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<KariyerPortali.Admin.Models.ApplicationUser>
+@using System.Data
 @{
     ViewBag.Title = "Tüm Kullanıcılar";
 }
@@ -10,7 +11,7 @@
 <div class="page-bar">
     <ul class="page-breadcrumb">
         <li>
-            <a href="/Candidate">Kullanıcılar</a>
+            <a href="/Account">Kullanıcılar</a>
             <i class="fa fa-circle"></i>
         </li>
         <li>
@@ -87,11 +88,11 @@
                         </th>
 
                         <th> @Html.DisplayNameFor(model=>model.UserName) </th>
-                        <th> @Html.DisplayNameFor(model=>model.FirstName) @Html.DisplayNameFor(model => model.LastName)</th>
-                        <th>  </th>
+                        <th> @Html.DisplayNameFor(model=>model.FirstName)</th>
+                        <th> @Html.DisplayNameFor(model => model.LastName) </th>
                         <th> @Html.DisplayNameFor(model => model.Title) </th>
-                        <th> @Html.DisplayNameFor(model => model.ImagePath) </th>
-                        <th> Kayıt Tarihi </th>
+                        <th> @Html.DisplayNameFor(model => model.Roles) </th>
+                        <th> @Html.DisplayNameFor(model=>model.CreatedDate) </th>
                         <th> Eylemler </th>
                     </tr>
                 </thead>
@@ -104,12 +105,12 @@
                                 <span></span>
                             </label>
                         </td>
-                        <td> @Html.DisplayFor(modelItem=>item.Email) </td>
-                        <td> @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</td>
-                        <td>  </td>
+                        <td> @Html.DisplayFor(modelItem=>item.UserName) </td>
+                        <td> @Html.DisplayFor(modelItem => item.FirstName)</td>
+                        <td> @Html.DisplayFor(modelItem => item.LastName)</td>
                         <td> @Html.DisplayFor(modelItem => item.Title)</td>
-                        <td> @Html.DisplayFor(modelItem => item.ImagePath)</td>
-                        <td> @DateTime.Now.ToShortDateString() </td>
+                        <td> @Html.DisplayFor(modelItem => item.Roles)</td>
+                        <td> @item.CreatedDate.ToShortDateString()</td>
                         <td>
                             
                         </td>
