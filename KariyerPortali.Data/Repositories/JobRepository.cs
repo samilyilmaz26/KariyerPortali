@@ -18,7 +18,7 @@ namespace KariyerPortali.Data.Repositories
             var searchWords = search.Split(' ');
 
 
-            var query = this.DbContext.Jobs.Include("Employer").AsQueryable();
+            var query = this.DbContext.Jobs.Include("Employer").Include("City").AsQueryable();
             foreach (string sSearch in searchWords)
             {
                 if (sSearch != null && sSearch != "")
@@ -30,7 +30,7 @@ namespace KariyerPortali.Data.Repositories
                         dDate = DateTime.Parse(sSearch);
                         dateParsed = true;
                     }
-                    query = query.Where(c => c.Title.Contains(sSearch) || c.Description.Contains(sSearch) || c.Employer.EmployerName.Contains(sSearch) || c.Employer.City.CityName.Contains(sSearch) || c.JobType.ToString().Contains(sSearch) || (dateParsed == true ? c.Createdate == dDate : false));
+                    query = query.Where(c => c.Title.Contains(sSearch) || c.Description.Contains(sSearch) || c.Employer.EmployerName.Contains(sSearch) || c.City.CityName.Contains(sSearch) || c.JobType.ToString().Contains(sSearch) || (dateParsed == true ? c.Createdate == dDate : false));
                 }
             }
             var allJobs = query;
@@ -55,7 +55,7 @@ namespace KariyerPortali.Data.Repositories
                         filteredJobs = filteredJobs.OrderBy(c => c.Employer.EmployerName);
                         break;
                     case 3:
-                        filteredJobs = filteredJobs.OrderBy(c => c.Employer.City.CityName);
+                        filteredJobs = filteredJobs.OrderBy(c => c.City.CityName);
                         break;
                     case 4:
                         filteredJobs = filteredJobs.OrderBy(c => c.JobType);
@@ -83,7 +83,7 @@ namespace KariyerPortali.Data.Repositories
                         filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.EmployerName);
                         break;
                     case 3:
-                        filteredJobs = filteredJobs.OrderByDescending(c => c.Employer.City.CityName);
+                        filteredJobs = filteredJobs.OrderByDescending(c => c.City.CityName);
                         break;
                     case 4:
                         filteredJobs = filteredJobs.OrderByDescending(c => c.JobType);

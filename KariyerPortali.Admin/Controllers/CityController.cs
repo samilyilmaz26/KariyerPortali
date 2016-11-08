@@ -17,10 +17,12 @@ namespace KariyerPortali.Admin.Controllers
     {
         // GET: City
         private readonly ICityService cityService;
+        private readonly ICountryService countryService;
 
-        public CityController(ICityService cityService)
+        public CityController(ICityService cityService,ICountryService countryService)
         {
             this.cityService = cityService;
+            this.countryService = countryService;
         }
 
         public ActionResult Index()
@@ -29,7 +31,7 @@ namespace KariyerPortali.Admin.Controllers
         }
         public ActionResult Create()
         {
-            ViewBag.Message = "Your application create page.";
+            ViewBag.CountryId = new SelectList(countryService.GetCountries(), "CountryId", "CountryName");
 
             return View();
         }

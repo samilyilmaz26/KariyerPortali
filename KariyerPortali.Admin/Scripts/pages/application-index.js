@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#allApplicationsTable');
+    var table = $('#sample_1');
     // begin first table
     table.dataTable({
 
@@ -62,8 +62,8 @@
                 'targets': [7],
                 'render': function (data, type, row) {
                     return '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Eylemler<i class="fa fa-angle-down"></i></button>'
-                        +'"><i class="icon-note"></i> Düzenle</a></li><li><a href="/Application/Details/' + row[0] + '"><i class="icon-list"></i> Detaylar</a></li><li>'
-                        + '<a href="/Application/Delete/' + row[0] + '"><i class="icon-ban"></i> Sil</a></li></ul></div>';
+                         + '<ul class="dropdown-menu" role="menu"><li><a href="/Job/Details/' + row[0] + '"><i class="icon-list"></i> Detaylar</a></li><li>'
+                         + '<a href="/Job/Delete/' + row[0] + '"><i class="icon-ban"></i> Sil</a></li></ul></div>';
                 }
 
             }
@@ -73,7 +73,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allApplicationsTable_wrapper');
+    var tableWrapper = jQuery('#Sample_1_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
