@@ -21,6 +21,7 @@ namespace KariyerPortali.Admin.Mappings
             Mapper.CreateMap<DepartmentFormViewModel, Department>();
 
             Mapper.CreateMap<LanguageFormViewModel, Language>();
+            Mapper.CreateMap<CountryFormViewModel, Country>();
             
         }
     }

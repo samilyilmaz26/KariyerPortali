@@ -30,6 +30,20 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(CountryFormViewModel countryForm)
+        {
+            if (ModelState.IsValid)
+            {
+                var country = Mapper.Map<CountryFormViewModel, Country>(countryForm);
+
+                countryService.CreateCountry(country);
+                countryService.SaveCountry();
+                return RedirectToAction("Index");
+            }
+            return View(countryForm);
+        }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
             string sSearch = "";
