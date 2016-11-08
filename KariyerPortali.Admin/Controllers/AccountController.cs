@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace KariyerPortali.Admin.Controllers
 {
-    [Authorize]
+    
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -23,21 +23,21 @@ namespace KariyerPortali.Admin.Controllers
 
         private ApplicationDbContext db = new ApplicationDbContext();
 
-
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Users.ToList());
         }
 
 
-        
+        [AllowAnonymous]
         public ActionResult Edit(string username)
         {
             if (username == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser appUser = db.Users.Find(username);
+            ApplicationUser appUser = db.Users.Find("alizalim123@gmail.com");
             if (appUser == null)
             {
                 return HttpNotFound();
@@ -62,6 +62,31 @@ namespace KariyerPortali.Admin.Controllers
                 return RedirectToAction("Index");
             }
             return View(model);
+        }
+
+        public ActionResult Delete(string username)
+        {
+            if (username == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ApplicationUser appUser = UserManager.FindById(username);
+            if (username == null)
+            {
+                return HttpNotFound();
+            }
+            return View(appUser);
+        }
+
+        // POST: Department/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(string username)
+        {
+            ApplicationUser appUser = db.Users.Find(username);
+            db.Users.Remove(appUser);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         [AllowAnonymous]
