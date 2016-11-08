@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -10,6 +11,8 @@ namespace KariyerPortali.Admin.ViewModels
     public class JobFormViewModel
     {
         public int JobId { get; set; }
+
+        [Required(ErrorMessage = "İş adı gereklidir.")]
         [DisplayName("İş Adı")]
         public string Title { get; set; }
         public string Description { get; set; }
