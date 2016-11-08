@@ -65,7 +65,7 @@
                 'targets': [7],
                 'render': function (data, type, row) {
                     var result = '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Eylemler<i class="fa fa-angle-down"></i></button>'
-                        result += '<ul class="dropdown-menu" role="menu"><li><a href="/Account/Edit/' + row[1] + '"><i class="icon-note"></i> Düzenle</a></li><li><a href="/Account/Details/' + row[1] + '"><i class="icon-list"></i> Detaylar</a></li><li>'
+                        result += '<ul class="dropdown-menu" role="menu"><li><a href="/Account/Edit?username=' + row[1] + '"><i class="icon-note"></i> Düzenle</a></li><li><a href="/Account/MyProfile?username=' + row[1] + '"><i class="icon-list"></i> Detaylar</a></li><li>'
                         result += '<a href="/Account/Delete/' + row[1] + '"><i class="icon-ban"></i> Sil</a></li></ul></div>';
                         return result;
 
