@@ -19,7 +19,7 @@ namespace KariyerPortali.Data.Repositories
             var searchWords = search.Split(' ');
 
 
-            var query = this.DbContext.Departments.Include("University").AsQueryable();
+            var query = this.DbContext.Departments.AsQueryable();
             foreach (string sSearch in searchWords)
             {
                 if (sSearch != null && sSearch != "")
