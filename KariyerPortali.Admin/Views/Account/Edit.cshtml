@@ -1,27 +1,5 @@
 ﻿@model KariyerPortali.Admin.Models.ApplicationUser
 @{
-    ViewBag.Title = "Create";
-}
-<br />
-
-<div class="page-bar">
-    <ul class="page-breadcrumb">
-        <li>
-            @Html.ActionLink("Kullanıcılar", "Index", "Account")
-            <i class="fa fa-circle"></i>
-        </li>
-        <li>
-            <span>Yeni Adaylar</span>
-        </li>
-    </ul>
-    <div class="page-toolbar">
-        <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
-
-        </div>
-    </div>
-</div>
-
-@{
     ViewBag.Title = "Edit";
 }
 <br />
@@ -36,7 +14,7 @@
                 <div class="caption font-dark">
                     <i class="icon-settings font-dark"></i>
                     <span class="caption-subject bold uppercase"> Kullanıcı Düzenle </span>
-                    @Html.HiddenFor(model => model.Id)
+                    @Html.HiddenFor(model => model.UserName)
                 </div>
                 <div class="actions">
                 </div>

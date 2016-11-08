@@ -69,7 +69,7 @@ namespace KariyerPortali.Data.Repositories
                         break;
 
                     default:
-                        filteredJobApplications = filteredJobApplications.OrderBy(j => j.Candidate.FirstName);
+                        filteredJobApplications = filteredJobApplications.OrderBy(j => j.JobApplicationId);
                         break;
                 }
             }
@@ -98,7 +98,7 @@ namespace KariyerPortali.Data.Repositories
                         break;
 
                     default:
-                        filteredJobApplications = filteredJobApplications.OrderByDescending(j => j.Candidate.FirstName);
+                        filteredJobApplications = filteredJobApplications.OrderByDescending(j => j.JobApplicationId);
                         break;
                 }
             }

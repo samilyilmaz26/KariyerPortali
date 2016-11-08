@@ -26,7 +26,9 @@ namespace KariyerPortali.Admin.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.UniversityId = new SelectList(universityService.GetUniversities(), "UniversityId", "UniversityName");
             return View();
+            
         }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {

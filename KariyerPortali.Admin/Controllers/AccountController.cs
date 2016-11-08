@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace KariyerPortali.Admin.Controllers
 {
-    [Authorize]
+    
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -23,21 +23,21 @@ namespace KariyerPortali.Admin.Controllers
 
         private ApplicationDbContext db = new ApplicationDbContext();
 
-
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Users.ToList());
         }
 
 
-        
+        [AllowAnonymous]
         public ActionResult Edit(string username)
         {
             if (username == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser appUser = db.Users.Find(username);
+            ApplicationUser appUser = db.Users.Find("alizalim123@gmail.com");
             if (appUser == null)
             {
                 return HttpNotFound();

@@ -14,10 +14,12 @@ namespace KariyerPortali.Admin.Controllers
     public class EmployerController : Controller
     {
         private readonly IEmployerService employerService;
+        private readonly ISectorService sectorService;
 
-        public EmployerController(IEmployerService employerService)
+        public EmployerController(IEmployerService employerService, ISectorService sectorService)
         {
             this.employerService = employerService;
+            this.sectorService = sectorService;
         }
         // GET: Employer
         public ActionResult Index()
@@ -27,6 +29,7 @@ namespace KariyerPortali.Admin.Controllers
      
         public ActionResult Create()
         {
+            ViewBag.SectorId = new SelectList(sectorService.GetSectors(), "SectorId", "SectorName");
             return View();
         }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
