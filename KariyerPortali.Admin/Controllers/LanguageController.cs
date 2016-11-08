@@ -30,6 +30,19 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(LanguageFormViewModel languageForm)
+        {
+            if (ModelState.IsValid)
+            {
+                var language = Mapper.Map<LanguageFormViewModel, Language>(languageForm);
+                languageService.CreateLanguage(language);
+                languageService.SaveLanguage();
+                return RedirectToAction("Index");
+            }
+            return View(languageForm);
+        }
         public ActionResult Edit()
         {
 

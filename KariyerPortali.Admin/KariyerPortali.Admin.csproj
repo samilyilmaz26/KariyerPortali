@@ -6371,6 +6371,9 @@
     <Content Include="Views\Language\Delete.cshtml" />
     <Content Include="Views\Language\Details.cshtml" />
     <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Country\Details.cshtml" />
+    <Content Include="Views\Country\Edit.cshtml" />
+    <Content Include="Views\Country\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

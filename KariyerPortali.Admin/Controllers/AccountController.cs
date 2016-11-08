@@ -54,10 +54,10 @@ namespace KariyerPortali.Admin.Controllers
             if (ModelState.IsValid)
             {
                 ApplicationUser u = UserManager.FindByEmail(model.UserName);
-                u.UserName = model.UserName;
+                u.UserName = model.Email;
                 u.Email = model.Email;
-                //u.FirstName = model.FirstName; // Extra Property
-                //u.LastName = model.LastName; // Extra Property
+                u.FirstName = model.FirstName; // Extra Property
+                u.LastName = model.LastName; // Extra Property
                 UserManager.Update(u);
                 return RedirectToAction("Index");
             }
