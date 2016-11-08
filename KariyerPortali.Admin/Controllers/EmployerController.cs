@@ -15,11 +15,13 @@ namespace KariyerPortali.Admin.Controllers
     {
         private readonly IEmployerService employerService;
         private readonly ISectorService sectorService;
-
-        public EmployerController(IEmployerService employerService, ISectorService sectorService)
+        private readonly ICityService cityService;
+        public EmployerController(IEmployerService employerService, ISectorService sectorService,ICityService cityService)
         {
             this.employerService = employerService;
             this.sectorService = sectorService;
+            this.cityService = cityService;
+            
         }
         // GET: Employer
         public ActionResult Index()
@@ -30,6 +32,8 @@ namespace KariyerPortali.Admin.Controllers
         public ActionResult Create()
         {
             ViewBag.SectorId = new SelectList(sectorService.GetSectors(), "SectorId", "SectorName");
+            ViewBag.CityId = new SelectList(cityService.GetCities(), "CityId", "CityName");
+
             return View();
         }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
