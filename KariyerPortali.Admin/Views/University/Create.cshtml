@@ -1,6 +1,6 @@
 ﻿@model KariyerPortali.Admin.ViewModels.UniversityViewModel
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Üniversite Ekle";
 }
 
 <!-- BEGIN CONTENT BODY -->
@@ -65,7 +65,7 @@
                                 <div class="form-body">
                                     @Html.LabelFor(model => model.UniversityName)
                                     
-                                        @Html.EditorFor(model => model.UniversityName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.EditorFor(model => model.UniversityName, new { htmlAttributes = new {@tabindex="1", @class = "form-control" } })
 
                                         @Html.ValidationMessageFor(model => model.UniversityName, "", new { @class = "text-danger" })
                                     </div>
@@ -81,7 +81,7 @@
                             <button type="submit" tabindex="2" class="btn blue">
                                 Kaydet
                             </button>
-                            <button type="button" tabindex="3" class="btn default">
+                            <button type="button" tabindex="3" class="btn default" onclick="window.location='@Url.Action("Index","University")';">
                                 İptal
                             </button>
                         </div>
@@ -92,6 +92,9 @@
         </div>
 
     </div>
+}
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
 }
     <div class="row ">
 

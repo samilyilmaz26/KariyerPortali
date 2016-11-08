@@ -221,6 +221,7 @@
     <Compile Include="ViewModels\LanguageFormViewModel.cs" />
     <Compile Include="ViewModels\LanguageViewModel.cs" />
     <Compile Include="ViewModels\ResumeViewModel.cs" />
+    <Compile Include="ViewModels\UniversityFormViewModel.cs" />
     <Compile Include="ViewModels\UniversityViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
