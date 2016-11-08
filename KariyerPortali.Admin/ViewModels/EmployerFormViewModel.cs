@@ -33,6 +33,7 @@ namespace KariyerPortali.Admin.ViewModels
         public string Phone { get; set; }
 
         [DisplayName("E-Mail")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [DisplayName("Web Site")]

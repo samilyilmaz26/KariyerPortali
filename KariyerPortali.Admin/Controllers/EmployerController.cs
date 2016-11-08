@@ -36,6 +36,24 @@ namespace KariyerPortali.Admin.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(EmployerFormViewModel employerForm)
+        {
+            if (ModelState.IsValid)
+            {
+                var employer = Mapper.Map<EmployerFormViewModel, Employer>(employerForm);
+                employer.CreatedBy = "mdemirci"; //User.Identity.Name
+                employer.CreateDate = DateTime.Now;
+                employer.UpdatedBy = "mdemirci";
+                employer.UpdateDate = employer.CreateDate;
+                employerService.CreateEmployer(employer);
+                employerService.SaveEmployer();
+                return RedirectToAction("Index");
+            }
+            return View(employerForm);
+        }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
 
