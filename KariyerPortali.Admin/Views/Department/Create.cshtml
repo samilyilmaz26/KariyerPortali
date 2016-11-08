@@ -1,4 +1,4 @@
-﻿@model KariyerPortali.Admin.ViewModels.EmployerFormViewModel
+﻿@model KariyerPortali.Admin.ViewModels.DepartmentFormViewModel
 @{
     ViewBag.Title = "Create";
 }
@@ -32,12 +32,12 @@
                     <form role="form">
                         <div class="form-body">
                             <div class="form-group">
-                                @Html.LabelFor(model => model.EmployerName)
-                                @Html.EditorFor(model => model.EmployerName, new { htmlAttributes = new { @tabindex = "1", @class = "form-control spinner" } })
-                                @Html.ValidationMessageFor(model => model.EmployerName, "", new { @class = "text-danger" })
-                                <div class="input-icon right">
+                                @Html.LabelFor(model => model.DepartmentName)
+                                @Html.EditorFor(model => model.DepartmentName, new { htmlAttributes = new { @class = "form-control spinner" } })
+                                @Html.ValidationMessageFor(model => model.DepartmentName, "", new { @class = "text-danger" })
+                                @*<div class="input-icon right">
                                     <input type="text" class="form-control">
-                                </div>
+                                </div>*@
                             </div>
                         </div>
                         <div class="form-actions">
@@ -50,3 +50,7 @@
 }       </div>
 
     </div>
+@section Scripts 
+    {
+    @Scripts.Render("~/bundles/jqueryval")
+    }

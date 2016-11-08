@@ -15,11 +15,13 @@ namespace KariyerPortali.Admin.Controllers
     {
         private readonly IEmployerService employerService;
         private readonly ISectorService sectorService;
-
-        public EmployerController(IEmployerService employerService, ISectorService sectorService)
+        private readonly ICityService cityService;
+        public EmployerController(IEmployerService employerService, ISectorService sectorService,ICityService cityService)
         {
             this.employerService = employerService;
             this.sectorService = sectorService;
+            this.cityService = cityService;
+            
         }
         // GET: Employer
         public ActionResult Index()
@@ -30,7 +32,27 @@ namespace KariyerPortali.Admin.Controllers
         public ActionResult Create()
         {
             ViewBag.SectorId = new SelectList(sectorService.GetSectors(), "SectorId", "SectorName");
+            ViewBag.CityId = new SelectList(cityService.GetCities(), "CityId", "CityName");
+
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(EmployerFormViewModel employerForm)
+        {
+            if (ModelState.IsValid)
+            {
+                var employer = Mapper.Map<EmployerFormViewModel, Employer>(employerForm);
+                employer.CreatedBy = "mdemirci"; //User.Identity.Name
+                employer.CreateDate = DateTime.Now;
+                employer.UpdatedBy = "mdemirci";
+                employer.UpdateDate = employer.CreateDate;
+                employerService.CreateEmployer(employer);
+                employerService.SaveEmployer();
+                return RedirectToAction("Index");
+            }
+            return View(employerForm);
         }
         public ActionResult AjaxHandler(jQueryDataTableParamModel param)
         {
