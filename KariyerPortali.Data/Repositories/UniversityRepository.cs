@@ -32,9 +32,9 @@ namespace KariyerPortali.Data.Repositories
             {
                 switch (sortColumnIndex)
                 {
-                    case 0: filteredUniversities = filteredUniversities.OrderBy(u => u.UniversityId);
+                    case 1: filteredUniversities = filteredUniversities.OrderBy(u => u.UniversityId);
                         break;
-                    case 1: filteredUniversities = filteredUniversities.OrderBy(u => u.UniversityName);
+                    case 2: filteredUniversities = filteredUniversities.OrderBy(u => u.UniversityName);
                         break;
 
                     default:
@@ -46,9 +46,9 @@ namespace KariyerPortali.Data.Repositories
             {
                 switch (sortColumnIndex)
                 {
-                    case 0: filteredUniversities = filteredUniversities.OrderByDescending(u => u.UniversityId);
+                    case 1: filteredUniversities = filteredUniversities.OrderByDescending(u => u.UniversityId);
                         break;
-                    case 1: filteredUniversities = filteredUniversities.OrderByDescending(u => u.UniversityName);
+                    case 2: filteredUniversities = filteredUniversities.OrderByDescending(u => u.UniversityName);
                         break;
 
                     default:

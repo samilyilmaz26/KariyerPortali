@@ -39,7 +39,7 @@ namespace KariyerPortali.Admin.Controllers
             var displayedCandidates = candidateService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
 
             var result = from c in displayedCandidates
-                         select new[] { c.UserName, c.FirstName + " " + c.LastName, c.Phone.ToString(), c.Email.ToString(), c.State.ToString(), c.CreateDate.ToShortDateString() };
+                         select new[] {string.Empty, c.UserName, c.FirstName + " " + c.LastName, c.Phone.ToString(), c.Email.ToString(), c.State.ToString(), c.CreateDate.ToShortDateString(),string.Empty};
             return Json(new
             {
                 sEcho = param.sEcho,

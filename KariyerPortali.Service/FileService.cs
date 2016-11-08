@@ -11,6 +11,8 @@ namespace KariyerPortali.Service
 {
     public interface IFileService
     {
+        IEnumerable<File> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords);
+
         IEnumerable<File> GetFiles();
         File GetFile(int id);
         void CreateFile(File file);
@@ -28,6 +30,13 @@ namespace KariyerPortali.Service
             this.unitOfWork = unitOfWork;
         }
         #region IFileService Members
+
+        public IEnumerable<File> Search(string search, int sortColumnIndex, string sortDirection, int displayStart, int displayLength, out int totalRecords, out int totalDisplayRecords)
+        {
+            var files = fileRepository.Search(search, sortColumnIndex, sortDirection, displayStart, displayLength, out totalRecords, out totalDisplayRecords);
+
+            return files;
+        }
         public IEnumerable<File> GetFiles()
         {
             var files = fileRepository.GetAll();
