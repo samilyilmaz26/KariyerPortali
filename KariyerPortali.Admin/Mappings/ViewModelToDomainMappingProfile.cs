@@ -23,6 +23,7 @@ namespace KariyerPortali.Admin.Mappings
             Mapper.CreateMap<LanguageFormViewModel, Language>();
             Mapper.CreateMap<CountryFormViewModel, Country>();
             
+            Mapper.CreateMap<CityFormViewModel, City>();
         }
     }
 }
