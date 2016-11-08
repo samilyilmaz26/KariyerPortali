@@ -13,6 +13,8 @@ namespace KariyerPortali.Admin.Controllers
 {
     public class CountryController : Controller
     {
+      
+
         private readonly ICountryService countryService;
 
          public CountryController(ICountryService countryService)
@@ -34,8 +36,9 @@ namespace KariyerPortali.Admin.Controllers
         {
             return View();
         }
-         public ActionResult Edit()
+        public ActionResult Edit()
         {
+           
             return View();
         }
         public ActionResult Delete()
