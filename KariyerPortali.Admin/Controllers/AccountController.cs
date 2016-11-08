@@ -12,6 +12,7 @@ using KariyerPortali.Admin.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Net;
 using System.Collections.Generic;
+using System.IO;
 
 namespace KariyerPortali.Admin.Controllers
 {
@@ -49,7 +50,7 @@ namespace KariyerPortali.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [AllowAnonymous]
-        public ActionResult Edit(ApplicationUser model)
+        public ActionResult Edit(ApplicationUser model,HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +61,13 @@ namespace KariyerPortali.Admin.Controllers
                 u.LastName = model.LastName; // Extra Property
                 u.ImagePath = model.ImagePath;
                 u.PhoneNumber = model.PhoneNumber;
-                
+                if (file != null && file.ContentLength > 0)  
+                {
+                    var path = Path.Combine(Server.MapPath("/Uploads/"), file.FileName);
+                    file.SaveAs(path);
+                    TempData["result"] = "Güncelleme Başarılı.";
+                    u.ImagePath = path;
+                }
                 UserManager.Update(u);
                 return RedirectToAction("Index");
             }
