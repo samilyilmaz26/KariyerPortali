@@ -37,10 +37,10 @@ namespace KariyerPortali.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser appUser = db.Users.Find("alizalim123@gmail.com");
+            ApplicationUser appUser = db.Users.Find(username);
             if (appUser == null)
             {
-                return HttpNotFound();
+                //return HttpNotFound();
             }
             return View(appUser);
         }
@@ -53,8 +53,8 @@ namespace KariyerPortali.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser u = UserManager.FindById(model.UserName);
-                u.UserName = model.Email;
+                ApplicationUser u = UserManager.FindByEmail(model.UserName);
+                u.UserName = model.UserName;
                 u.Email = model.Email;
                 //u.FirstName = model.FirstName; // Extra Property
                 //u.LastName = model.LastName; // Extra Property
@@ -88,12 +88,31 @@ namespace KariyerPortali.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        
 
-        [AllowAnonymous]
         public ActionResult MyProfile()
         {
             return View();
         }
+        
+        public ActionResult MyProfile(string username)
+        {
+            if (username == null)
+            {
+                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ApplicationUser appUser = db.Users.Find(username);
+            if (appUser == null)
+            {
+                //return HttpNotFound();
+            }
+
+            return View(appUser);
+        }
+
+
+
+
 
         public AccountController()
         {
