@@ -14,10 +14,12 @@ namespace KariyerPortali.Admin.Controllers
     public class JobController : Controller
     {
         private readonly IJobService jobService;
+        private readonly IEmployerService employerService;
 
-        public JobController(IJobService jobService)
+        public JobController(IJobService jobService, IEmployerService employerService)
         {
             this.jobService = jobService;
+            this.employerService = employerService;
         }
         // GET: Job
         public ActionResult Index()
@@ -26,6 +28,8 @@ namespace KariyerPortali.Admin.Controllers
         }
         public ActionResult Create()
         {
+            ViewBag.EmployerId = new SelectList(employerService.GetEmployers(), "EmployerId", "EmployerName");
+            ViewBag.CityId = new SelectList(employerService.GetEmployers(), "EmployerId", "EmployerName");
             return View();
         }
         public ActionResult Liste()
@@ -44,7 +48,7 @@ namespace KariyerPortali.Admin.Controllers
             int iTotalDisplayRecords;
             var displayedJobs = jobService.Search(sSearch, sortColumnIndex, sortDirection, param.iDisplayStart, param.iDisplayLength, out iTotalRecords, out iTotalDisplayRecords);
             var result = from c in displayedJobs
-                         select new[] {c.JobId.ToString(), c.Title.ToString(), c.Description.ToString(), (c.Employer != null ? c.Employer.EmployerName.ToString() : string.Empty), (c.Employer != null ? c.Employer.City.CityName.ToString() : string.Empty), c.JobType.ToString(), c.Createdate.ToShortDateString(),string.Empty};
+                         select new[] {c.JobId.ToString(), c.Title.ToString(), c.Description.ToString(), (c.Employer != null ? c.Employer.EmployerName.ToString() : string.Empty), (c.Employer != null ? c.City.CityName.ToString() : string.Empty), c.JobType.ToString(), c.Createdate.ToShortDateString(),string.Empty};
             return Json(new
             {
                 sEcho = param.sEcho,
