@@ -1,13 +1,8 @@
-﻿@model KariyerPortali.Model.Language
+﻿@model KariyerPortali.Admin.ViewModels.LanguageViewModel
 @{
     ViewBag.Title = "Create";
 }
 <!DOCTYPE html>
-
-@using (Html.BeginForm("Create", "Language", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
-    <br />
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
