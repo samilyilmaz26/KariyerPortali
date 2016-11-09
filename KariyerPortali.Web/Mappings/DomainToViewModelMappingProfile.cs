@@ -18,7 +18,9 @@ namespace KariyerPortali.Web.Mappings
         protected override void Configure()
         {
 #pragma warning disable CS0618 // Type or member is obsolete
-            Mapper.CreateMap<Cv, CvViewModel>();
+            Mapper.CreateMap<Resume, ResumeViewModel>();
+            Mapper.CreateMap<Country, ResumeViewModel>();
+            Mapper.CreateMap<Language, ResumeViewModel>();
 #pragma warning restore CS0618 // Type or member is obsolete
         }
     }

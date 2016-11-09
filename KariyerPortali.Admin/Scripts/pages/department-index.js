@@ -10,18 +10,18 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "No data available in table",
-            "info": "Showing _START_ to _END_ of _TOTAL_ records",
-            "infoEmpty": "No records found",
-            "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Show _MENU_",
-            "search": "Search:",
-            "zeroRecords": "No matching records found",
+            "emptyTable": "Böyle bir kayıt bulunamamaktadır",
+            "info": "Gösterilen _START_ ile _END_ toplam _TOTAL_ kayıt",
+            "infoEmpty": "Kayıt bulunamadı",
+            "infoFiltered": "(Filitrenilen toplam _MAX_ kayıt)",
+            "lengthMenu": "Göster _MENU_",
+            "search": "Ara:",
+            "zeroRecords": "Eşleşen kayıt bulunmamaktadır",
             "paginate": {
-                "previous": "Prev",
-                "next": "Next",
-                "last": "Last",
-                "first": "First"
+                "previous": "Önceki",
+                "next": "Sonraki",
+                "last": "Son",
+                "first": "İlk"
             }
         },
 
@@ -35,6 +35,9 @@
         // So when dropdowns used the scrollable div should be removed. 
         //"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
 
+        "bServerSide": true,
+        "bProcessing": true,
+        "sAjaxSource": "/Department/AjaxHandler",
         "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
 
         "lengthMenu": [
@@ -47,23 +50,32 @@
         "columnDefs": [
             {  // set default column settings
                 'orderable': false,
-                'targets': [0]
+                'searchable': false,
+                'targets': [0],
+                'render': function (data, type, row) {
+                    return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
+                }
             },
+
             {
-                "searchable": false,
-                "targets": [0]
-            },
-            {
-                "className": "dt-right",
-                //"targets": [2]
+                'orderable': false,
+                'searchable': false,
+                'targets': [3],
+                'render': function (data, type, row) {
+                    return '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Eylemler<i class="fa fa-angle-down"></i></button>'
+                        + '<ul class="dropdown-menu" role="menu"><li><a href="/Department/Edit/' + row[0] + '"><i class="icon-note"></i> Düzenle</a></li><li><a href="/Department/Details/' + row[0] + '"><i class="icon-list"></i> Detaylar</a></li><li>'
+                        + '<a href="/Department/Delete/' + row[0] + '"><i class="icon-ban"></i> Sil</a></li></ul></div>';
+                }
+
             }
+
         ],
         "order": [
             [1, "asc"]
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allApplicationsTable_wrapper');
+    var tableWrapper = jQuery('#allDepartmentTable_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");

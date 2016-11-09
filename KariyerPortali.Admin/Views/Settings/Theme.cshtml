@@ -1,0 +1,104 @@
+﻿@model IEnumerable<KariyerPortali.Admin.Controllers.SettingsController>
+@{
+    ViewBag.Title = "Tema Ayarları";
+}
+
+<!DOCTYPE html>
+
+<link href="/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+<link href="/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+<style>
+.theme-panel>.theme-option.theme-colors>ul {
+	list-style:none;
+	padding:0;
+	display:block;
+	margin-bottom:10px!important;
+	margin-top:15px
+}
+.theme-panel>.theme-option.theme-colors>ul>li {
+	width:40px;
+	height:40px;
+	margin:0 4px;
+	cursor:pointer;
+	list-style:none;
+	float:left;
+	border:1px solid #707070
+}
+.theme-panel>.theme-option.theme-colors>ul>li:first-child {
+	margin-left:0
+}
+.theme-panel>.theme-option.theme-colors>ul>li.current,.theme-panel>.theme-options>.theme-option.theme-colors>ul>li:hover {
+	border:2px solid #d64635
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-default {
+	background:#333438
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-darkblue {
+	background:#2b3643
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-blue {
+	background:#2D5F8B
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-grey {
+	background:#697380
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-light {
+	background:#F9FAFD
+}
+.theme-panel>.theme-option.theme-colors>ul>li.color-light2 {
+	background:#F1F1F1
+}
+</style>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="@Url.Action("Index", "Settings")" class="nav-link">Genel Ayarlar</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>Tema Ayarları</span>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PROFILE SIDEBAR -->
+        <div class="profile-sidebar">
+            <!-- PORTLET MAIN -->
+            <div class="portlet light profile-sidebar-portlet ">
+                <div class="theme-panel">
+
+                        <div class="theme-option theme-colors clearfix">
+                            <span> THEME COLOR </span>
+                            <ul>
+                                <li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default"> </li>
+                                <li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue"> </li>
+                                <li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue"> </li>
+                                <li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey"> </li>
+                                <li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light"> </li>
+                                <li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2"> </li>
+                            </ul>
+                        </div>                      
+                        <div class="theme-option">
+                            <span> Sidebar Menu </span>
+                            <select class="sidebar-menu-option form-control input-sm">
+                                <option value="accordion" selected="selected">Accordion</option>
+                                <option value="hover">Hover</option>
+                            </select>
+                        </div>                       
+                        <div class="theme-option">
+                            <span> Sidebar Position </span>
+                            <select class="sidebar-pos-option form-control input-sm">
+                                <option value="left" selected="selected">Left</option>
+                                <option value="right">Right</option>
+                            </select>
+                        </div>                       
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+             
+
+
+            

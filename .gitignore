@@ -5,9 +5,20 @@
 *.suo
 *.user
 *.sln.docstates
-/KariyerPortali.Admin/bin/
-/KariyerPortali.Admin/obj/
-/KariyerPortali.Admin/.vs/
+KariyerPortali.Admin/bin/
+bin/
+KariyerPortali.Admin/bin/*
+Solution/*/bin/Debug
+Solution/*/bin/Release
+**/bin/Debug/
+**/bin/
+KariyerPortali.Admin/obj/
+
+.vs/config/
+.vs/config/*
+**/config/
+
+
 
 # Build results
 [Dd]ebug/

@@ -10,22 +10,23 @@ namespace KariyerPortali.Data
 {
     public class KariyerPortaliSeedData : DropCreateDatabaseIfModelChanges<KariyerPortaliEntities>
     {
+        
         protected override void Seed(KariyerPortaliEntities context)
         {
-            GetCvs().ForEach(c => context.Cvs.Add(c));
+            //GetResumes().ForEach(c => context.Resumes.Add(c));
 
             context.Commit();
         }
 
-        private static List<Cv> GetCvs()
+        private static List<Resume> GetResumes()
         {
-            return new List<Cv>
+            return new List<Resume>
             {
-                new Cv {
-                    CvName = "Murat Demirci"
+                new Resume {
+                    ResumeName = "Murat Demirci"
                 },
-                new Cv {
-                    CvName = "Şamil Yılmaz"
+                new Resume {
+                    ResumeName = "Şamil Yılmaz"
                 }
             };
         }

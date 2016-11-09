@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,7 +40,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Cv.cs" />
+    <Compile Include="Models\BloodType.cs" />
+    <Compile Include="Models\Candidate.cs" />
+    <Compile Include="Models\CigaretteStatus.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\DrivingLicenseClass.cs" />
+    <Compile Include="Models\EducationInfo.cs" />
+    <Compile Include="Models\EducationStatus.cs" />
+    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\ExamInfo.cs" />
+    <Compile Include="Models\Expertise.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\HighSchoolCertificate.cs" />
+    <Compile Include="Models\HighSchoolDepartment.cs" />
+    <Compile Include="Models\HighSchoolType.cs" />
+    <Compile Include="Models\JobType.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\LanguageInfo.cs" />
+    <Compile Include="Models\LanguageLevel.cs" />
+    <Compile Include="Models\MaritalStatus.cs" />
+    <Compile Include="Models\MilitaryService.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\Reference.cs" />
+    <Compile Include="Models\ReferenceType.cs" />
+    <Compile Include="Models\Resume.cs" />
+    <Compile Include="Models\Employer.cs" />
+    <Compile Include="Models\Experience.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobApplication.cs" />
+    <Compile Include="Models\SalaryWaited.cs" />
+    <Compile Include="Models\Sector.cs" />
+    <Compile Include="Models\Setting.cs" />
+    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\SkillInfo.cs" />
+    <Compile Include="Models\SocialRight.cs" />
+    <Compile Include="Models\University.cs" />
+    <Compile Include="Models\WorkStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

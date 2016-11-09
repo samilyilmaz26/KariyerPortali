@@ -4,12 +4,12 @@
 
 <link href="/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
 <link href="/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
-
+<br> 
 <!-- BEGIN PAGE BAR -->
 <div class="page-bar">
     <ul class="page-breadcrumb">
         <li>
-            <a href="index.html">Tanımlamalar</a>
+            <a href="@Url.Action("Index", "City")" class="nav-link">Tanımlamalar</a>
             <i class="fa fa-circle"></i>
         </li>
         <li>
@@ -18,7 +18,7 @@
     </ul>
 
 </div>
-
+<br> 
 
 <div class="row">
     <div class="col-md-12">
@@ -27,33 +27,24 @@
             <div class="portlet-title">
                 <div class="caption font-dark">
                     <h1 class="page-title">
-                        İller
+                        Şehirler
                     </h1>
                 </div>
 
                 <div class="actions">
                     <div class="btn-group btn-group-devided" data-toggle="buttons">
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
-
-
-
             <div class="portlet-body">
                 <div class="table-toolbar">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="btn-group">
-                                <button id="sample_editable_1_new" class="btn sbold green">
+                                <a href="/City/Create" id="sample_editable_1_new" class=" btn sbold green">
                                     Yeni Şehir
                                     <i class="fa fa-plus"></i>
-                                </button>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -97,147 +88,13 @@
                                     <span></span>
                                 </label>
                             </th>
-
-
-
-
-                            <th width="20"> Şehir No </th>
+                            <th width="20"> Şehir ID </th>
                             <th> Şehir Adı </th>
                             <th width="200"> Eylemler </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="odd gradeX">
-                            <td>
-                                <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                    <input type="checkbox" class="checkboxes" value="1" />
-                                    <span></span>
-                                </label>
-                            </td>
-
-                            <td>
-                                1
-                            </td>
-
-                            <td> İstanbul </td>
-
-
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                        Eylemler
-                                        <i class="fa fa-angle-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-note"></i> Düzenle
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-list"></i> Detaylar
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-ban"></i> Sil
-                                            </a>
-                                        </li>
-
-
-
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="odd gradeX">
-                            <td>
-                                <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                    <input type="checkbox" class="checkboxes" value="1" />
-                                    <span></span>
-                                </label>
-                            </td>
-
-                            <td>
-                                2
-                            </td>
-
-
-                            <td> Ankara</td>
-
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                        Eylemler
-                                        <i class="fa fa-angle-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-note"></i> Düzenle
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-list"></i> Detaylar
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-ban"></i> Sil
-                                            </a>
-                                        </li>
-
-
-
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="odd gradeX">
-                            <td>
-                                <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                    <input type="checkbox" class="checkboxes" value="1" />
-                                    <span></span>
-                                </label>
-                            </td>
-
-                            <td>
-                                3
-                            </td>
-
-                            <td> İzmir </td>
-
-
-
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                        Eylemler
-                                        <i class="fa fa-angle-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-note"></i> Düzenle
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-list"></i> Detaylar
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <i class="icon-ban"></i> Sil
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
+                        
 
 
                     </tbody>

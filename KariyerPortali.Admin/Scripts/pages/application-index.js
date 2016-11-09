@@ -1,6 +1,6 @@
 ﻿var initTable1 = function () {
 
-    var table = $('#allApplicationsTable');
+    var table = $('#sample_1');
     // begin first table
     table.dataTable({
 
@@ -10,13 +10,13 @@
                 "sortAscending": ": activate to sort column ascending",
                 "sortDescending": ": activate to sort column descending"
             },
-            "emptyTable": "No data available in table",
-            "info": "Showing _START_ to _END_ of _TOTAL_ records",
-            "infoEmpty": "No records found",
-            "infoFiltered": "(filtered1 from _MAX_ total records)",
-            "lengthMenu": "Show _MENU_",
-            "search": "Search:",
-            "zeroRecords": "No matching records found",
+            "emptyTable": "Tabloda Sonuç Bulunamadı",
+            "info": " _START_ - _END_ Arasındaki Toplam ' _TOTAL_ ' Kayıt Gösteriliyor ",
+            "infoEmpty": "Kayıt Bulunamadı",
+            "infoFiltered": "(Toplam _MAX_ Kayıt Arasından)",
+            "lengthMenu": "Göster : _MENU_",
+            "search": "Ara :",
+            "zeroRecords": "Sonuç Bulunamadı",
             "paginate": {
                 "previous": "Prev",
                 "next": "Next",
@@ -34,7 +34,9 @@
         // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js). 
         // So when dropdowns used the scrollable div should be removed. 
         //"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
-
+        "bServerSide": true,
+        "bProccessing": true,
+        "sAjaxSource": "/Applications/AjaxHandler",
         "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
 
         "lengthMenu": [
@@ -47,15 +49,23 @@
         "columnDefs": [
             {  // set default column settings
                 'orderable': false,
-                'targets': [0]
+                'searchable': false,
+                'targets': [0],
+                'render': function (data, type, row) {
+                    return '<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label>';
+                }
             },
+
             {
-                "searchable": false,
-                "targets": [0]
-            },
-            {
-                "className": "dt-right",
-                //"targets": [2]
+                'orderable': false,
+                'searchable': false,
+                'targets': [7],
+                'render': function (data, type, row) {
+                    return '<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Eylemler<i class="fa fa-angle-down"></i></button>'
+                         + '<ul class="dropdown-menu" role="menu"><li><a href="/Job/Details/' + row[0] + '"><i class="icon-list"></i> Detaylar</a></li><li>'
+                         + '<a href="/Job/Delete/' + row[0] + '"><i class="icon-ban"></i> Sil</a></li></ul></div>';
+                }
+
             }
         ],
         "order": [
@@ -63,7 +73,7 @@
         ] // set first column as a default sort by asc
     });
 
-    var tableWrapper = jQuery('#allApplicationsTable_wrapper');
+    var tableWrapper = jQuery('#Sample_1_wrapper');
 
     table.find('.group-checkable').change(function () {
         var set = jQuery(this).attr("data-set");
