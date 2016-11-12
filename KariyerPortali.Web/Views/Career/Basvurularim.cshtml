@@ -1,8 +1,283 @@
 ﻿
 @{
-    ViewBag.Title = "Basvurularim";
+    ViewBag.Title = "Başvurularım";
     Layout = "~/Views/Shared/LayoutMaster.cshtml";
 }
 
-<h2>Basvurularim</h2>
+<!-- Page header -->
+<header class="page-header bg-img" style="background-image: url(assets/img/bg-banner1.jpg);">
+    <div class="container page-name">
+        <h1 class="text-center">Başvurularım</h1>
+        <p class="lead text-center">Başvurduğunuz ilanlar arasında filtreleme yapmak için arama motorunu kullanabilirsiniz</p>
+    </div>
 
+    <div class="container">
+        <form action="#">
+
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-4">
+                    <input type="text" class="form-control" placeholder="Anahtar Kelimeler: pozisyon adı, yetkinlikler veya şirket adı">
+                </div>
+
+
+                @*Başvuru özelliği (Güncel eski arşivlenmiş...)*@
+                <div class="form-group col-xs-12 col-sm-4">
+                    <select class="form-control selectpicker" multiple>
+                        <option selected>Tüm Başvurular</option>
+                        <option>Güncel Başvurular</option>
+                        <option>Arşivdeki Başvurular</option>
+                        <option>Okunmamış Mektuplar</option>
+                        <option>Eski Başvurular</option>
+                    </select>
+                </div>
+
+
+
+                @*Başvurulan Özgeçmiş *@
+                <div class="form-group col-xs-12 col-sm-4">
+                    <select class="form-control selectpicker" multiple>
+                        <option selected>Tüm Özgeçmişler</option>
+                        <option>Özgeçmiş1</option>
+                        <option>Özgeçmiş2</option>
+                        <option>Özgeçmiş3</option>
+                    </select>
+                </div>
+
+                @*Tarih aralığı*@
+                <span class="input-group " style="margin:15px">
+                    <span class="input-group-addon ">Başlangıç tarihi</span>
+                    <input type="date" class="form-control " />
+                    <span class="input-group-addon  ">Bitiş Tarihi</span>
+                    <input type="date" class="form-control " />
+                </span>
+
+                
+            </div>
+
+            <div class="button-group">
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Filtrele</button>
+                </div>
+            </div>
+
+    </div>
+
+
+    </form>
+
+    </div>
+
+</header>
+<!-- END Page header -->
+<!-- Main container -->
+<main>
+    <section class="no-padding-top bg-alt">
+        <div class="container">
+            <div class="row item-blocks-connected">
+
+                <div class="col-xs-12">
+                    <br>
+                    <h5>Bulunan <strong>357</strong> başvuru içerisinden, <i>10</i> ile <i>20</i> arasındakiler görüntüleniyor.</h5>
+                    <br>
+                </div>
+
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-google.jpg" alt="">
+                            <div class="hgroup">
+                                <h4>Senior front-end developer</h4>
+                                <h5>Google</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">Menlo park, CA</span>
+                                <span class="label label-success">Full-time</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-linkedin.png" alt="">
+                            <div class="hgroup">
+                                <h4>Software Engineer (Entry or Senior)</h4>
+                                <h5>Linkedin</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">Livermore, CA</span>
+                                <span class="label label-warning">Part-time</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-envato.png" alt="">
+                            <div class="hgroup">
+                                <h4>Full Stack Web Developer</h4>
+                                <h5>Envato</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">San Francisco, CA</span>
+                                <span class="label label-info">Freelance</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-facebook.png" alt="">
+                            <div class="hgroup">
+                                <h4>Web Applications Developer</h4>
+                                <h5>Facebook</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">Lexington, MA</span>
+                                <span class="label label-danger">Internship</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-microsoft.jpg" alt="">
+                            <div class="hgroup">
+                                <h4>Sr. SQL Server Developer</h4>
+                                <h5>Microsoft</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">Palo Alto, CA</span>
+                                <span class="label label-success">Remote</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-google.jpg" alt="">
+                            <div class="hgroup">
+                                <h4>Senior front-end developer</h4>
+                                <h5>Google</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">Menlo park, CA</span>
+                                <span class="label label-success">Full-time</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-linkedin.png" alt="">
+                            <div class="hgroup">
+                                <h4>Software Engineer (Entry or Senior)</h4>
+                                <h5>Linkedin</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">Livermore, CA</span>
+                                <span class="label label-warning">Part-time</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-envato.png" alt="">
+                            <div class="hgroup">
+                                <h4>Full Stack Web Developer</h4>
+                                <h5>Envato</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">San Francisco, CA</span>
+                                <span class="label label-info">Freelance</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-facebook.png" alt="">
+                            <div class="hgroup">
+                                <h4>Web Applications Developer</h4>
+                                <h5>Facebook</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">Lexington, MA</span>
+                                <span class="label label-danger">Internship</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+                <!-- Job item -->
+                <div class="col-xs-12">
+                    <a class="item-block" href="job-detail.html">
+                        <header>
+                            <img src="assets/img/logo-microsoft.jpg" alt="">
+                            <div class="hgroup">
+                                <h4>Sr. SQL Server Developer</h4>
+                                <h5>Microsoft</h5>
+                            </div>
+                            <div class="header-meta">
+                                <span class="location">Palo Alto, CA</span>
+                                <span class="label label-success">Remote</span>
+                            </div>
+                        </header>
+                    </a>
+                </div>
+                <!-- END Job item -->
+
+            </div>
+
+
+            <!-- Page navigation -->
+            <nav class="text-center">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <i class="ti-angle-left"></i>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <i class="ti-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- END Page navigation -->
+
+
+        </div>
+    </section>
+</main>
+<!-- END Main container -->
