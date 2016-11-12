@@ -184,6 +184,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -460,6 +461,8 @@
     <Content Include="Views\Shared\LayoutMaster.cshtml" />
     <Content Include="Views\Job\IsAra.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Page\Hakkimizda.cshtml" />
+    <Content Include="Views\Page\Iletisim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
