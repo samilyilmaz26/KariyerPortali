@@ -465,6 +465,7 @@
     <Content Include="Views\Page\Hakkimizda.cshtml" />
     <Content Include="Views\Page\Iletisim.cshtml" />
     <Content Include="Views\Career\Ozgecmisim.cshtml" />
+    <Content Include="Views\Career\Basvurularim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

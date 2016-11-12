@@ -8,10 +8,19 @@ namespace KariyerPortali.Web.Controllers
 {
     public class CareerController : Controller
     {
-        // GET: Career
+        public ActionResult Index()
+        {
+            return View();
+        }      
         public ActionResult Ozgecmisim()
         {
             return View();
         }
+        public ActionResult Basvurularim()
+        {
+            return View();
+        }
+
+
     }
 }
