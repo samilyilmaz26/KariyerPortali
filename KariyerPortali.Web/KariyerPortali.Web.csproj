@@ -181,6 +181,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\CareerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -463,6 +464,7 @@
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Page\Hakkimizda.cshtml" />
     <Content Include="Views\Page\Iletisim.cshtml" />
+    <Content Include="Views\Career\Ozgecmisim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
