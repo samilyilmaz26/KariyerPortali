@@ -5,3 +5,517 @@
 }
 
 
+
+
+<form action="#">
+
+    <!-- Page header -->
+    <header class="page-header">
+        <div class="container page-name">
+            <h1 class="text-center">Özgeçmiş Ekle</h1>
+            <p class="lead text-center">Özgeçmişinizi Ekleyerek İlanlara Başvurabilirsiniz.</p>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                        <input type="file" class="dropify" data-default-file="assets/img/avatar.jpg">
+                        <span class="help-block">Lütfen 4:6 boyutlarında bir profil fotoğrafı seçiniz.</span>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-8">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" placeholder="İsim">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Başlık (e.g. Front-end developer)">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Hakkınızda Kısa Açıklama"></textarea>
+                    </div>
+
+                    <hr class="hr-lg">
+
+                    <h6>Temel Bilgiler</h6>
+                    <div class="row">
+
+                        <div class="form-group col-xs-12 col-sm-6">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input type="text" class="form-control" placeholder="Şehir, e.g. Melon Park, CA">
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-6">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                <input type="text" class="form-control" placeholder="Web adresi">
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-6">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-usd"></i></span>
+                                <input type="text" class="form-control" placeholder="Ücret, e.g. 85">
+                                <span class="input-group-addon">Saatlik</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-6">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
+                                <input type="text" class="form-control" placeholder="Yaş">
+                                <span class="input-group-addon">Yaşında</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-6">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                <input type="text" class="form-control" placeholder="Telefon numarası">
+                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12 col-sm-6">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                <input type="text" class="form-control" placeholder="E-posta adresi">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr class="hr-lg">
+
+                    <h6>Tags list</h6>
+                    <div class="form-group">
+                        <input type="text" value="HTML,CSS,Javascript" data-role="tagsinput" placeholder="Etiket adı">
+                        <span class="help-block">Etiketi yazarak enter'a basınız</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="button-group">
+                <div class="action-buttons">
+
+                    <div class="upload-button">
+                        <button class="btn btn-block btn-gray">Özgeçmiş dosyası seçiniz</button>
+                        <input type="file">
+                    </div>
+
+                    <div class="upload-button">
+                        <button class="btn btn-block btn-primary">Kapak fotoğrafı seçiniz</button>
+                        <input id="cover_img_file" type="file">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END Page header -->
+    <!-- Main container -->
+    <main>
+
+
+        <!-- Social media -->
+        <section>
+            <div class="container">
+
+                <header class="section-header">
+                    <span>İletişimde Kalın</span>
+                    <h2>Sosyal medya</h2>
+                </header>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-facebook"></i></span>
+                                <input type="text" class="form-control" placeholder="Profil linki">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-google-plus"></i></span>
+                                <input type="text" class="form-control" placeholder="Profil linki">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-dribbble"></i></span>
+                                <input type="text" class="form-control" placeholder="Profil linki">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-pinterest"></i></span>
+                                <input type="text" class="form-control" placeholder="Profil linki">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-twitter"></i></span>
+                                <input type="text" class="form-control" placeholder="Profil linki">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-github"></i></span>
+                                <input type="text" class="form-control" placeholder="Profil linki">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-instagram"></i></span>
+                                <input type="text" class="form-control" placeholder="Profil linki">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-youtube"></i></span>
+                                <input type="text" class="form-control" placeholder="Profil linki">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Social media -->
+        <!-- Education -->
+        <section class=" bg-alt">
+            <div class="container">
+
+                <header class="section-header">
+                    <span>Mezuniyet Bilgileri</span>
+                    <h2>Eğitim</h2>
+                </header>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <div class="item-block">
+                            <div class="item-form">
+
+                                <button class="btn btn-danger btn-float btn-remove"><i class="ti-close"></i></button>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="form-group">
+                                            <input type="file" class="dropify" data-default-file="assets/img/logo-default.png">
+                                            <span class="help-block">Lütfen kare bir logo seçiniz</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-8">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Eğitim seviyesi, e.g. Lisans">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Bölüm, e.g. Bilgisayar Mühendisliği">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Okul adı, e.g. Boğaziçi Üniversitesi">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Başlangıç tarihi</span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2012">
+                                                <span class="input-group-addon">Bitiş tarihi</span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2016">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3" placeholder="Kısa açıklama"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 duplicateable-content">
+                        <div class="item-block">
+                            <div class="item-form">
+
+                                <button class="btn btn-danger btn-float btn-remove"><i class="ti-close"></i></button>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="form-group">
+                                            <input type="file" class="dropify" data-default-file="assets/img/logo-default.png">
+                                            <span class="help-block">Lütfen kare bir logo seçiniz.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-8">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Eğitim seviyesi, e.g. Lisans">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Bölüm, e.g. Bilgisayar Mühendisliği">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Okul adı, e.g. Boğaziçi Üniversitesi">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Başlangıç tarihi</span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2012">
+                                                <span class="input-group-addon">Bitiş tarihi</span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2016">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3" placeholder="Kısa açıklama"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 text-center">
+                        <br>
+                        <button class="btn btn-primary btn-duplicator">Eğitim ekle</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- END Education -->
+        <!-- Work Experience -->
+        <section>
+            <div class="container">
+                <header class="section-header">
+                    <span>Geçmiş Pozisyonlar</span>
+                    <h2>İş Deneyimleri</h2>
+                </header>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <div class="item-block">
+                            <div class="item-form">
+
+                                <button class="btn btn-danger btn-float btn-remove"><i class="ti-close"></i></button>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="form-group">
+                                            <input type="file" class="dropify" data-default-file="assets/img/logo-default.png">
+                                            <span class="help-block">Lütfen kare bir logo seçiniz</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-8">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Şirket adı">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Pozisyon, e.g. UI/UX Researcher">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Başlangıç tarihi</span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2012">
+                                                <span class="input-group-addon">Bitiş tarihi</span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2016">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <textarea class="summernote-editor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 duplicateable-content">
+                        <div class="item-block">
+                            <div class="item-form">
+
+                                <button class="btn btn-danger btn-float btn-remove"><i class="ti-close"></i></button>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="form-group">
+                                            <input type="file" class="dropify" data-default-file="assets/img/logo-default.png">
+                                            <span class="help-block">Lütfen kare bir logo seçiniz</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-8">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Şirket adı">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Pozisyon, e.g. UI/UX Researcher">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Başlangıç tarihi</span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2012">
+                                                <span class="input-group-addon">Bitiş tarihi</span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2016">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <textarea class="summernote-editor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 text-center">
+                        <br>
+                        <button class="btn btn-primary btn-duplicator">Deneyim ekle</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- END Work Experience -->
+        <!-- Skills -->
+        <section class="bg-alt">
+            <div class="container">
+                <header class="section-header">
+                    <span>Uzmanlık Alanları</span>
+                    <h2>Yetkinlikler</h2>
+                </header>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <div class="item-block">
+                            <div class="item-form">
+
+                                <button class="btn btn-danger btn-float btn-remove"><i class="ti-close"></i></button>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Yetenek adı, e.g. HTML">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Yeterlilik, e.g. 90">
+                                                <span class="input-group-addon">%</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 duplicateable-content">
+                        <div class="item-block">
+                            <div class="item-form">
+
+                                <button class="btn btn-danger btn-float btn-remove"><i class="ti-close"></i></button>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Yetenek adı, e.g. HTML">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Yeterlilik, e.g. 90">
+                                                <span class="input-group-addon">%</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 text-center">
+                        <br>
+                        <button class="btn btn-primary btn-duplicator">Yetkinlik ekle</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- END Skills -->
+        <!-- Submit -->
+        <section class=" bg-img" style="background-image: url(assets/img/bg-facts.jpg);">
+            <div class="container">
+                <header class="section-header">
+                    <span>Tamamladınız mı?</span>
+                    <h2>Özgeçmişi Kaydet</h2>
+                    <p>Lütfen özgeçmişinizi kaydetmeden önce bilgilerinizi bir kez daha kontrol ediniz.</p>
+                </header>
+
+                <p class="text-center"><button class="btn btn-success btn-xl btn-round">Özgeçmişi Kaydet</button></p>
+
+            </div>
+        </section>
+        <!-- END Submit -->
+     
+
+    </main>
+    <!-- END Main container -->
+
+</form>
+
