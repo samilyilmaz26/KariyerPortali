@@ -467,6 +467,7 @@
     <Content Include="Views\Career\Ozgecmisim.cshtml" />
     <Content Include="Views\Career\Basvurularim.cshtml" />
     <Content Include="Views\Job\IlanDetay.cshtml" />
+    <Content Include="Views\Career\OzgecmisDuzenle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

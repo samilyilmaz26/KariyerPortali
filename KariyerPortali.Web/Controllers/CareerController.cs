@@ -20,7 +20,9 @@ namespace KariyerPortali.Web.Controllers
         {
             return View();
         }
-
-
+        public ActionResult OzgecmisDuzenle()
+        {
+            return View();
+        }
     }
 }
