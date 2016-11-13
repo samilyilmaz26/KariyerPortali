@@ -24,5 +24,9 @@ namespace KariyerPortali.Web.Controllers
         {
             return View();
         }
+        public ActionResult HesapAyarlarim()
+        {
+            return View();
+        }
     }
 }
