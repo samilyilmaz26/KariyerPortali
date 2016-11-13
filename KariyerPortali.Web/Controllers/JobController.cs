@@ -13,5 +13,10 @@ namespace KariyerPortali.Web.Controllers
         {
             return View();
         }
+        public ActionResult IlanDetay()
+        {
+            return View();
+        }
+
     }
 }
