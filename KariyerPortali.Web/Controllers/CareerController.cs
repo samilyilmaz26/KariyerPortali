@@ -28,5 +28,9 @@ namespace KariyerPortali.Web.Controllers
         {
             return View();
         }
+        public ActionResult IsHabercim()
+        {
+            return View();
+        }
     }
 }
