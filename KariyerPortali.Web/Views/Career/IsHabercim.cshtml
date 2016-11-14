@@ -4,5 +4,121 @@
     Layout = "~/Views/Shared/LayoutMaster.cshtml";
 }
 
+<!-- Page header -->
+<header class="page-header bg-img" style="background-image: url(assets/img/bg-banner1.jpg)">
+    <div class="container">
+        <div class="row">
+
+            <section>
+                <div class="section-header">
+                    @*<span>Latest degrees</span>*@
+                    <h2>İş Habercim</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="item-block">
+                            
+                            <div class="item-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="active">
+                                            <th>İş habercisi Adı</th>
+                                            <th>Kayıt Tarihi</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>İş habercim 1</td>
+                                            <td>02/11/2016</td>
+                                            <td><span class="glyphicon glyphicon-remove"></span> Kaldır</td>
+                                        </tr>
+                                        <tr>
+                                            <td>İş habercim 2</td>
+                                            <td>02/11/2016</td>
+                                            <td><span class="glyphicon glyphicon-erase"></span> Kaldır</td>
+                                        </tr>
+                                        <tr>
+                                            <td>İş habercim 3</td>
+                                            <td>02/11/2016</td>
+                                            <td><span class="glyphicon glyphicon-erase"></span> Kaldır</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="button-group">
+
+            <div class="action-buttons">
+                @*<a class="btn btn-gray" href="#">Download CV</a>*@
+                <a class="btn btn-success" data-toggle="modal" data-target="#modal-contact" href="#">Yeni İş Habercisi Ekle</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kriterler başlangıc -->
+    <section class="bg-alt">
+        <div class="container">
+            <div class="section-header">
+                @*<span>Past positions</span>*@
+                <h2>Kayıtlı Kriterlerim</h2>
+            </div>
+
+            <div class="row">               
+                <div class="col-xs-12">
+                    <div class="item-block">
+                        
+                        <div class="item-body">
+                            <table class="table">
+                                <thead>
+                                    <tr class="active">
+                                        <th>Kriter Adı</th>
+                                        <th>Kayıt Tarihi</th>
+                                        <th>İşlemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Kriterim 1</td>
+                                        <td>02/11/2016</td>
+                                        <td><span class="glyphicon glyphicon-remove"></span> Kaldır</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kriterim 2</td>
+                                        <td>02/11/2016</td>
+                                        <td><span class="glyphicon glyphicon-erase"></span> Kaldır</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kriterim 3</td>
+                                        <td>02/11/2016</td>
+                                        <td><span class="glyphicon glyphicon-erase"></span> Kaldır</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+              
 
 
+            </div>
+
+            <div class="button-group">
+
+                <div class="action-buttons">
+                    @*<a class="btn btn-gray" href="#">Download CV</a>*@
+                    <a class="btn btn-success" data-toggle="modal" data-target="#modal-contact" href="#">Yeni Kriter Ekle</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+</header>
